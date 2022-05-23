@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Answer.cs" />
     <Compile Include="DatabaseDataSet.cs">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
@@ -81,6 +82,8 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="QandA.cs" />
+    <Compile Include="Question.cs" />
     <Compile Include="Questions.cs">
       <SubType>Form</SubType>
     </Compile>
