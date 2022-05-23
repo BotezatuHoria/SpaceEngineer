@@ -8,7 +8,7 @@ using SpaceGame.DatabaseDataSetTableAdapters;
 
 namespace SpaceGame
 {
-    class Users
+    public class Users
     {
         private string fName, sName, email, password;
         private int idUser;

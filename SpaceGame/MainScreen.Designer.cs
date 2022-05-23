@@ -72,6 +72,7 @@ namespace SpaceGame
             this.Controls.Add(this.startButton);
             this.Name = "MainScreen";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainScreen_Load);
             this.ResumeLayout(false);
 
         }

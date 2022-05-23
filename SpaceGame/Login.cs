@@ -31,7 +31,7 @@ namespace SpaceGame
                 MessageBox.Show("User found, email = , password = ", "Info",  MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //new Game().ShowDialog();
                 //new Questions().ShowDialog();
-                new MainScreen().ShowDialog();
+                new MainScreen(rsp).ShowDialog();
             }
         }
 

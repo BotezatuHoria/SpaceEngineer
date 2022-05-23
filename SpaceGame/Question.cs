@@ -8,7 +8,7 @@ using SpaceGame.DatabaseDataSetTableAdapters;
 
 namespace SpaceGame
 {
-    class Question
+    public class Question
     {
         private int idQuestion;
         private string question, expl;
@@ -20,7 +20,9 @@ namespace SpaceGame
             var question = new QuestionsTableAdapter();
             DataTable dataTable = question.GetData();
             DataView dataView = dataTable.DefaultView;
+
             dataView.RowFilter = String.Format("IdQuestion = {0}", _idQuestion);
+            
             this.question = Convert.ToString(dataView[0]["Question"]);
 
             var answers = new AnswersTableAdapter();
@@ -39,6 +41,7 @@ namespace SpaceGame
         {
             this.question = _question;
             this.expl = _expl;
+
             QuestionsTableAdapter question = new QuestionsTableAdapter();
             question.Insert(this.question, this.expl);
             this.idQuestion = Convert.ToInt32(question.GetData().Last()["IdQuestion"]);
