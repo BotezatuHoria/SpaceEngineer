@@ -80,28 +80,14 @@ namespace SpaceGame
         public string FirstName
         {
             get { return fName; }
-            set
-            {
-                fName = value;
-                TableTableAdapter usersTableAdapter = new TableTableAdapter();
-                DatabaseDataSet.TableDataTable users = usersTableAdapter.GetData();
-                users.Rows.Find(idUser)["FirstName"] = Convert.ToString(fName);
-                usersTableAdapter.Update(users);
-            }
+            set { fName = value; }
         }
 
 
         public string SecondName
         {
             get { return sName; }
-            set
-            {
-                sName = value;
-                TableTableAdapter usersTableAdapter = new TableTableAdapter();
-                DatabaseDataSet.TableDataTable users = usersTableAdapter.GetData();
-                users.Rows.Find(idUser)["SecondName"] = Convert.ToString(sName);
-                usersTableAdapter.Update(users);
-            }
+            set { sName = value; }
         }
 
         public string Email
@@ -112,19 +98,13 @@ namespace SpaceGame
         public string Password
         {
             get { return password; }
-            set
-            {
-                password = value;
-                TableTableAdapter usersTableAdapter = new TableTableAdapter();
-                DatabaseDataSet.TableDataTable users = usersTableAdapter.GetData();
-                users.Rows.Find(idUser)["Password"] = Convert.ToString(password);
-                usersTableAdapter.Update(users);
-            }
+            set { password = value; }
         }
 
         public int IdUser
         {
             get { return idUser; }
+            set { idUser = value; }
         }
 
     }

@@ -14,6 +14,11 @@ namespace SpaceGame
         string ans;
         bool valid;
 
+        public Answer()
+        {
+
+        }
+
         public Answer(int _idAnswer)
         {
             idAnswer = _idAnswer;
@@ -38,6 +43,7 @@ namespace SpaceGame
         public int IdAnswer
         {
             get { return idAnswer; }
+            set { idAnswer = value; }
         }
 
         public int IdQuestion
@@ -45,39 +51,21 @@ namespace SpaceGame
             get { return IdQuestion; }
             set
             {
-                this.IdQuestion = value;
-                AnswersTableAdapter answersTableAdapter = new AnswersTableAdapter();
-                SpaceGame.DatabaseDataSet.AnswersDataTable answers = answersTableAdapter.GetData();
-                answers.Rows.Find(this.idAnswer)["IdQuestion"] = value;
-                answersTableAdapter.Update(answers);
+                this.IdQuestion = value;                
             }
         }
 
         public string Ans
         {
             get { return ans; }
-            set
-            {
-                this.ans = value;
-                AnswersTableAdapter answerTableAdapter = new AnswersTableAdapter();
-                SpaceGame.DatabaseDataSet.AnswersDataTable answers = answerTableAdapter.GetData();
-                answers.Rows.Find(this.idAnswer)["Answer"] = value;
-                answerTableAdapter.Update(answers);
-            }
+            set { this.ans = value; }
         }
 
         
         public bool Valid
         {
             get { return valid; }
-            set
-            {
-                this.valid = value;
-                AnswersTableAdapter answerTableAdapter = new AnswersTableAdapter();
-                SpaceGame.DatabaseDataSet.AnswersDataTable answers = answerTableAdapter.GetData();
-                answers.Rows.Find(this.idAnswer)["isValid"] = value;
-                answerTableAdapter.Update(answers);
-            }
+            set { this.valid = value; }
         }
     }
 }

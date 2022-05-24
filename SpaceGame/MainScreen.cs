@@ -12,7 +12,6 @@ namespace SpaceGame
 {
     public partial class MainScreen : Form
     {
-        List<QandA> qa;
         Users user = null;
 
         public MainScreen(Users _user)
@@ -21,21 +20,17 @@ namespace SpaceGame
             InitializeComponent();     
         }
 
-        private void LoadQandA()
-        {
-            qa = QandA.LoadQandAFromDatabase();
-            
-        }
+        
 
         private void startButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Questions(qa[0]).ShowDialog();
+            new Questions().ShowDialog();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            LoadQandA();
+            //LoadQandA();
         }
     }
 }

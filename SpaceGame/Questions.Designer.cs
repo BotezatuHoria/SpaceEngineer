@@ -29,40 +29,13 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.databaseDataSet = new SpaceGame.DatabaseDataSet();
-            this.qandABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qandATableAdapter = new SpaceGame.DatabaseDataSetTableAdapters.QandATableAdapter();
-            this.tableAdapterManager = new SpaceGame.DatabaseDataSetTableAdapters.TableAdapterManager();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).BeginInit();
+            this.nextButton = new System.Windows.Forms.Button();
+            this.explButton = new System.Windows.Forms.Button();
+            this.prevButton = new System.Windows.Forms.Button();
+            this.validButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // qandABindingSource
-            // 
-            this.qandABindingSource.DataMember = "QandA";
-            this.qandABindingSource.DataSource = this.databaseDataSet;
-            // 
-            // qandATableAdapter
-            // 
-            this.qandATableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.AnswersTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.QuestionsTableAdapter = null;
-            this.tableAdapterManager.TableTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SpaceGame.DatabaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // textBox1
             // 
@@ -78,42 +51,73 @@ namespace SpaceGame
             this.panel1.Size = new System.Drawing.Size(491, 249);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // nextButton
             // 
-            this.button1.Location = new System.Drawing.Point(698, 317);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.nextButton.Location = new System.Drawing.Point(568, 402);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(75, 23);
+            this.nextButton.TabIndex = 2;
+            this.nextButton.Text = "button1";
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
+            // 
+            // explButton
+            // 
+            this.explButton.Location = new System.Drawing.Point(713, 129);
+            this.explButton.Name = "explButton";
+            this.explButton.Size = new System.Drawing.Size(75, 23);
+            this.explButton.TabIndex = 3;
+            this.explButton.Text = "button2";
+            this.explButton.UseVisualStyleBackColor = true;
+            this.explButton.Visible = false;
+            this.explButton.Click += new System.EventHandler(this.explButton_Click);
+            // 
+            // prevButton
+            // 
+            this.prevButton.Location = new System.Drawing.Point(152, 402);
+            this.prevButton.Name = "prevButton";
+            this.prevButton.Size = new System.Drawing.Size(75, 23);
+            this.prevButton.TabIndex = 4;
+            this.prevButton.Text = "button1";
+            this.prevButton.UseVisualStyleBackColor = true;
+            this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
+            // 
+            // validButton
+            // 
+            this.validButton.Location = new System.Drawing.Point(713, 244);
+            this.validButton.Name = "validButton";
+            this.validButton.Size = new System.Drawing.Size(75, 23);
+            this.validButton.TabIndex = 5;
+            this.validButton.Text = "button1";
+            this.validButton.UseVisualStyleBackColor = true;
+            this.validButton.Click += new System.EventHandler(this.validButton_Click);
             // 
             // Questions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.validButton);
+            this.Controls.Add(this.prevButton);
+            this.Controls.Add(this.explButton);
+            this.Controls.Add(this.nextButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Name = "Questions";
             this.Text = "Questions";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Questions_FormClosed);
             this.Load += new System.EventHandler(this.Questions_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DatabaseDataSet databaseDataSet;
-        private System.Windows.Forms.BindingSource qandABindingSource;
-        private DatabaseDataSetTableAdapters.QandATableAdapter qandATableAdapter;
-        private DatabaseDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button explButton;
+        private System.Windows.Forms.Button prevButton;
+        private System.Windows.Forms.Button validButton;
     }
 }

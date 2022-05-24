@@ -12,7 +12,6 @@ namespace SpaceGame
     {
         private int idQuestion;
         private string question, expl;
-        private List<Answer> lstans;
 
         public Question(int _idQuestion)
         {
@@ -25,16 +24,6 @@ namespace SpaceGame
             
             this.question = Convert.ToString(dataView[0]["Question"]);
 
-            var answers = new AnswersTableAdapter();
-            dataTable = answers.GetData();
-            dataView = dataTable.DefaultView;
-            dataView.RowFilter = String.Format("IdQuestion = {0}", _idQuestion);
-
-            lstans = new List<Answer>();
-            foreach (DataRowView drView in dataView)
-            {
-                lstans.Add(new Answer(Convert.ToInt32(drView["IdAnswer"])));
-            }
         }
 
         public Question(string _question, string _expl)
@@ -55,20 +44,8 @@ namespace SpaceGame
         public string Quest
         {
             get { return question; }
-            set
-            {
-                this.question = value;
-                QuestionsTableAdapter questionTableAdapter = new QuestionsTableAdapter();
-                SpaceGame.DatabaseDataSet.QuestionsDataTable data = questionTableAdapter.GetData();
-                data.Rows.Find(this.idQuestion)["Question"] = value;
-                questionTableAdapter.Update(data);
-            }
+            set{ this.question = value;}
         }
 
-        public List<Answer> LastAns
-        {
-            get { return this.lstans; }
-            set { this.lstans = value; }
-        }
     }
 }
