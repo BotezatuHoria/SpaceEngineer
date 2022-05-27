@@ -30,7 +30,6 @@ namespace SpaceGame
         private void InitializeComponent()
         {
             this.startButton = new System.Windows.Forms.Button();
-            this.optionsButtons = new System.Windows.Forms.Button();
             this.statsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -39,7 +38,7 @@ namespace SpaceGame
             this.startButton.BackColor = System.Drawing.Color.Gold;
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.startButton.Location = new System.Drawing.Point(153, 104);
+            this.startButton.Location = new System.Drawing.Point(153, 114);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(283, 48);
             this.startButton.TabIndex = 0;
@@ -47,24 +46,12 @@ namespace SpaceGame
             this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // optionsButtons
-            // 
-            this.optionsButtons.BackColor = System.Drawing.Color.Gold;
-            this.optionsButtons.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.optionsButtons.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.optionsButtons.Location = new System.Drawing.Point(153, 200);
-            this.optionsButtons.Name = "optionsButtons";
-            this.optionsButtons.Size = new System.Drawing.Size(283, 48);
-            this.optionsButtons.TabIndex = 1;
-            this.optionsButtons.Text = "Optiuni";
-            this.optionsButtons.UseVisualStyleBackColor = false;
-            // 
             // statsButton
             // 
             this.statsButton.BackColor = System.Drawing.Color.Gold;
             this.statsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.statsButton.Location = new System.Drawing.Point(153, 292);
+            this.statsButton.Location = new System.Drawing.Point(153, 242);
             this.statsButton.Name = "statsButton";
             this.statsButton.Size = new System.Drawing.Size(283, 48);
             this.statsButton.TabIndex = 2;
@@ -78,7 +65,6 @@ namespace SpaceGame
             this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
             this.ClientSize = new System.Drawing.Size(588, 450);
             this.Controls.Add(this.statsButton);
-            this.Controls.Add(this.optionsButtons);
             this.Controls.Add(this.startButton);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -93,7 +79,6 @@ namespace SpaceGame
         #endregion
 
         private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button optionsButtons;
         private System.Windows.Forms.Button statsButton;
     }
 }

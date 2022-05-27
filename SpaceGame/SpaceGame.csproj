@@ -76,6 +76,12 @@
     <Compile Include="Explain.Designer.cs">
       <DependentUpon>Explain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intro.Designer.cs">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intro.resx">
+      <DependentUpon>Intro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -171,11 +180,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\magel2.gif" />
+    <None Include="Resources\magel.gif" />
+    <None Include="Resources\back.png" />
     <None Include="Resources\fundal1.png" />
     <None Include="Resources\logo.png" />
     <None Include="Resources\map.png" />
     <None Include="Resources\rocket1.png" />
-    <None Include="Resources\WhatsApp Image 2022-05-13 at 6.58.57 PM.jpeg" />
     <None Include="Resources\door5.png" />
     <None Include="Resources\door4.png" />
     <None Include="Resources\background1.png" />

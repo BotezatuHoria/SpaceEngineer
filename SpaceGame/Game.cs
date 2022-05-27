@@ -44,18 +44,22 @@ namespace SpaceGame
         {
             if (e.KeyCode == Keys.W)
             {
+                character.Image = SpaceGame.Properties.Resources.back;
                 upTimer.Enabled = true;
             }
             if (e.KeyCode == Keys.S)
             {
+                character.Image = SpaceGame.Properties.Resources.frontPosition;
                 downTimer.Enabled = true;
             }
             if (e.KeyCode == Keys.A)
             {
+                character.Image = SpaceGame.Properties.Resources.magel;
                 leftTimer.Enabled = true;
             }
             if (e.KeyCode == Keys.D)
             {
+                character.Image = SpaceGame.Properties.Resources.magel2;
                 rightTimer.Enabled = true;
             }
             e.SuppressKeyPress = true;
@@ -74,12 +78,15 @@ namespace SpaceGame
             }
             if (e.KeyCode == Keys.A)
             {
+                character.Image = SpaceGame.Properties.Resources.frontPosition;
                 leftTimer.Enabled = false;
             }
             if (e.KeyCode == Keys.D)
             {
+                character.Image = SpaceGame.Properties.Resources.frontPosition;
                 rightTimer.Enabled = false;
             }
+            
         }
 
         private void upTimer_Tick(object sender, EventArgs e)
@@ -106,6 +113,7 @@ namespace SpaceGame
                     controlButton.Enabled = true;
                 if (Interaction(character, rocket) == "Rocket")
                     controlButton.Enabled = true;
+                
             }
         }
 
@@ -169,7 +177,6 @@ namespace SpaceGame
             {
                 newX = character.Location.X - pxlMoveX;
                 character.Location = new Point(newX, character.Location.Y);
-                //character.Image = global::SpaceGame.Properties.Resources.try100000;
                 if (Interaction(character, upRoomEntrance) == "Door")
                     controlButton.Enabled = true;
                 if (Interaction(character, downRoomEntrance) == "Door")
@@ -401,5 +408,6 @@ namespace SpaceGame
             }
                 
         }
+
     }
 }

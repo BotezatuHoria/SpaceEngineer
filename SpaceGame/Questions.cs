@@ -101,23 +101,7 @@ namespace SpaceGame
         {
             
             explButton.Visible = false;
-            /*if (room == "math")
-            {
-                MessageBox.Show("mate");
-            }
-            if (room == "phy")
-            {
-                MessageBox.Show("phy");
-            }
-            if (room == "chem")
-            {
-                MessageBox.Show("chem");
-            }
-            if (room == "prog")
-            {
-                MessageBox.Show("prog");
-            }*/
-            //questionIndex = randomIndex();
+          
             if (pace <= 5)
             {
                 pace++;
