@@ -28,7 +28,7 @@ namespace SpaceGame
             else
             {
                 this.Hide();
-                MessageBox.Show("User found, email = , password = ", "Info",  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Utilizator gasit", "Logare efectuata cu succes",  MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //new Game().ShowDialog();
                 //new Questions().ShowDialog();
                 new MainScreen(rsp).ShowDialog();

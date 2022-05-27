@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,12 @@ namespace SpaceGame
         Random rndm = new Random();
         int score = 0;
         int questionIndex = 0;
+        string room = null;
+        int pace = 1;
 
-        public Questions()
-        { 
+        public Questions(string _room)
+        {
+            room = _room;
             InitializeComponent();
         }
 
@@ -44,6 +48,7 @@ namespace SpaceGame
         private void Questions_Load(object sender, EventArgs e)
         {
             qa = QandA.LoadQandAFromDatabase();
+            questionIndex = randomIndex();
             LoadQuestion(questionIndex);
             ///MessageBox.Show(qa[0].Answers[2].Ans.ToString());
         }
@@ -94,16 +99,36 @@ namespace SpaceGame
 
         private void NextQandA()
         {
+            
             explButton.Visible = false;
-            if (questionIndex + 1 < qa.Count)
+            /*if (room == "math")
             {
-                questionIndex++;
+                MessageBox.Show("mate");
+            }
+            if (room == "phy")
+            {
+                MessageBox.Show("phy");
+            }
+            if (room == "chem")
+            {
+                MessageBox.Show("chem");
+            }
+            if (room == "prog")
+            {
+                MessageBox.Show("prog");
+            }*/
+            //questionIndex = randomIndex();
+            if (pace <= 5)
+            {
+                pace++;
+                questionIndex = randomIndex();
                 LoadQuestion(questionIndex);
             }
             else
             {
                 this.Close();
             }
+            
         }
 
         private void validButton_Click(object sender, EventArgs e)
@@ -115,7 +140,6 @@ namespace SpaceGame
             else
             {
                 score++;
-                //MessageBox.Show(score.ToString());
                 NextQandA();
             }
             
@@ -123,28 +147,63 @@ namespace SpaceGame
 
         private void Questions_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show(score.ToString());
+            
         }
 
-        /*public int randomIndex(Obj x)
+        public int randomIndex()
         {
-            int y = rndm.Next(x.a, x.b);
-            while (askedIndx[y].Equals(true)
+            int a = 0, b = 0;
+            if (room == "math")
             {
-                y = rndm.Next(x.a, x.b);
+                a = 0;
+                b = 5;
             }
-            if (askedIndx[y].Equals(false)
+            if (room == "phy")
+            {
+                a = 5;
+                b = 10;
+            }
+            if (room == "chem")
+            {
+                a = 10;
+                b = 15;
+            }
+            if (room == "prog")
+            {
+                a = 15;
+                b = 20;
+            }
+            int y = rndm.Next(a, b);
+            /*while (askedIndx[y].Equals(true))
+            {
+                y = rndm.Next(a, b);
+            }
+            if (askedIndx[y].Equals(false))
             {
                 askedIndx[y] = true;
             }
-            
+            bool ok = false;
+            for (int i = 0; i <= askedIndx.Count() - 1; ++i)
+                if (askedIndx[i] == false)
+                    ok = true;
+            if (ok == false)
+                return -1;*/
+
             return y;
-        }*/
+        }
 
         public int Score
         {
             get { return score; }
             set { score = value; }
+        }
+
+        private void Questions_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            using (StreamWriter writetext = new StreamWriter("score.txt"))
+            {
+                writetext.WriteLine(score.ToString());
+            }
         }
     }
 }

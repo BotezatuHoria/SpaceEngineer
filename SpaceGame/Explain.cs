@@ -21,7 +21,7 @@ namespace SpaceGame
 
         private void Explain_Load(object sender, EventArgs e)
         {
-            label1.Text = Convert.ToString(qa.Explanation);
+            explainLabel.Text = Convert.ToString(qa.Explanation);
         }
     }
 }

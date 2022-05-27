@@ -88,6 +88,11 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QandA.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Questions.cs">
@@ -114,6 +119,9 @@
     <EmbeddedResource Include="Explain.resx">
       <DependentUpon>Explain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,13 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Questions.resx">
       <DependentUpon>Questions.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +171,19 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\fundal1.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\rocket1.png" />
+    <None Include="Resources\WhatsApp Image 2022-05-13 at 6.58.57 PM.jpeg" />
+    <None Include="Resources\door5.png" />
+    <None Include="Resources\door4.png" />
+    <None Include="Resources\background1.png" />
+    <None Include="Resources\door3.png" />
+    <None Include="Resources\door2.png" />
+    <None Include="Resources\background.png" />
+    <None Include="Resources\try100000.gif" />
+    <None Include="Resources\frontPosition.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
