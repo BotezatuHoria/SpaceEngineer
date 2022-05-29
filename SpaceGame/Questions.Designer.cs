@@ -29,6 +29,7 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Questions));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.nextButton = new System.Windows.Forms.Button();
@@ -45,7 +46,8 @@ namespace SpaceGame
             this.textBox1.Location = new System.Drawing.Point(34, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(863, 67);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(863, 76);
             this.textBox1.TabIndex = 0;
             // 
             // panel1
@@ -120,6 +122,7 @@ namespace SpaceGame
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Questions";

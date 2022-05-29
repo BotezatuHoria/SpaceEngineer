@@ -29,6 +29,7 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.fNameBox = new System.Windows.Forms.TextBox();
             this.sNameBox = new System.Windows.Forms.TextBox();
             this.emailBox = new System.Windows.Forms.TextBox();
@@ -157,6 +158,7 @@ namespace SpaceGame
             this.Controls.Add(this.emailBox);
             this.Controls.Add(this.sNameBox);
             this.Controls.Add(this.fNameBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Register";

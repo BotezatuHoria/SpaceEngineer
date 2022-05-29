@@ -29,6 +29,7 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Explain));
             this.explainLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@ namespace SpaceGame
             this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
             this.ClientSize = new System.Drawing.Size(597, 450);
             this.Controls.Add(this.explainLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Explain";

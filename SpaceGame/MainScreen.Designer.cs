@@ -29,8 +29,10 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.startButton = new System.Windows.Forms.Button();
             this.statsButton = new System.Windows.Forms.Button();
+            this.storyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startButton
@@ -51,12 +53,26 @@ namespace SpaceGame
             this.statsButton.BackColor = System.Drawing.Color.Gold;
             this.statsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.statsButton.Location = new System.Drawing.Point(153, 242);
+            this.statsButton.Location = new System.Drawing.Point(153, 260);
             this.statsButton.Name = "statsButton";
             this.statsButton.Size = new System.Drawing.Size(283, 48);
             this.statsButton.TabIndex = 2;
-            this.statsButton.Text = "Statistici";
+            this.statsButton.Text = "Highscore";
             this.statsButton.UseVisualStyleBackColor = false;
+            this.statsButton.Click += new System.EventHandler(this.statsButton_Click);
+            // 
+            // storyButton
+            // 
+            this.storyButton.BackColor = System.Drawing.Color.Gold;
+            this.storyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.storyButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.storyButton.Location = new System.Drawing.Point(153, 189);
+            this.storyButton.Name = "storyButton";
+            this.storyButton.Size = new System.Drawing.Size(283, 48);
+            this.storyButton.TabIndex = 3;
+            this.storyButton.Text = "Poveste";
+            this.storyButton.UseVisualStyleBackColor = false;
+            this.storyButton.Click += new System.EventHandler(this.storyButton_Click);
             // 
             // MainScreen
             // 
@@ -64,8 +80,10 @@ namespace SpaceGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
             this.ClientSize = new System.Drawing.Size(588, 450);
+            this.Controls.Add(this.storyButton);
             this.Controls.Add(this.statsButton);
             this.Controls.Add(this.startButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainScreen";
@@ -80,5 +98,6 @@ namespace SpaceGame
 
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button statsButton;
+        private System.Windows.Forms.Button storyButton;
     }
 }

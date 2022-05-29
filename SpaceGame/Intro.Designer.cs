@@ -29,36 +29,39 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Intro));
+            this.storyLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // storyLabel
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(28, 29);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(533, 375);
-            this.textBox1.TabIndex = 1;
+            this.storyLabel.BackColor = System.Drawing.Color.Transparent;
+            this.storyLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.storyLabel.ForeColor = System.Drawing.Color.White;
+            this.storyLabel.Location = new System.Drawing.Point(56, 34);
+            this.storyLabel.Name = "storyLabel";
+            this.storyLabel.Size = new System.Drawing.Size(471, 543);
+            this.storyLabel.TabIndex = 3;
+            this.storyLabel.Text = "label1";
+            this.storyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Intro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
-            this.ClientSize = new System.Drawing.Size(595, 450);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(595, 677);
+            this.Controls.Add(this.storyLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Intro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intro";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Intro_FormClosed);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label storyLabel;
     }
 }

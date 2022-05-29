@@ -25,12 +25,22 @@ namespace SpaceGame
         private void startButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Intro().ShowDialog();
+            new Game().ShowDialog();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
             //LoadQandA();
+        }
+
+        private void statsButton_Click(object sender, EventArgs e)
+        {
+            new HighScore().ShowDialog();
+        }
+
+        private void storyButton_Click(object sender, EventArgs e)
+        {
+            new Intro().ShowDialog();
         }
     }
 }

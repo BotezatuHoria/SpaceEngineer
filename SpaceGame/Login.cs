@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SpaceGame
 {
@@ -31,6 +32,10 @@ namespace SpaceGame
                 MessageBox.Show("Utilizator gasit", "Logare efectuata cu succes",  MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //new Game().ShowDialog();
                 //new Questions().ShowDialog();
+                using (StreamWriter writetext = new StreamWriter("user.txt"))
+                {
+                    writetext.WriteLine(rsp.IdUser.ToString());
+                }
                 new MainScreen(rsp).ShowDialog();
             }
         }

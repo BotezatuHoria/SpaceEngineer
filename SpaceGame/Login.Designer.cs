@@ -29,6 +29,7 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.loginButton = new System.Windows.Forms.Button();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
@@ -134,6 +135,7 @@ namespace SpaceGame
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.loginLogo);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SpaceGame
 {
@@ -21,8 +22,12 @@ namespace SpaceGame
         {
             if (Users.ReturnUserByCredentials(emailBox.Text, null) == null)
             {
-                new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, passwordBox.Text);
+                Users x = new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, passwordBox.Text);
                 MessageBox.Show("Account created");
+                using (StreamWriter writetext = new StreamWriter(x.IdUser + ".txt"))
+                {
+                    writetext.Write("0");
+                }
 
             }
         }

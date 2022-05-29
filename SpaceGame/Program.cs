@@ -20,6 +20,7 @@ namespace SpaceGame
             ///Application.Run(new Questions());
             //Application.Run(new Game());
             //Application.Run(new Intro());
+            //Application.Run(new Ending());
         }
     }
 }
