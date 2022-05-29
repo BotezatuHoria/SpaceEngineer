@@ -22,8 +22,18 @@ namespace SpaceGame
         {
             if (Users.ReturnUserByCredentials(emailBox.Text, null) == null)
             {
+                foreach (Control ctrl in this.Controls)
+                    if (ctrl is TextBox)
+                    {
+                        var box = (TextBox)ctrl;
+                        if (String.IsNullOrWhiteSpace(box.Text))
+                        {
+                            MessageBox.Show("Completati toate campurile", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
                 Users x = new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, passwordBox.Text);
-                MessageBox.Show("Account created");
+                MessageBox.Show("Cont creat cu success", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 using (StreamWriter writetext = new StreamWriter(x.IdUser + ".txt"))
                 {
                     writetext.Write("0");

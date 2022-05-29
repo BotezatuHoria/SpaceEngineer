@@ -53,6 +53,8 @@ namespace SpaceGame
             this.ClientSize = new System.Drawing.Size(595, 677);
             this.Controls.Add(this.storyLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Intro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Intro";
