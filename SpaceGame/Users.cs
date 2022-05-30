@@ -15,7 +15,7 @@ namespace SpaceGame
 
         public Users(int _idUser)
         {
-            TableTableAdapter usersTableAdapter = new TableTableAdapter();
+            UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
             DataTable users = usersTableAdapter.GetData();
             DataView user = users.DefaultView;
             user.RowFilter = String.Format("IdUser = {0}", _idUser);
@@ -33,7 +33,7 @@ namespace SpaceGame
             }
         }
 
-        public Users (string _fName, string _sName, string _email, string _password)
+        public Users(string _fName, string _sName, string _email, string _password)
         {
             if (ReturnUserByCredentials(_email, null) == null)
             {
@@ -41,7 +41,7 @@ namespace SpaceGame
                 sName = _sName;
                 email = _email;
                 password = _password;
-                TableTableAdapter usersTableAdapter = new TableTableAdapter();
+                UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
                 usersTableAdapter.Insert(_email, _fName, _sName, _password);
                 idUser = Convert.ToInt32(usersTableAdapter.GetData().Last()["IdUser"]);
 
@@ -51,7 +51,7 @@ namespace SpaceGame
         public static List<Users> ReturnUsersFromDb()
         {
             List<Users> userList = new List<Users>();
-            TableTableAdapter usersTableAdapter = new TableTableAdapter();
+            UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
             DataTable usersDb = usersTableAdapter.GetData();
 
             foreach (DataRow drow in usersDb.Rows)
@@ -62,7 +62,7 @@ namespace SpaceGame
 
         public static Users ReturnUserByCredentials(string email, string password)
         {
-            TableTableAdapter usersTableAdapter = new TableTableAdapter();
+            UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
             DataTable users = usersTableAdapter.GetData();
             DataView user = users.DefaultView;
 

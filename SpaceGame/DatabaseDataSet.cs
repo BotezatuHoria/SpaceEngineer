@@ -14,9 +14,11 @@
     }
 }
 
-namespace SpaceGame.DatabaseDataSetTableAdapters {
-    
-    
-    public partial class TableTableAdapter {
+namespace SpaceGame.DatabaseDataSetTableAdapters
+{
+
+
+    public partial class UsersTableAdapter
+    {
     }
 }

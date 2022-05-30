@@ -33,7 +33,7 @@ namespace SpaceGame
                         }
                     }
                 Users x = new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, passwordBox.Text);
-                MessageBox.Show("Cont creat cu success", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cont creat cu succes.", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 using (StreamWriter writetext = new StreamWriter(x.IdUser + ".txt"))
                 {
                     writetext.Write("0");

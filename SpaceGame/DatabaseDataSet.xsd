@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DatabaseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SpaceGame.Properties.Settings.GlobalReference.Default.DatabaseConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TableTableAdapter" GeneratorDataComponentClassName="TableTableAdapter" Name="Table" UserDataComponentName="TableTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsersTableAdapter" GeneratorDataComponentClassName="UsersTableAdapter" Name="Users" UserDataComponentName="UsersTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="DatabaseConnectionString (Settings)" DbObjectName="dbo.[Table]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -203,7 +203,7 @@ SELECT IdQuestion, Question, Explanation FROM Questions WHERE (IdQuestion = @IdQ
   <xs:element name="DatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DatabaseDataSet" msprop:Generator_UserDSName="DatabaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_TablePropName="Table" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowClassName="TableRow" msprop:Generator_UserTableName="Table" msprop:Generator_RowEvArgName="TableRowChangeEvent">
+        <xs:element name="Users" msprop:Generator_TableClassName="UsersDataTable" msprop:Generator_TableVarName="tableUsers" msprop:Generator_TablePropName="Users" msprop:Generator_RowDeletingName="UsersRowDeleting" msprop:Generator_RowChangingName="UsersRowChanging" msprop:Generator_RowEvHandlerName="UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="UsersRowDeleted" msprop:Generator_UserTableName="Users" msprop:Generator_RowChangedName="UsersRowChanged" msprop:Generator_RowEvArgName="UsersRowChangeEvent" msprop:Generator_RowClassName="UsersRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdUser" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdUser" msprop:Generator_ColumnPropNameInRow="IdUser" msprop:Generator_ColumnPropNameInTable="IdUserColumn" msprop:Generator_UserColumnName="IdUser" type="xs:int" />
@@ -238,7 +238,7 @@ SELECT IdQuestion, Question, Explanation FROM Questions WHERE (IdQuestion = @IdQ
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Answers" msprop:Generator_TableClassName="AnswersDataTable" msprop:Generator_TableVarName="tableAnswers" msprop:Generator_TablePropName="Answers" msprop:Generator_RowDeletingName="AnswersRowDeleting" msprop:Generator_RowChangingName="AnswersRowChanging" msprop:Generator_RowEvHandlerName="AnswersRowChangeEventHandler" msprop:Generator_RowDeletedName="AnswersRowDeleted" msprop:Generator_UserTableName="Answers" msprop:Generator_RowChangedName="AnswersRowChanged" msprop:Generator_RowEvArgName="AnswersRowChangeEvent" msprop:Generator_RowClassName="AnswersRow">
+        <xs:element name="Answers" msprop:Generator_TableClassName="AnswersDataTable" msprop:Generator_TableVarName="tableAnswers" msprop:Generator_RowChangedName="AnswersRowChanged" msprop:Generator_TablePropName="Answers" msprop:Generator_RowDeletingName="AnswersRowDeleting" msprop:Generator_RowChangingName="AnswersRowChanging" msprop:Generator_RowEvHandlerName="AnswersRowChangeEventHandler" msprop:Generator_RowDeletedName="AnswersRowDeleted" msprop:Generator_RowClassName="AnswersRow" msprop:Generator_UserTableName="Answers" msprop:Generator_RowEvArgName="AnswersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdAnswer" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdAnswer" msprop:Generator_ColumnPropNameInRow="IdAnswer" msprop:Generator_ColumnPropNameInTable="IdAnswerColumn" msprop:Generator_UserColumnName="IdAnswer" type="xs:int" />
@@ -254,7 +254,7 @@ SELECT IdQuestion, Question, Explanation FROM Questions WHERE (IdQuestion = @IdQ
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Questions" msprop:Generator_TableClassName="QuestionsDataTable" msprop:Generator_TableVarName="tableQuestions" msprop:Generator_TablePropName="Questions" msprop:Generator_RowDeletingName="QuestionsRowDeleting" msprop:Generator_RowChangingName="QuestionsRowChanging" msprop:Generator_RowEvHandlerName="QuestionsRowChangeEventHandler" msprop:Generator_RowDeletedName="QuestionsRowDeleted" msprop:Generator_UserTableName="Questions" msprop:Generator_RowChangedName="QuestionsRowChanged" msprop:Generator_RowEvArgName="QuestionsRowChangeEvent" msprop:Generator_RowClassName="QuestionsRow">
+        <xs:element name="Questions" msprop:Generator_TableClassName="QuestionsDataTable" msprop:Generator_TableVarName="tableQuestions" msprop:Generator_RowChangedName="QuestionsRowChanged" msprop:Generator_TablePropName="Questions" msprop:Generator_RowDeletingName="QuestionsRowDeleting" msprop:Generator_RowChangingName="QuestionsRowChanging" msprop:Generator_RowEvHandlerName="QuestionsRowChangeEventHandler" msprop:Generator_RowDeletedName="QuestionsRowDeleted" msprop:Generator_RowClassName="QuestionsRow" msprop:Generator_UserTableName="Questions" msprop:Generator_RowEvArgName="QuestionsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdQuestion" msprop:Generator_ColumnVarNameInTable="columnIdQuestion" msprop:Generator_ColumnPropNameInRow="IdQuestion" msprop:Generator_ColumnPropNameInTable="IdQuestionColumn" msprop:Generator_UserColumnName="IdQuestion" type="xs:int" />
@@ -275,7 +275,7 @@ SELECT IdQuestion, Question, Explanation FROM Questions WHERE (IdQuestion = @IdQ
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="QandA" msprop:Generator_TableClassName="QandADataTable" msprop:Generator_TableVarName="tableQandA" msprop:Generator_TablePropName="QandA" msprop:Generator_RowDeletingName="QandARowDeleting" msprop:Generator_RowChangingName="QandARowChanging" msprop:Generator_RowEvHandlerName="QandARowChangeEventHandler" msprop:Generator_RowDeletedName="QandARowDeleted" msprop:Generator_UserTableName="QandA" msprop:Generator_RowChangedName="QandARowChanged" msprop:Generator_RowEvArgName="QandARowChangeEvent" msprop:Generator_RowClassName="QandARow">
+        <xs:element name="QandA" msprop:Generator_TableClassName="QandADataTable" msprop:Generator_TableVarName="tableQandA" msprop:Generator_RowChangedName="QandARowChanged" msprop:Generator_TablePropName="QandA" msprop:Generator_RowDeletingName="QandARowDeleting" msprop:Generator_RowChangingName="QandARowChanging" msprop:Generator_RowEvHandlerName="QandARowChangeEventHandler" msprop:Generator_RowDeletedName="QandARowDeleted" msprop:Generator_RowClassName="QandARow" msprop:Generator_UserTableName="QandA" msprop:Generator_RowEvArgName="QandARowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdQuestion" msprop:Generator_ColumnVarNameInTable="columnIdQuestion" msprop:Generator_ColumnPropNameInRow="IdQuestion" msprop:Generator_ColumnPropNameInTable="IdQuestionColumn" msprop:Generator_UserColumnName="IdQuestion" type="xs:int" />
@@ -309,7 +309,7 @@ SELECT IdQuestion, Question, Explanation FROM Questions WHERE (IdQuestion = @IdQ
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:Table" />
+      <xs:selector xpath=".//mstns:Users" />
       <xs:field xpath="mstns:IdUser" />
     </xs:unique>
     <xs:unique name="Answers_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
@@ -328,8 +328,8 @@ SELECT IdQuestion, Question, Explanation FROM Questions WHERE (IdQuestion = @IdQ
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Answers_ToTable" msdata:parent="Questions" msdata:child="Answers" msdata:parentkey="IdQuestion" msdata:childkey="IdQuestion" msprop:Generator_UserChildTable="Answers" msprop:Generator_ChildPropName="GetAnswersRows" msprop:Generator_UserRelationName="FK_Answers_ToTable" msprop:Generator_RelationVarName="relationFK_Answers_ToTable" msprop:Generator_UserParentTable="Questions" msprop:Generator_ParentPropName="QuestionsRow" />
-      <msdata:Relationship name="FK_Answers_ToTable1" msdata:parent="Questions" msdata:child="QandA" msdata:parentkey="IdQuestion" msdata:childkey="IdQuestion" msprop:Generator_UserChildTable="QandA" msprop:Generator_ChildPropName="GetQandARows" msprop:Generator_UserRelationName="FK_Answers_ToTable1" msprop:Generator_ParentPropName="QuestionsRow" msprop:Generator_RelationVarName="relationFK_Answers_ToTable1" msprop:Generator_UserParentTable="Questions" />
+      <msdata:Relationship name="FK_Answers_ToTable" msdata:parent="Questions" msdata:child="Answers" msdata:parentkey="IdQuestion" msdata:childkey="IdQuestion" msprop:Generator_UserChildTable="Answers" msprop:Generator_ChildPropName="GetAnswersRows" msprop:Generator_UserRelationName="FK_Answers_ToTable" msprop:Generator_ParentPropName="QuestionsRow" msprop:Generator_RelationVarName="relationFK_Answers_ToTable" msprop:Generator_UserParentTable="Questions" />
+      <msdata:Relationship name="FK_Answers_ToTable1" msdata:parent="Questions" msdata:child="QandA" msdata:parentkey="IdQuestion" msdata:childkey="IdQuestion" msprop:Generator_UserChildTable="QandA" msprop:Generator_ChildPropName="GetQandARows" msprop:Generator_UserRelationName="FK_Answers_ToTable1" msprop:Generator_RelationVarName="relationFK_Answers_ToTable1" msprop:Generator_UserParentTable="Questions" msprop:Generator_ParentPropName="QuestionsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
