@@ -14,12 +14,12 @@ namespace SpaceGame
     public partial class Questions : Form
     {
         List<QandA> qa;
-        List<bool> askedIndx;
         Random rndm = new Random();
         int score = 0;
         int questionIndex = 0;
         string room = null;
         int pace = 1;
+        const int maxpace = 5;
 
         public Questions(string _room)
         {
@@ -104,7 +104,7 @@ namespace SpaceGame
             
             explButton.Visible = false;
           
-            if (pace <= 5)
+            if (pace <= maxpace)
             {
                 pace++;
                 questionIndex = randomIndex();
