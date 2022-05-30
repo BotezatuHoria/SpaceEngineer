@@ -7,40 +7,40 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="15" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Table" ZOrder="6" X="997" Y="192" Height="172" Width="176" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:Answers" ZOrder="1" X="86" Y="175" Height="172" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:Questions" ZOrder="3" X="288" Y="418" Height="115" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:QandA" ZOrder="2" X="556" Y="181" Height="229" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="178" />
+    <Shape ID="DesignTable:Answers" ZOrder="5" X="142" Y="178" Height="153" Width="193" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
+    <Shape ID="DesignTable:Questions" ZOrder="4" X="301" Y="405" Height="134" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:QandA" ZOrder="2" X="616" Y="190" Height="210" Width="210" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_Answers_ToTable" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Answers_ToTable" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>288</X>
-          <Y>435</Y>
+          <X>301</X>
+          <Y>422</Y>
         </Point>
         <Point>
-          <X>227</X>
-          <Y>435</Y>
+          <X>293</X>
+          <Y>422</Y>
         </Point>
         <Point>
-          <X>227</X>
-          <Y>347</Y>
+          <X>293</X>
+          <Y>331</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Answers_ToTable1" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Answers_ToTable1" ZOrder="1" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>446</X>
-          <Y>459</Y>
+          <X>486</X>
+          <Y>405</Y>
         </Point>
         <Point>
-          <X>595</X>
-          <Y>459</Y>
+          <X>486</X>
+          <Y>269</Y>
         </Point>
         <Point>
-          <X>595</X>
-          <Y>410</Y>
+          <X>616</X>
+          <Y>269</Y>
         </Point>
       </RoutePoints>
     </Connector>

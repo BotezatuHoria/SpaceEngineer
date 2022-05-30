@@ -49,7 +49,7 @@ namespace SpaceGame
             this.fNameBox.Location = new System.Drawing.Point(217, 118);
             this.fNameBox.Name = "fNameBox";
             this.fNameBox.Size = new System.Drawing.Size(263, 30);
-            this.fNameBox.TabIndex = 0;
+            this.fNameBox.TabIndex = 2;
             // 
             // sNameBox
             // 
@@ -69,7 +69,7 @@ namespace SpaceGame
             this.emailBox.Location = new System.Drawing.Point(217, 169);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(263, 30);
-            this.emailBox.TabIndex = 2;
+            this.emailBox.TabIndex = 3;
             // 
             // passwordBox
             // 
@@ -80,7 +80,7 @@ namespace SpaceGame
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(263, 30);
-            this.passwordBox.TabIndex = 3;
+            this.passwordBox.TabIndex = 4;
             // 
             // registerButton
             // 
@@ -90,7 +90,7 @@ namespace SpaceGame
             this.registerButton.Location = new System.Drawing.Point(116, 318);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(364, 44);
-            this.registerButton.TabIndex = 4;
+            this.registerButton.TabIndex = 5;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);

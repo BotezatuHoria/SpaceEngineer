@@ -38,7 +38,7 @@ namespace SpaceGame
                 {
                     writetext.Write("0");
                 }
-
+                this.Close();
             }
         }
     }

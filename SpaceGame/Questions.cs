@@ -37,7 +37,9 @@ namespace SpaceGame
             foreach(Answer a in qa[indx].Answers)
             {
                 var answer = new RadioButton();
-                answer.Location = new Point(120 , 30 + i * 50);
+                answer.AutoSize = false;
+                answer.Width = 770;
+                answer.Location = new Point(100 , 30 + i * 55);
                 answer.Text = a.Ans;
                 answer.Tag = a.Valid;
                 panel1.Controls.Add(answer);
@@ -139,23 +141,23 @@ namespace SpaceGame
             int a = 0, b = 0;
             if (room == "math")
             {
-                a = 0;
-                b = 5;
+                a = 10;
+                b = 20;
             }
             if (room == "phy")
             {
-                a = 5;
-                b = 10;
+                a = 20;
+                b = 30;
             }
             if (room == "chem")
             {
-                a = 10;
-                b = 15;
+                a = 30;
+                b = 40;
             }
             if (room == "prog")
             {
-                a = 15;
-                b = 20;
+                a = 0;
+                b = 10;
             }
             int y = rndm.Next(a, b);
             /*while (askedIndx[y].Equals(true))

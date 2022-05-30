@@ -32,7 +32,7 @@ namespace SpaceGame
             this.expl = _expl;
 
             QuestionsTableAdapter question = new QuestionsTableAdapter();
-            question.Insert(this.question, this.expl);
+            //question.Insert(this.question, this.expl);
             this.idQuestion = Convert.ToInt32(question.GetData().Last()["IdQuestion"]);
         }
 

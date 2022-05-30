@@ -332,7 +332,7 @@ namespace SpaceGame
             // colBoxProg3
             // 
             this.colBoxProg3.Enabled = false;
-            this.colBoxProg3.Location = new System.Drawing.Point(711, 753);
+            this.colBoxProg3.Location = new System.Drawing.Point(711, 739);
             this.colBoxProg3.Name = "colBoxProg3";
             this.colBoxProg3.Size = new System.Drawing.Size(690, 50);
             this.colBoxProg3.TabIndex = 18;
@@ -375,7 +375,7 @@ namespace SpaceGame
             // colBoxPhy2
             // 
             this.colBoxPhy2.Enabled = false;
-            this.colBoxPhy2.Location = new System.Drawing.Point(585, 615);
+            this.colBoxPhy2.Location = new System.Drawing.Point(585, 595);
             this.colBoxPhy2.Name = "colBoxPhy2";
             this.colBoxPhy2.Size = new System.Drawing.Size(719, 23);
             this.colBoxPhy2.TabIndex = 22;
@@ -386,7 +386,7 @@ namespace SpaceGame
             // colBoxPhy3
             // 
             this.colBoxPhy3.Enabled = false;
-            this.colBoxPhy3.Location = new System.Drawing.Point(585, 390);
+            this.colBoxPhy3.Location = new System.Drawing.Point(585, 357);
             this.colBoxPhy3.Name = "colBoxPhy3";
             this.colBoxPhy3.Size = new System.Drawing.Size(719, 23);
             this.colBoxPhy3.TabIndex = 23;

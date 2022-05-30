@@ -69,7 +69,7 @@ namespace SpaceGame
             this.storyButton.Location = new System.Drawing.Point(153, 189);
             this.storyButton.Name = "storyButton";
             this.storyButton.Size = new System.Drawing.Size(283, 48);
-            this.storyButton.TabIndex = 3;
+            this.storyButton.TabIndex = 1;
             this.storyButton.Text = "Poveste";
             this.storyButton.UseVisualStyleBackColor = false;
             this.storyButton.Click += new System.EventHandler(this.storyButton_Click);
