@@ -11,7 +11,7 @@ namespace SpaceGame
     public class Question
     {
         private int idQuestion;
-        private string question, expl;
+        private string question, expl, subject;
 
         public Question(int _idQuestion)
         {
@@ -23,13 +23,16 @@ namespace SpaceGame
             dataView.RowFilter = String.Format("IdQuestion = {0}", _idQuestion);
             
             this.question = Convert.ToString(dataView[0]["Question"]);
+            this.expl = Convert.ToString(dataView[0]["Explanation"]);
+            this.subject = Convert.ToString(dataView[0]["Subject"]);
 
         }
 
-        public Question(string _question, string _expl)
+        public Question(string _question, string _expl, string _subject)
         {
             this.question = _question;
             this.expl = _expl;
+            this.subject = _subject;
 
             QuestionsTableAdapter question = new QuestionsTableAdapter();
             //question.Insert(this.question, this.expl);
@@ -47,5 +50,16 @@ namespace SpaceGame
             set{ this.question = value;}
         }
 
+        public string Explanation
+        {
+            get { return expl; }
+            set { this.expl = value; }
+        }
+
+        public string Subject
+        {
+            get { return subject; }
+            set { this.subject = value; }
+        }
     }
 }

@@ -408,6 +408,8 @@ namespace SpaceGame {
             
             private global::System.Data.DataColumn columnPassword;
             
+            private global::System.Data.DataColumn columnIsAdmin;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UsersDataTable() {
@@ -483,6 +485,14 @@ namespace SpaceGame {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn IsAdminColumn {
+                get {
+                    return this.columnIsAdmin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -518,14 +528,15 @@ namespace SpaceGame {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsersRow AddUsersRow(string Email, string FirstName, string SecondName, string Password) {
+            public UsersRow AddUsersRow(string Email, string FirstName, string SecondName, string Password, bool IsAdmin) {
                 UsersRow rowUsersRow = ((UsersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Email,
                         FirstName,
                         SecondName,
-                        Password};
+                        Password,
+                        IsAdmin};
                 rowUsersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUsersRow);
                 return rowUsersRow;
@@ -560,6 +571,7 @@ namespace SpaceGame {
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnSecondName = base.Columns["SecondName"];
                 this.columnPassword = base.Columns["Password"];
+                this.columnIsAdmin = base.Columns["IsAdmin"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -575,6 +587,8 @@ namespace SpaceGame {
                 base.Columns.Add(this.columnSecondName);
                 this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassword);
+                this.columnIsAdmin = new global::System.Data.DataColumn("IsAdmin", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIsAdmin);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdUser}, true));
                 this.columnIdUser.AutoIncrement = true;
@@ -1038,6 +1052,8 @@ namespace SpaceGame {
             
             private global::System.Data.DataColumn columnExplanation;
             
+            private global::System.Data.DataColumn columnSubject;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public QuestionsDataTable() {
@@ -1097,6 +1113,14 @@ namespace SpaceGame {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SubjectColumn {
+                get {
+                    return this.columnSubject;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1132,12 +1156,13 @@ namespace SpaceGame {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public QuestionsRow AddQuestionsRow(int IdQuestion, string Question, string Explanation) {
+            public QuestionsRow AddQuestionsRow(int IdQuestion, string Question, string Explanation, string Subject) {
                 QuestionsRow rowQuestionsRow = ((QuestionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IdQuestion,
                         Question,
-                        Explanation};
+                        Explanation,
+                        Subject};
                 rowQuestionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowQuestionsRow);
                 return rowQuestionsRow;
@@ -1170,6 +1195,7 @@ namespace SpaceGame {
                 this.columnIdQuestion = base.Columns["IdQuestion"];
                 this.columnQuestion = base.Columns["Question"];
                 this.columnExplanation = base.Columns["Explanation"];
+                this.columnSubject = base.Columns["Subject"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1181,6 +1207,8 @@ namespace SpaceGame {
                 base.Columns.Add(this.columnQuestion);
                 this.columnExplanation = new global::System.Data.DataColumn("Explanation", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExplanation);
+                this.columnSubject = new global::System.Data.DataColumn("Subject", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubject);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdQuestion}, true));
                 this.columnIdQuestion.AllowDBNull = false;
@@ -1188,6 +1216,7 @@ namespace SpaceGame {
                 this.columnQuestion.AllowDBNull = false;
                 this.columnQuestion.MaxLength = 2147483647;
                 this.columnExplanation.MaxLength = 2147483647;
+                this.columnSubject.MaxLength = 10;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1327,6 +1356,8 @@ namespace SpaceGame {
             
             private global::System.Data.DataColumn columnExplanation;
             
+            private global::System.Data.DataColumn columnSubject;
+            
             private global::System.Data.DataColumn columnIdAnswer;
             
             private global::System.Data.DataColumn columnAnswer;
@@ -1389,6 +1420,14 @@ namespace SpaceGame {
             public global::System.Data.DataColumn ExplanationColumn {
                 get {
                     return this.columnExplanation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SubjectColumn {
+                get {
+                    return this.columnSubject;
                 }
             }
             
@@ -1461,12 +1500,13 @@ namespace SpaceGame {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public QandARow AddQandARow(QuestionsRow parentQuestionsRowByFK_Answers_ToTable1, string Question, string Explanation, string Answer, int IdQuestion1, bool isValid) {
+            public QandARow AddQandARow(QuestionsRow parentQuestionsRowByFK_Answers_ToTable1, string Question, string Explanation, string Subject, string Answer, int IdQuestion1, bool isValid) {
                 QandARow rowQandARow = ((QandARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Question,
                         Explanation,
+                        Subject,
                         null,
                         Answer,
                         IdQuestion1,
@@ -1507,6 +1547,7 @@ namespace SpaceGame {
                 this.columnIdQuestion = base.Columns["IdQuestion"];
                 this.columnQuestion = base.Columns["Question"];
                 this.columnExplanation = base.Columns["Explanation"];
+                this.columnSubject = base.Columns["Subject"];
                 this.columnIdAnswer = base.Columns["IdAnswer"];
                 this.columnAnswer = base.Columns["Answer"];
                 this.columnIdQuestion1 = base.Columns["IdQuestion1"];
@@ -1522,6 +1563,8 @@ namespace SpaceGame {
                 base.Columns.Add(this.columnQuestion);
                 this.columnExplanation = new global::System.Data.DataColumn("Explanation", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnExplanation);
+                this.columnSubject = new global::System.Data.DataColumn("Subject", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSubject);
                 this.columnIdAnswer = new global::System.Data.DataColumn("IdAnswer", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdAnswer);
                 this.columnAnswer = new global::System.Data.DataColumn("Answer", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1537,6 +1580,7 @@ namespace SpaceGame {
                 this.columnQuestion.AllowDBNull = false;
                 this.columnQuestion.MaxLength = 2147483647;
                 this.columnExplanation.MaxLength = 2147483647;
+                this.columnSubject.MaxLength = 10;
                 this.columnIdAnswer.AutoIncrement = true;
                 this.columnIdAnswer.AutoIncrementSeed = -1;
                 this.columnIdAnswer.AutoIncrementStep = -1;
@@ -1737,6 +1781,34 @@ namespace SpaceGame {
                     this[this.tableUsers.PasswordColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAdmin {
+                get {
+                    try {
+                        return ((bool)(this[this.tableUsers.IsAdminColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'IsAdmin\' in table \'Users\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsers.IsAdminColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsIsAdminNull() {
+                return this.IsNull(this.tableUsers.IsAdminColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetIsAdminNull() {
+                this[this.tableUsers.IsAdminColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1914,6 +1986,22 @@ namespace SpaceGame {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Subject {
+                get {
+                    try {
+                        return ((string)(this[this.tableQuestions.SubjectColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Subject\' in table \'Questions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableQuestions.SubjectColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsExplanationNull() {
                 return this.IsNull(this.tableQuestions.ExplanationColumn);
             }
@@ -1922,6 +2010,18 @@ namespace SpaceGame {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetExplanationNull() {
                 this[this.tableQuestions.ExplanationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSubjectNull() {
+                return this.IsNull(this.tableQuestions.SubjectColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSubjectNull() {
+                this[this.tableQuestions.SubjectColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1996,6 +2096,22 @@ namespace SpaceGame {
                 }
                 set {
                     this[this.tableQandA.ExplanationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Subject {
+                get {
+                    try {
+                        return ((string)(this[this.tableQandA.SubjectColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Subject\' in table \'QandA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableQandA.SubjectColumn] = value;
                 }
             }
             
@@ -2079,6 +2195,18 @@ namespace SpaceGame {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetExplanationNull() {
                 this[this.tableQandA.ExplanationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSubjectNull() {
+                return this.IsNull(this.tableQandA.SubjectColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSubjectNull() {
+                this[this.tableQandA.SubjectColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2384,34 +2512,39 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("SecondName", "SecondName");
             tableMapping.ColumnMappings.Add("Password", "Password");
+            tableMapping.ColumnMappings.Add("IsAdmin", "IsAdmin");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Table] WHERE (([IdUser] = @Original_IdUser))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Table] WHERE (([IdUser] = @Original_IdUser) AND ((@IsNull_IsAd" +
+                "min = 1 AND [IsAdmin] IS NULL) OR ([IsAdmin] = @Original_IsAdmin)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdUser", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsAdmin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsAdmin", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsAdmin", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsAdmin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Table] ([Email], [FirstName], [SecondName], [Password]) VALUES" +
-                " (@Email, @FirstName, @SecondName, @Password);\r\nSELECT IdUser, Email, FirstName," +
-                " SecondName, Password FROM [Table] WHERE (IdUser = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Table] ([Email], [FirstName], [SecondName], [Password], [IsAdmin]) VALUES (@Email, @FirstName, @SecondName, @Password, @IsAdmin);
+SELECT IdUser, Email, FirstName, SecondName, Password, IsAdmin FROM [Table] WHERE (IdUser = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecondName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsAdmin", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsAdmin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Table] SET [Email] = @Email, [FirstName] = @FirstName, [SecondName]" +
-                " = @SecondName, [Password] = @Password WHERE (([IdUser] = @Original_IdUser));\r\nS" +
-                "ELECT IdUser, Email, FirstName, SecondName, Password FROM [Table] WHERE (IdUser " +
-                "= @IdUser)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table] SET [Email] = @Email, [FirstName] = @FirstName, [SecondName] = @SecondName, [Password] = @Password, [IsAdmin] = @IsAdmin WHERE (([IdUser] = @Original_IdUser) AND ((@IsNull_IsAdmin = 1 AND [IsAdmin] IS NULL) OR ([IsAdmin] = @Original_IsAdmin)));
+SELECT IdUser, Email, FirstName, SecondName, Password, IsAdmin FROM [Table] WHERE (IdUser = @IdUser)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FirstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FirstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SecondName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SecondName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsAdmin", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsAdmin", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdUser", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdUser", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IsAdmin", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsAdmin", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IsAdmin", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IsAdmin", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdUser", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdUser", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -2428,7 +2561,7 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdUser, Email, FirstName, SecondName, Password FROM dbo.[Table]";
+            this._commandCollection[0].CommandText = "SELECT IdUser, Email, FirstName, SecondName, Password, IsAdmin FROM dbo.[Table]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2489,8 +2622,16 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdUser) {
+        public virtual int Delete(int Original_IdUser, global::System.Nullable<bool> Original_IsAdmin) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdUser));
+            if ((Original_IsAdmin.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((bool)(Original_IsAdmin.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2511,7 +2652,7 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Email, string FirstName, string SecondName, string Password) {
+        public virtual int Insert(string Email, string FirstName, string SecondName, string Password, global::System.Nullable<bool> IsAdmin) {
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
@@ -2536,6 +2677,12 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Password));
             }
+            if ((IsAdmin.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(IsAdmin.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2556,7 +2703,7 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Email, string FirstName, string SecondName, string Password, int Original_IdUser, int IdUser) {
+        public virtual int Update(string Email, string FirstName, string SecondName, string Password, global::System.Nullable<bool> IsAdmin, int Original_IdUser, global::System.Nullable<bool> Original_IsAdmin, int IdUser) {
             if ((Email == null)) {
                 throw new global::System.ArgumentNullException("Email");
             }
@@ -2581,8 +2728,22 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Password));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_IdUser));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(IdUser));
+            if ((IsAdmin.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(IsAdmin.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_IdUser));
+            if ((Original_IsAdmin.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Original_IsAdmin.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(IdUser));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2603,8 +2764,8 @@ namespace SpaceGame.DatabaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Email, string FirstName, string SecondName, string Password, int Original_IdUser) {
-            return this.Update(Email, FirstName, SecondName, Password, Original_IdUser, Original_IdUser);
+        public virtual int Update(string Email, string FirstName, string SecondName, string Password, global::System.Nullable<bool> IsAdmin, int Original_IdUser, global::System.Nullable<bool> Original_IsAdmin) {
+            return this.Update(Email, FirstName, SecondName, Password, IsAdmin, Original_IdUser, Original_IsAdmin, Original_IdUser);
         }
     }
     
@@ -3125,32 +3286,38 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
             tableMapping.ColumnMappings.Add("IdQuestion", "IdQuestion");
             tableMapping.ColumnMappings.Add("Question", "Question");
             tableMapping.ColumnMappings.Add("Explanation", "Explanation");
+            tableMapping.ColumnMappings.Add("Subject", "Subject");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Questions] WHERE (([IdQuestion] = @Original_IdQuestion))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Questions] WHERE (([IdQuestion] = @Original_IdQuestion) AND ((" +
+                "@IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdQuestion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdQuestion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Subject", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subject", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Subject", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subject", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Questions] ([IdQuestion], [Question], [Explanation]) VALUES (@" +
-                "IdQuestion, @Question, @Explanation);\r\nSELECT IdQuestion, Question, Explanation " +
-                "FROM Questions WHERE (IdQuestion = @IdQuestion)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Questions] ([IdQuestion], [Question], [Explanation], [Subject]" +
+                ") VALUES (@IdQuestion, @Question, @Explanation, @Subject);\r\nSELECT IdQuestion, Q" +
+                "uestion, Explanation, Subject FROM Questions WHERE (IdQuestion = @IdQuestion)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdQuestion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdQuestion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Question", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Question", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Explanation", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Explanation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Subject", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subject", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Questions] SET [IdQuestion] = @IdQuestion, [Question] = @Question, " +
-                "[Explanation] = @Explanation WHERE (([IdQuestion] = @Original_IdQuestion));\r\nSEL" +
-                "ECT IdQuestion, Question, Explanation FROM Questions WHERE (IdQuestion = @IdQues" +
-                "tion)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Questions] SET [IdQuestion] = @IdQuestion, [Question] = @Question, [Explanation] = @Explanation, [Subject] = @Subject WHERE (([IdQuestion] = @Original_IdQuestion) AND ((@IsNull_Subject = 1 AND [Subject] IS NULL) OR ([Subject] = @Original_Subject)));
+SELECT IdQuestion, Question, Explanation, Subject FROM Questions WHERE (IdQuestion = @IdQuestion)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdQuestion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdQuestion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Question", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Question", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Explanation", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Explanation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Subject", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subject", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdQuestion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdQuestion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Subject", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subject", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Subject", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subject", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3166,7 +3333,7 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdQuestion, Question, Explanation FROM dbo.Questions";
+            this._commandCollection[0].CommandText = "SELECT IdQuestion, Question, Explanation, Subject FROM dbo.Questions";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3227,8 +3394,16 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdQuestion) {
+        public virtual int Delete(int Original_IdQuestion, string Original_Subject) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdQuestion));
+            if ((Original_Subject == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Subject));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3249,7 +3424,7 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int IdQuestion, string Question, string Explanation) {
+        public virtual int Insert(int IdQuestion, string Question, string Explanation, string Subject) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IdQuestion));
             if ((Question == null)) {
                 throw new global::System.ArgumentNullException("Question");
@@ -3262,6 +3437,12 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Explanation));
+            }
+            if ((Subject == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Subject));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3283,7 +3464,7 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int IdQuestion, string Question, string Explanation, int Original_IdQuestion) {
+        public virtual int Update(int IdQuestion, string Question, string Explanation, string Subject, int Original_IdQuestion, string Original_Subject) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IdQuestion));
             if ((Question == null)) {
                 throw new global::System.ArgumentNullException("Question");
@@ -3297,7 +3478,21 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Explanation));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_IdQuestion));
+            if ((Subject == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Subject));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_IdQuestion));
+            if ((Original_Subject == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Subject));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3318,8 +3513,8 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Question, string Explanation, int Original_IdQuestion) {
-            return this.Update(Original_IdQuestion, Question, Explanation, Original_IdQuestion);
+        public virtual int Update(string Question, string Explanation, string Subject, int Original_IdQuestion, string Original_Subject) {
+            return this.Update(Original_IdQuestion, Question, Explanation, Subject, Original_IdQuestion, Original_Subject);
         }
     }
     
@@ -3447,6 +3642,7 @@ SELECT IdAnswer, Answer, IdQuestion, isValid FROM Answers WHERE (IdAnswer = @IdA
             tableMapping.ColumnMappings.Add("IdQuestion", "IdQuestion");
             tableMapping.ColumnMappings.Add("Question", "Question");
             tableMapping.ColumnMappings.Add("Explanation", "Explanation");
+            tableMapping.ColumnMappings.Add("Subject", "Subject");
             tableMapping.ColumnMappings.Add("IdAnswer", "IdAnswer");
             tableMapping.ColumnMappings.Add("Answer", "Answer");
             tableMapping.ColumnMappings.Add("IdQuestion1", "IdQuestion1");

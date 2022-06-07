@@ -33,6 +33,7 @@ namespace SpaceGame
             this.startButton = new System.Windows.Forms.Button();
             this.statsButton = new System.Windows.Forms.Button();
             this.storyButton = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startButton
@@ -40,7 +41,7 @@ namespace SpaceGame
             this.startButton.BackColor = System.Drawing.Color.Gold;
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.startButton.Location = new System.Drawing.Point(153, 114);
+            this.startButton.Location = new System.Drawing.Point(154, 82);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(283, 48);
             this.startButton.TabIndex = 0;
@@ -53,7 +54,7 @@ namespace SpaceGame
             this.statsButton.BackColor = System.Drawing.Color.Gold;
             this.statsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.statsButton.Location = new System.Drawing.Point(153, 260);
+            this.statsButton.Location = new System.Drawing.Point(154, 228);
             this.statsButton.Name = "statsButton";
             this.statsButton.Size = new System.Drawing.Size(283, 48);
             this.statsButton.TabIndex = 2;
@@ -66,7 +67,7 @@ namespace SpaceGame
             this.storyButton.BackColor = System.Drawing.Color.Gold;
             this.storyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.storyButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.storyButton.Location = new System.Drawing.Point(153, 189);
+            this.storyButton.Location = new System.Drawing.Point(154, 157);
             this.storyButton.Name = "storyButton";
             this.storyButton.Size = new System.Drawing.Size(283, 48);
             this.storyButton.TabIndex = 1;
@@ -74,12 +75,28 @@ namespace SpaceGame
             this.storyButton.UseVisualStyleBackColor = false;
             this.storyButton.Click += new System.EventHandler(this.storyButton_Click);
             // 
+            // settingsButton
+            // 
+            this.settingsButton.BackColor = System.Drawing.Color.Gold;
+            this.settingsButton.Enabled = false;
+            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.settingsButton.Location = new System.Drawing.Point(154, 303);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(283, 48);
+            this.settingsButton.TabIndex = 3;
+            this.settingsButton.Text = "Setari";
+            this.settingsButton.UseVisualStyleBackColor = false;
+            this.settingsButton.Visible = false;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
             this.ClientSize = new System.Drawing.Size(588, 450);
+            this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.storyButton);
             this.Controls.Add(this.statsButton);
             this.Controls.Add(this.startButton);
@@ -99,5 +116,6 @@ namespace SpaceGame
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Button statsButton;
         private System.Windows.Forms.Button storyButton;
+        private System.Windows.Forms.Button settingsButton;
     }
 }

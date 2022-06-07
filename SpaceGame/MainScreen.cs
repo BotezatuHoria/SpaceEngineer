@@ -20,8 +20,6 @@ namespace SpaceGame
             InitializeComponent();     
         }
 
-        
-
         private void startButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -30,7 +28,11 @@ namespace SpaceGame
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            //LoadQandA();
+            if (user.IsAdmin == true)
+            {
+                settingsButton.Enabled = true;
+                settingsButton.Visible = true;
+            }
         }
 
         private void statsButton_Click(object sender, EventArgs e)
@@ -41,6 +43,11 @@ namespace SpaceGame
         private void storyButton_Click(object sender, EventArgs e)
         {
             new Intro().ShowDialog();
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            new Admin().ShowDialog();
         }
     }
 }

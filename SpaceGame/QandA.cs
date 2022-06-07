@@ -15,6 +15,7 @@ namespace SpaceGame
         private List<Answer> answers;
         private string question;
         private string explanation;
+        private string subject;
 
         public QandA()
         {
@@ -31,6 +32,7 @@ namespace SpaceGame
 
             this.question = Convert.ToString(qandaView[0]["Question"]);
             this.explanation = Convert.ToString(qandaView[0]["Explanation"]);
+            this.subject = Convert.ToString(qandaView[0]["Subject"]);
 
             answers = new List<Answer>();
 
@@ -68,6 +70,7 @@ namespace SpaceGame
                     qandaItem.idQuestion = Convert.ToInt32(dr["IdQuestion"]);
                     qandaItem.question = dr["Question"].ToString();
                     qandaItem.explanation = dr["Explanation"].ToString();
+                    qandaItem.subject = dr["Subject"].ToString();
                     if (qandaItem.answers.Count > 0)
                         qandaItem.answers.Clear();
 
@@ -114,5 +117,10 @@ namespace SpaceGame
             set { this.explanation = value; }
         }
 
+        public string Subject
+        {
+            get { return this.subject; }
+            set { this.subject = value; }
+        }
     }
 }

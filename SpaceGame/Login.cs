@@ -13,6 +13,7 @@ namespace SpaceGame
 {
     public partial class Login : Form
     {
+        public bool isAdmin = false;
         public Login()
         {
             InitializeComponent();
@@ -20,29 +21,36 @@ namespace SpaceGame
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            Users rsp = Users.ReturnUserByCredentials(emailBox.Text, passwordBox.Text);
-            if (rsp == null)
+            if (emailBox.Text == "admin@admin.com" && passwordBox.Text == "admin1234")
             {
-                MessageBox.Show("User not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                isAdmin = true;
+                new Register(isAdmin).Show();
             }
             else
             {
-                this.Hide();
-                MessageBox.Show("Utilizator gasit", "Logare efectuata cu succes",  MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //new Game().ShowDialog();
-                //new Questions().ShowDialog();
-                using (StreamWriter writetext = new StreamWriter("user.txt"))
+                Users rsp = Users.ReturnUserByCredentials(emailBox.Text, passwordBox.Text);
+
+                if (rsp == null)
                 {
-                    writetext.WriteLine(rsp.IdUser.ToString());
+                    MessageBox.Show("User not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                new MainScreen(rsp).ShowDialog();
+                else
+                {
+                    this.Hide();
+                    MessageBox.Show("Utilizator gasit", "Logare efectuata cu succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    using (StreamWriter writetext = new StreamWriter("user.txt"))
+                    {
+                        writetext.WriteLine(rsp.IdUser.ToString());
+                    }
+                    new MainScreen(rsp).ShowDialog();
+                }
             }
         }
 
         private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new Register().ShowDialog();
+            new Register(isAdmin).ShowDialog();
         }
     }
 }

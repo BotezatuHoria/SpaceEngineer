@@ -30,7 +30,7 @@ namespace SpaceGame
             this.valid = Convert.ToBoolean(answer["isValid"]);
         }
 
-        public Answer(int _idQuestion, string _ans, bool _valid)
+        public Answer(int _idQuestion, string _ans, bool _valid, string _subject)
         {
             this.ans = _ans;
             this.valid = _valid;
@@ -49,10 +49,7 @@ namespace SpaceGame
         public int IdQuestion
         {
             get { return IdQuestion; }
-            set
-            {
-                this.IdQuestion = value;                
-            }
+            set { this.IdQuestion = value; }
         }
 
         public string Ans
@@ -61,7 +58,6 @@ namespace SpaceGame
             set { this.ans = value; }
         }
 
-        
         public bool Valid
         {
             get { return valid; }

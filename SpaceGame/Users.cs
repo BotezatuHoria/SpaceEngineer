@@ -12,6 +12,7 @@ namespace SpaceGame
     {
         private string fName, sName, email, password;
         private int idUser;
+        private bool isadmin;
 
         public Users(int _idUser)
         {
@@ -28,12 +29,13 @@ namespace SpaceGame
                 sName = Convert.ToString(user[0]["SecondName"]);
                 email = Convert.ToString(user[0]["Email"]);
                 password = Convert.ToString(user[0]["Password"]);
+                isadmin = Convert.ToBoolean(user[0]["IsAdmin"]);
                 idUser = _idUser;
 
             }
         }
 
-        public Users(string _fName, string _sName, string _email, string _password)
+        public Users(string _fName, string _sName, string _email, string _password, bool _isadmin)
         {
             if (ReturnUserByCredentials(_email, null) == null)
             {
@@ -41,8 +43,9 @@ namespace SpaceGame
                 sName = _sName;
                 email = _email;
                 password = _password;
+                isadmin = _isadmin;
                 UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
-                usersTableAdapter.Insert(_email, _fName, _sName, _password);
+                usersTableAdapter.Insert(_email, _fName, _sName, _password, _isadmin);
                 idUser = Convert.ToInt32(usersTableAdapter.GetData().Last()["IdUser"]);
 
             }
@@ -107,5 +110,10 @@ namespace SpaceGame
             set { idUser = value; }
         }
 
+        public bool IsAdmin
+        {
+            get { return isadmin; }
+            set { isadmin = value; }
+        }
     }
 }

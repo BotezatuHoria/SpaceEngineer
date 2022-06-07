@@ -14,6 +14,7 @@ namespace SpaceGame
     public partial class Questions : Form
     {
         List<QandA> qa;
+        List<int> indexes;
         Random rndm = new Random();
         int score = 0;
         int questionIndex = 0;
@@ -50,6 +51,7 @@ namespace SpaceGame
         private void Questions_Load(object sender, EventArgs e)
         {
             qa = QandA.LoadQandAFromDatabase();
+            //createList();
             questionIndex = randomIndex();
             LoadQuestion(questionIndex);
             ///MessageBox.Show(qa[0].Answers[2].Ans.ToString());
@@ -57,11 +59,12 @@ namespace SpaceGame
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            if (questionIndex + 1 < qa.Count)
+            /*if (questionIndex + 1 < qa.Count)
             {
                 questionIndex++;
                 LoadQuestion(questionIndex);
-            }
+            }*/
+            createList();
         }
 
         public bool ValidateAnswer()
@@ -133,11 +136,12 @@ namespace SpaceGame
 
         private void Questions_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
+            //createList();
         }
 
         public int randomIndex()
         {
+            /*
             int a = 0, b = 0;
             if (room == "math")
             {
@@ -160,6 +164,7 @@ namespace SpaceGame
                 b = 10;
             }
             int y = rndm.Next(a, b);
+            */
             /*while (askedIndx[y].Equals(true))
             {
                 y = rndm.Next(a, b);
@@ -174,8 +179,21 @@ namespace SpaceGame
                     ok = true;
             if (ok == false)
                 return -1;*/
+            
+            return 0;
+        }
 
-            return y;
+        public void createList()
+        {
+            indexes = new List<int>();
+            foreach (QandA q in qa)
+            {
+                if (q.Subject == room)
+                {
+                    MessageBox.Show(q.IdQuestion.ToString());
+                }
+            }
+                
         }
 
         public int Score

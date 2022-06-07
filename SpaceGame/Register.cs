@@ -13,8 +13,10 @@ namespace SpaceGame
 {
     public partial class Register : Form
     {
-        public Register()
+        bool isAdmin;
+        public Register(bool _isAdmin)
         {
+            isAdmin = _isAdmin;
             InitializeComponent();
         }
 
@@ -32,13 +34,17 @@ namespace SpaceGame
                             return;
                         }
                     }
-                Users x = new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, passwordBox.Text);
+                Users x = new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, passwordBox.Text, isAdmin);
                 MessageBox.Show("Cont creat cu succes.", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 using (StreamWriter writetext = new StreamWriter(x.IdUser + ".txt"))
                 {
                     writetext.Write("0");
                 }
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Exista deja un utilizator cu acest email.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
