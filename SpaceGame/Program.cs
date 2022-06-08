@@ -16,9 +16,9 @@ namespace SpaceGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            //Application.Run(new Login());
             ///Application.Run(new Questions());
-            //Application.Run(new Game());
+            Application.Run(new Game());
             //Application.Run(new Intro());
             //Application.Run(new Ending());
         }

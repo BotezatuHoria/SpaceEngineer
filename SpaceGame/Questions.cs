@@ -51,20 +51,21 @@ namespace SpaceGame
         private void Questions_Load(object sender, EventArgs e)
         {
             qa = QandA.LoadQandAFromDatabase();
-            //createList();
-            questionIndex = randomIndex();
+            createList();
+            questionIndex = randomIndex() - 1;
+            //Console.WriteLine(questionIndex);
             LoadQuestion(questionIndex);
             ///MessageBox.Show(qa[0].Answers[2].Ans.ToString());
         }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            /*if (questionIndex + 1 < qa.Count)
+            if (questionIndex + 1 < qa.Count)
             {
                 questionIndex++;
                 LoadQuestion(questionIndex);
-            }*/
-            createList();
+            }
+            //createList();
         }
 
         public bool ValidateAnswer()
@@ -141,46 +142,10 @@ namespace SpaceGame
 
         public int randomIndex()
         {
-            /*
-            int a = 0, b = 0;
-            if (room == "math")
-            {
-                a = 10;
-                b = 20;
-            }
-            if (room == "phy")
-            {
-                a = 20;
-                b = 30;
-            }
-            if (room == "chem")
-            {
-                a = 30;
-                b = 40;
-            }
-            if (room == "prog")
-            {
-                a = 0;
-                b = 10;
-            }
+            int a = 0, b = indexes.Count();
             int y = rndm.Next(a, b);
-            */
-            /*while (askedIndx[y].Equals(true))
-            {
-                y = rndm.Next(a, b);
-            }
-            if (askedIndx[y].Equals(false))
-            {
-                askedIndx[y] = true;
-            }
-            bool ok = false;
-            for (int i = 0; i <= askedIndx.Count() - 1; ++i)
-                if (askedIndx[i] == false)
-                    ok = true;
-            if (ok == false)
-                return -1;*/
-            
-            return 0;
+            Console.WriteLine(y);
+            return indexes[y];
         }
 
         public void createList()
@@ -188,12 +153,17 @@ namespace SpaceGame
             indexes = new List<int>();
             foreach (QandA q in qa)
             {
-                if (q.Subject == room)
+                if (q.Subject.Trim() == room)
                 {
-                    MessageBox.Show(q.IdQuestion.ToString());
+                    indexes.Add(q.IdQuestion);
+                    Console.WriteLine("index: {0}, Question: {1}", indexes.Count() - 1, q.Question);
                 }
+                    
             }
-                
+
+            //for (int i = 0; i < indexes.Count(); ++i)
+              //  Console.WriteLine(indexes[i]);
+
         }
 
         public int Score
