@@ -21,6 +21,7 @@ namespace SpaceGame
             Application.Run(new Game());
             //Application.Run(new Intro());
             //Application.Run(new Ending());
+            //Application.Run(new Admin());
         }
     }
 }

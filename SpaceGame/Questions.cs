@@ -21,6 +21,7 @@ namespace SpaceGame
         string room = null;
         int pace = 1;
         const int maxpace = 5;
+        List<QandA> array;
 
         public Questions(string _room)
         {
@@ -31,11 +32,14 @@ namespace SpaceGame
         private void LoadQuestion(int indx)
         {
             ClearInputs();
-
-            textBox1.Text = qa[indx].Question;
-
+            if (array[indx - 1] != null)
+                textBox1.Text = array[indx - 1].Question;
+            else
+                MessageBox.Show("INDEX OUT OF RANGE");
+            //if (array[indx])
+            //textBox1.Text = qa[array[indx] - 1].Question;
             int i = 0;
-            foreach(Answer a in qa[indx].Answers)
+            foreach(Answer a in array[indx - 1].Answers)
             {
                 var answer = new RadioButton();
                 answer.AutoSize = false;
@@ -51,8 +55,9 @@ namespace SpaceGame
         private void Questions_Load(object sender, EventArgs e)
         {
             qa = QandA.LoadQandAFromDatabase();
+            idk();
             createList();
-            questionIndex = randomIndex() - 1;
+            questionIndex = randomIndex();
             //Console.WriteLine(questionIndex);
             LoadQuestion(questionIndex);
             ///MessageBox.Show(qa[0].Answers[2].Ans.ToString());
@@ -60,12 +65,13 @@ namespace SpaceGame
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            if (questionIndex + 1 < qa.Count)
+            /*if (questionIndex + 1 < qa.Count)
             {
                 questionIndex++;
                 LoadQuestion(questionIndex);
-            }
+            }*/
             //createList();
+            
         }
 
         public bool ValidateAnswer()
@@ -90,7 +96,7 @@ namespace SpaceGame
 
         private void explButton_Click(object sender, EventArgs e)
         {
-            new Explain(qa[questionIndex]).ShowDialog();
+            new Explain(array[questionIndex]).ShowDialog();
             NextQandA();
         }
 
@@ -144,7 +150,8 @@ namespace SpaceGame
         {
             int a = 0, b = indexes.Count();
             int y = rndm.Next(a, b);
-            Console.WriteLine(y);
+            Console.WriteLine("Random index " + y);
+            Console.WriteLine("index[y] : " + indexes[y]);
             return indexes[y];
         }
 
@@ -155,10 +162,11 @@ namespace SpaceGame
             {
                 if (q.Subject.Trim() == room)
                 {
+                    int cnt = indexes.Count();
                     indexes.Add(q.IdQuestion);
-                    Console.WriteLine("index: {0}, Question: {1}", indexes.Count() - 1, q.Question);
+                    Console.WriteLine("index: {0}, Question: {1}, id {2}", cnt, q.Question, q.IdQuestion);
                 }
-                    
+
             }
 
             //for (int i = 0; i < indexes.Count(); ++i)
@@ -178,6 +186,25 @@ namespace SpaceGame
             {
                 writetext.WriteLine(score.ToString());
             }
+        }
+
+        private void idk()
+        {
+            array = new List<QandA>();
+            foreach (QandA q in qa)
+            {
+                int cnt = array.Count();
+                while (q.IdQuestion - cnt > 1)
+                {
+                    array.Add(null);
+                    cnt = array.Count();
+                }
+
+                array.Add(q);
+                Console.WriteLine(cnt + " " + array[cnt].IdQuestion + " " + q.IdQuestion + " " + q.Question);
+                //Console.WriteLine(q.IdQuestion + " " + q.Question + " ");
+            }
+            Console.WriteLine(qa.Count());
         }
     }
 }

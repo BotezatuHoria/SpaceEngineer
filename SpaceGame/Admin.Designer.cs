@@ -29,13 +29,33 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.question = new System.Windows.Forms.TextBox();
             this.chemRadButton = new System.Windows.Forms.RadioButton();
             this.mathsRadButton = new System.Windows.Forms.RadioButton();
             this.phyRadButton = new System.Windows.Forms.RadioButton();
             this.progRadButton = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.answersPanel = new System.Windows.Forms.Panel();
+            this.sendButton = new System.Windows.Forms.Button();
+            this.answerButton = new System.Windows.Forms.Button();
+            this.explanationTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idQuestionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.questionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.explanationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idAnswerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.answerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idQuestion1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isValidDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.qandABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new SpaceGame.DatabaseDataSet();
+            this.qandATableAdapter = new SpaceGame.DatabaseDataSetTableAdapters.QandATableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // question
@@ -49,7 +69,7 @@ namespace SpaceGame
             // chemRadButton
             // 
             this.chemRadButton.AutoSize = true;
-            this.chemRadButton.Location = new System.Drawing.Point(445, 363);
+            this.chemRadButton.Location = new System.Drawing.Point(447, 487);
             this.chemRadButton.Name = "chemRadButton";
             this.chemRadButton.Size = new System.Drawing.Size(56, 17);
             this.chemRadButton.TabIndex = 1;
@@ -60,7 +80,7 @@ namespace SpaceGame
             // mathsRadButton
             // 
             this.mathsRadButton.AutoSize = true;
-            this.mathsRadButton.Location = new System.Drawing.Point(85, 363);
+            this.mathsRadButton.Location = new System.Drawing.Point(87, 487);
             this.mathsRadButton.Name = "mathsRadButton";
             this.mathsRadButton.Size = new System.Drawing.Size(80, 17);
             this.mathsRadButton.TabIndex = 2;
@@ -71,7 +91,7 @@ namespace SpaceGame
             // phyRadButton
             // 
             this.phyRadButton.AutoSize = true;
-            this.phyRadButton.Location = new System.Drawing.Point(214, 363);
+            this.phyRadButton.Location = new System.Drawing.Point(216, 487);
             this.phyRadButton.Name = "phyRadButton";
             this.phyRadButton.Size = new System.Drawing.Size(52, 17);
             this.phyRadButton.TabIndex = 3;
@@ -82,7 +102,7 @@ namespace SpaceGame
             // progRadButton
             // 
             this.progRadButton.AutoSize = true;
-            this.progRadButton.Location = new System.Drawing.Point(310, 363);
+            this.progRadButton.Location = new System.Drawing.Point(312, 487);
             this.progRadButton.Name = "progRadButton";
             this.progRadButton.Size = new System.Drawing.Size(79, 17);
             this.progRadButton.TabIndex = 4;
@@ -90,29 +110,140 @@ namespace SpaceGame
             this.progRadButton.Text = "Programare";
             this.progRadButton.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // answersPanel
             // 
-            this.panel1.Location = new System.Drawing.Point(85, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(625, 232);
-            this.panel1.TabIndex = 5;
+            this.answersPanel.Location = new System.Drawing.Point(85, 100);
+            this.answersPanel.Name = "answersPanel";
+            this.answersPanel.Size = new System.Drawing.Size(625, 232);
+            this.answersPanel.TabIndex = 5;
             // 
-            // button1
+            // sendButton
             // 
-            this.button1.Location = new System.Drawing.Point(310, 424);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 46);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.sendButton.Location = new System.Drawing.Point(312, 548);
+            this.sendButton.Name = "sendButton";
+            this.sendButton.Size = new System.Drawing.Size(191, 46);
+            this.sendButton.TabIndex = 6;
+            this.sendButton.Text = "button1";
+            this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
+            // 
+            // answerButton
+            // 
+            this.answerButton.Location = new System.Drawing.Point(521, 472);
+            this.answerButton.Name = "answerButton";
+            this.answerButton.Size = new System.Drawing.Size(191, 46);
+            this.answerButton.TabIndex = 7;
+            this.answerButton.Text = "button1";
+            this.answerButton.UseVisualStyleBackColor = true;
+            this.answerButton.Click += new System.EventHandler(this.answerButton_Click);
+            // 
+            // explanationTextBox
+            // 
+            this.explanationTextBox.Location = new System.Drawing.Point(87, 362);
+            this.explanationTextBox.Multiline = true;
+            this.explanationTextBox.Name = "explanationTextBox";
+            this.explanationTextBox.Size = new System.Drawing.Size(625, 65);
+            this.explanationTextBox.TabIndex = 8;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idQuestionDataGridViewTextBoxColumn,
+            this.questionDataGridViewTextBoxColumn,
+            this.explanationDataGridViewTextBoxColumn,
+            this.subjectDataGridViewTextBoxColumn,
+            this.idAnswerDataGridViewTextBoxColumn,
+            this.answerDataGridViewTextBoxColumn,
+            this.idQuestion1DataGridViewTextBoxColumn,
+            this.isValidDataGridViewCheckBoxColumn});
+            this.dataGridView1.DataSource = this.qandABindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(816, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(844, 506);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // idQuestionDataGridViewTextBoxColumn
+            // 
+            this.idQuestionDataGridViewTextBoxColumn.DataPropertyName = "IdQuestion";
+            this.idQuestionDataGridViewTextBoxColumn.HeaderText = "IdQuestion";
+            this.idQuestionDataGridViewTextBoxColumn.Name = "idQuestionDataGridViewTextBoxColumn";
+            this.idQuestionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // questionDataGridViewTextBoxColumn
+            // 
+            this.questionDataGridViewTextBoxColumn.DataPropertyName = "Question";
+            this.questionDataGridViewTextBoxColumn.HeaderText = "Question";
+            this.questionDataGridViewTextBoxColumn.Name = "questionDataGridViewTextBoxColumn";
+            // 
+            // explanationDataGridViewTextBoxColumn
+            // 
+            this.explanationDataGridViewTextBoxColumn.DataPropertyName = "Explanation";
+            this.explanationDataGridViewTextBoxColumn.HeaderText = "Explanation";
+            this.explanationDataGridViewTextBoxColumn.Name = "explanationDataGridViewTextBoxColumn";
+            // 
+            // subjectDataGridViewTextBoxColumn
+            // 
+            this.subjectDataGridViewTextBoxColumn.DataPropertyName = "Subject";
+            this.subjectDataGridViewTextBoxColumn.HeaderText = "Subject";
+            this.subjectDataGridViewTextBoxColumn.Name = "subjectDataGridViewTextBoxColumn";
+            // 
+            // idAnswerDataGridViewTextBoxColumn
+            // 
+            this.idAnswerDataGridViewTextBoxColumn.DataPropertyName = "IdAnswer";
+            this.idAnswerDataGridViewTextBoxColumn.HeaderText = "IdAnswer";
+            this.idAnswerDataGridViewTextBoxColumn.Name = "idAnswerDataGridViewTextBoxColumn";
+            this.idAnswerDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // answerDataGridViewTextBoxColumn
+            // 
+            this.answerDataGridViewTextBoxColumn.DataPropertyName = "Answer";
+            this.answerDataGridViewTextBoxColumn.HeaderText = "Answer";
+            this.answerDataGridViewTextBoxColumn.Name = "answerDataGridViewTextBoxColumn";
+            // 
+            // idQuestion1DataGridViewTextBoxColumn
+            // 
+            this.idQuestion1DataGridViewTextBoxColumn.DataPropertyName = "IdQuestion1";
+            this.idQuestion1DataGridViewTextBoxColumn.HeaderText = "IdQuestion1";
+            this.idQuestion1DataGridViewTextBoxColumn.Name = "idQuestion1DataGridViewTextBoxColumn";
+            // 
+            // isValidDataGridViewCheckBoxColumn
+            // 
+            this.isValidDataGridViewCheckBoxColumn.DataPropertyName = "isValid";
+            this.isValidDataGridViewCheckBoxColumn.HeaderText = "isValid";
+            this.isValidDataGridViewCheckBoxColumn.Name = "isValidDataGridViewCheckBoxColumn";
+            // 
+            // qandABindingSource
+            // 
+            this.qandABindingSource.DataMember = "QandA";
+            this.qandABindingSource.DataSource = this.databaseDataSetBindingSource;
+            // 
+            // databaseDataSetBindingSource
+            // 
+            this.databaseDataSetBindingSource.DataSource = this.databaseDataSet;
+            this.databaseDataSetBindingSource.Position = 0;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // qandATableAdapter
+            // 
+            this.qandATableAdapter.ClearBeforeFill = true;
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 482);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1688, 606);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.explanationTextBox);
+            this.Controls.Add(this.answerButton);
+            this.Controls.Add(this.sendButton);
+            this.Controls.Add(this.answersPanel);
             this.Controls.Add(this.progRadButton);
             this.Controls.Add(this.phyRadButton);
             this.Controls.Add(this.mathsRadButton);
@@ -120,6 +251,11 @@ namespace SpaceGame
             this.Controls.Add(this.question);
             this.Name = "Admin";
             this.Text = "Admin";
+            this.Load += new System.EventHandler(this.Admin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,7 +268,22 @@ namespace SpaceGame
         private System.Windows.Forms.RadioButton mathsRadButton;
         private System.Windows.Forms.RadioButton phyRadButton;
         private System.Windows.Forms.RadioButton progRadButton;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel answersPanel;
+        private System.Windows.Forms.Button sendButton;
+        private System.Windows.Forms.Button answerButton;
+        private System.Windows.Forms.TextBox explanationTextBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource databaseDataSetBindingSource;
+        private DatabaseDataSet databaseDataSet;
+        private System.Windows.Forms.BindingSource qandABindingSource;
+        private DatabaseDataSetTableAdapters.QandATableAdapter qandATableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idQuestionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn questionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn explanationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAnswerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn answerDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idQuestion1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isValidDataGridViewCheckBoxColumn;
     }
 }

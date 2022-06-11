@@ -30,13 +30,13 @@ namespace SpaceGame
             this.valid = Convert.ToBoolean(answer["isValid"]);
         }
 
-        public Answer(int _idQuestion, string _ans, bool _valid, string _subject)
+        public Answer(int _idQuestion, string _ans, bool _valid)
         {
             this.ans = _ans;
             this.valid = _valid;
             this.idQuestion = _idQuestion;
             AnswersTableAdapter answersTableAdapter = new AnswersTableAdapter();
-            answersTableAdapter.Insert(this.ans, this.idQuestion, this.valid);
+            answersTableAdapter.Insert(_ans, _idQuestion, _valid);
             this.idAnswer = Convert.ToInt32(answersTableAdapter.GetData().Last()["IdAnswer"]);
         }
 

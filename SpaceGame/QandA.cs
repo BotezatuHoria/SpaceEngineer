@@ -97,6 +97,7 @@ namespace SpaceGame
         public int IdQuestion
         {
             get { return this.idQuestion; }
+            set { this.IdQuestion = value; }
         }
 
         public string Question
