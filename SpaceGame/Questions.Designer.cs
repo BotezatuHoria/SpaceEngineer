@@ -61,12 +61,14 @@ namespace SpaceGame
             // 
             // nextButton
             // 
+            this.nextButton.Enabled = false;
             this.nextButton.Location = new System.Drawing.Point(822, 543);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.TabIndex = 2;
             this.nextButton.Text = "button1";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Visible = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // explButton
@@ -125,7 +127,7 @@ namespace SpaceGame
             this.MinimizeBox = false;
             this.Name = "Questions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Questions";
+            this.Text = "+";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questions_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Questions_FormClosed);
             this.Load += new System.EventHandler(this.Questions_Load);

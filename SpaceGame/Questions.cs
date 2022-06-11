@@ -35,7 +35,13 @@ namespace SpaceGame
             if (array[indx - 1] != null)
                 textBox1.Text = array[indx - 1].Question;
             else
-                MessageBox.Show("INDEX OUT OF RANGE");
+            {
+                while(array[indx - 1] == null)
+                {
+                    indx = randomIndex();
+                }
+                textBox1.Text = array[indx - 1].Question;
+            }
             //if (array[indx])
             //textBox1.Text = qa[array[indx] - 1].Question;
             int i = 0;
@@ -55,7 +61,7 @@ namespace SpaceGame
         private void Questions_Load(object sender, EventArgs e)
         {
             qa = QandA.LoadQandAFromDatabase();
-            idk();
+            createNewQandA();
             createList();
             questionIndex = randomIndex();
             //Console.WriteLine(questionIndex);
@@ -96,7 +102,7 @@ namespace SpaceGame
 
         private void explButton_Click(object sender, EventArgs e)
         {
-            new Explain(array[questionIndex]).ShowDialog();
+            new Explain(array[questionIndex - 1]).ShowDialog();
             NextQandA();
         }
 
@@ -186,9 +192,10 @@ namespace SpaceGame
             {
                 writetext.WriteLine(score.ToString());
             }
+            roomData(room);
         }
 
-        private void idk()
+        private void createNewQandA()
         {
             array = new List<QandA>();
             foreach (QandA q in qa)
@@ -205,6 +212,16 @@ namespace SpaceGame
                 //Console.WriteLine(q.IdQuestion + " " + q.Question + " ");
             }
             Console.WriteLine(qa.Count());
+        }
+
+
+        private void roomData(string room)
+        {
+            string scr = File.ReadAllText(room.Replace("\n", "").Replace("\r", "") + ".txt");
+            using (StreamWriter writetext = new StreamWriter(room.Replace("\n", "").Replace("\r", "") + ".txt"))
+            {
+                writetext.WriteLine(Convert.ToInt32(scr) + score);
+            }
         }
     }
 }

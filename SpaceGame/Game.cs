@@ -98,27 +98,7 @@ namespace SpaceGame
             {
                 newY = character.Location.Y - pxlMoveY;
                 character.Location = new Point(character.Location.X, newY);
-                if (Interaction(character, upRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, downRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, leftRoomEntrance) == "Door")
-                    controlButton.Enabled = true; 
-                if (Interaction(character, rightRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testMath) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testPhy) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testProg) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testChem) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, rocket) == "Rocket")
-                    controlButton.Enabled = true;
-                if (Interaction(character, elevator) == "Elevator")
-                    controlButton.Enabled = true;
-                collision();
+                verifInteraction();
             }
         }
 
@@ -128,27 +108,7 @@ namespace SpaceGame
             {
                 newY = character.Location.Y + pxlMoveY;
                 character.Location = new Point(character.Location.X, newY);
-                if (Interaction(character, upRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, downRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, leftRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, rightRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testMath) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testPhy) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testProg) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testChem) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, rocket) == "Rocket")
-                    controlButton.Enabled = true;
-                if (Interaction(character, elevator) == "Elevator")
-                    controlButton.Enabled = true;
-                collision();
+                verifInteraction();
             }
         }
 
@@ -158,27 +118,7 @@ namespace SpaceGame
             {
                 newX = character.Location.X + pxlMoveX;
                 character.Location = new Point(newX, character.Location.Y);
-                if (Interaction(character, upRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, downRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, leftRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, rightRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testMath) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testPhy) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testProg) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testChem) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, rocket) == "Rocket")
-                    controlButton.Enabled = true;
-                if (Interaction(character, elevator) == "Elevator")
-                    controlButton.Enabled = true;
-                collision();
+                verifInteraction();
             }
         }
 
@@ -188,27 +128,7 @@ namespace SpaceGame
             {
                 newX = character.Location.X - pxlMoveX;
                 character.Location = new Point(newX, character.Location.Y);
-                if (Interaction(character, upRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, downRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, leftRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, rightRoomEntrance) == "Door")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testMath) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testPhy) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testProg) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, testChem) == "Test")
-                    controlButton.Enabled = true;
-                if (Interaction(character, rocket) == "Rocket")
-                    controlButton.Enabled = true;
-                if (Interaction(character, elevator) == "Elevator")
-                    controlButton.Enabled = true;
-                collision();
+                verifInteraction();
             }
         }
 
@@ -595,5 +515,31 @@ namespace SpaceGame
         {
 
         }
+
+        private void verifInteraction()
+        {
+            if (Interaction(character, upRoomEntrance) == "Door")
+                controlButton.Enabled = true;
+            if (Interaction(character, downRoomEntrance) == "Door")
+                controlButton.Enabled = true;
+            if (Interaction(character, leftRoomEntrance) == "Door")
+                controlButton.Enabled = true;
+            if (Interaction(character, rightRoomEntrance) == "Door")
+                controlButton.Enabled = true;
+            if (Interaction(character, testMath) == "Test")
+                controlButton.Enabled = true;
+            if (Interaction(character, testPhy) == "Test")
+                controlButton.Enabled = true;
+            if (Interaction(character, testProg) == "Test")
+                controlButton.Enabled = true;
+            if (Interaction(character, testChem) == "Test")
+                controlButton.Enabled = true;
+            if (Interaction(character, rocket) == "Rocket")
+                controlButton.Enabled = true;
+            if (Interaction(character, elevator) == "Elevator")
+                controlButton.Enabled = true;
+            collision();
+        }
+
     }
 }

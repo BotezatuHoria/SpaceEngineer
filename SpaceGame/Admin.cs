@@ -22,7 +22,6 @@ namespace SpaceGame
         private string explstr;
         private string subjectstr;
         List<string> answersstr;
-        private int goodindx;
         List<string> controls;
         Question quest;
 
@@ -33,23 +32,18 @@ namespace SpaceGame
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'databaseDataSet.QandA' table. You can move, or remove it, as needed.
             this.qandATableAdapter.Fill(this.databaseDataSet.QandA);
-            var answer = new TextBox();
-            var answerButton = new RadioButton();
-            answerButtonPosX = answerButton.Location.X;
-            answerButtonPosY = answerButton.Location.Y;
-            answer.Location = new Point(answerButtonPosX + 20, answerButtonPosY);
-            answer.Width = 600;
-            answer.Height = 30;
-            answer.Multiline = true;
-            answersPanel.Controls.Add(answer);
-            answersPanel.Controls.Add(answerButton);
+            firstAnswer();
+            
         }
         public void newAnswer(int pace)
         {
             var answer = new TextBox();
             var answerButton = new RadioButton();
+            answer.Font = new Font("Consolas", 10);
+            answer.ForeColor = Color.White;
+            answer.BackColor = Color.MediumTurquoise;
+            answer.BorderStyle = BorderStyle.FixedSingle;
             answerButton.Location = new Point(answerButtonPosX, answerButtonPosY + 2 * pace);
             answerButtonPosY += 2 * pace;
             answer.Location = new Point(answerButtonPosX + 20, answerButtonPosY);
@@ -115,6 +109,7 @@ namespace SpaceGame
 
         private void sendButton_Click(object sender, EventArgs e)
         {
+            errors();
             getData();
             quest = new Question(questionstr, explstr, subjectstr);
             for (int i = 0; i < controls.Count(); i = i + 2)
@@ -122,7 +117,7 @@ namespace SpaceGame
                 Answer answer = new Answer(lastQuestionId(), controls[i], Convert.ToBoolean(controls[i + 1]));
             }
             refreshDataGrid();
-
+            clearInputs();
         }
 
         private int lastQuestionId()
@@ -144,5 +139,99 @@ namespace SpaceGame
             dataGridView1.Refresh();
         }
 
+        private void clearInputs()
+        {
+            question.Clear();
+            answersPanel.Controls.Clear();
+            explanationTextBox.Clear();
+            mathsRadButton.Checked = false;
+            phyRadButton.Checked = false;
+            chemRadButton.Checked = false;
+            progRadButton.Checked = false;
+            answerButtonPosX = 0;
+            answerButtonPosY = 0;
+            answersNr = 1;
+            firstAnswer();
+        }
+
+        private void firstAnswer()
+        {
+            var answer = new TextBox();
+            var answerButton = new RadioButton();
+            answer.Font = new Font("Consolas", 10);
+            answer.ForeColor = Color.White;
+            answer.BackColor = Color.MediumTurquoise;
+            answer.BorderStyle = BorderStyle.FixedSingle;
+            answerButtonPosX = answerButton.Location.X;
+            answerButtonPosY = answerButton.Location.Y;
+            answer.Location = new Point(answerButtonPosX + 20, answerButtonPosY);
+            answer.Width = 600;
+            answer.Height = 30;
+            answer.Multiline = true;
+            answersPanel.Controls.Add(answer);
+            answersPanel.Controls.Add(answerButton);
+        }
+
+        private void eraseButton_Click(object sender, EventArgs e)
+        {
+            refreshDataGrid();
+            /*
+            if (eraseTextBox.Enabled == false)
+            {
+                eraseTextBox.Enabled = true;
+                eraseTextBox.Visible = true;
+            }
+            else
+            {
+                var question = new QuestionsTableAdapter();
+                DataTable dataTable = question.GetData();
+                DataView dataView = dataTable.DefaultView;
+                dataView.Delete(Convert.ToInt32(eraseTextBox.Text.Replace("\n", "").Replace("\r", "")));
+                Console.WriteLine(dataView[Convert.ToInt32(eraseTextBox.Text.Replace("\n", "").Replace("\r", ""))]["IdQues"]);
+                var answer = new AnswersTableAdapter();
+                dataTable = answer.GetData();
+                dataView = dataTable.DefaultView;
+                //dataView.Sort = "IdQuestion";
+                for (int i = 0; i < dataView.Count; ++i)
+                {
+                    if (dataView[i]["IdQuestion"].ToString() == eraseTextBox.Text)
+                    {
+                        dataView.Delete(i);
+                    }
+                }
+            }*/
+        }
+
+        private void statsButton_Click(object sender, EventArgs e)
+        {
+            new Statistics().ShowDialog();
+        }
+
+        private void errors()
+        {
+            if (String.IsNullOrWhiteSpace(question.Text))
+            {
+                MessageBox.Show("Nu ati introdus o intrebare.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            foreach(Control c in answersPanel.Controls)
+            {
+                if (c is TextBox && String.IsNullOrWhiteSpace(c.Text))
+                {
+                    MessageBox.Show("Nu ati introdus un raspuns.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (c is RadioButton && String.IsNullOrWhiteSpace(c.Text))
+                {
+                    MessageBox.Show("Nu ati selectat raspunsul corect.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (String.IsNullOrWhiteSpace(explanationTextBox.Text))
+            {
+                MessageBox.Show("Nu ati introdus o explicatie.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (mathsRadButton.Checked == false && phyRadButton.Checked == false && chemRadButton.Checked == false && progRadButton.Checked == false)
+            {
+                MessageBox.Show("Nu ati selectat materia.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

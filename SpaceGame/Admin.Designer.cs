@@ -52,6 +52,12 @@ namespace SpaceGame
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new SpaceGame.DatabaseDataSet();
             this.qandATableAdapter = new SpaceGame.DatabaseDataSetTableAdapters.QandATableAdapter();
+            this.refreshButton = new System.Windows.Forms.Button();
+            this.statsButton = new System.Windows.Forms.Button();
+            this.questionLabel = new System.Windows.Forms.Label();
+            this.answersLabel = new System.Windows.Forms.Label();
+            this.explLabel = new System.Windows.Forms.Label();
+            this.subjectLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
@@ -60,7 +66,11 @@ namespace SpaceGame
             // 
             // question
             // 
-            this.question.Location = new System.Drawing.Point(85, 12);
+            this.question.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.question.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.question.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.question.ForeColor = System.Drawing.Color.White;
+            this.question.Location = new System.Drawing.Point(142, 15);
             this.question.Multiline = true;
             this.question.Name = "question";
             this.question.Size = new System.Drawing.Size(625, 65);
@@ -69,9 +79,10 @@ namespace SpaceGame
             // chemRadButton
             // 
             this.chemRadButton.AutoSize = true;
-            this.chemRadButton.Location = new System.Drawing.Point(447, 487);
+            this.chemRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chemRadButton.Location = new System.Drawing.Point(489, 490);
             this.chemRadButton.Name = "chemRadButton";
-            this.chemRadButton.Size = new System.Drawing.Size(56, 17);
+            this.chemRadButton.Size = new System.Drawing.Size(72, 22);
             this.chemRadButton.TabIndex = 1;
             this.chemRadButton.TabStop = true;
             this.chemRadButton.Text = "Chimie";
@@ -80,9 +91,10 @@ namespace SpaceGame
             // mathsRadButton
             // 
             this.mathsRadButton.AutoSize = true;
-            this.mathsRadButton.Location = new System.Drawing.Point(87, 487);
+            this.mathsRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mathsRadButton.Location = new System.Drawing.Point(144, 490);
             this.mathsRadButton.Name = "mathsRadButton";
-            this.mathsRadButton.Size = new System.Drawing.Size(80, 17);
+            this.mathsRadButton.Size = new System.Drawing.Size(103, 22);
             this.mathsRadButton.TabIndex = 2;
             this.mathsRadButton.TabStop = true;
             this.mathsRadButton.Text = "Matematica";
@@ -91,9 +103,10 @@ namespace SpaceGame
             // phyRadButton
             // 
             this.phyRadButton.AutoSize = true;
-            this.phyRadButton.Location = new System.Drawing.Point(216, 487);
+            this.phyRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.phyRadButton.Location = new System.Drawing.Point(273, 490);
             this.phyRadButton.Name = "phyRadButton";
-            this.phyRadButton.Size = new System.Drawing.Size(52, 17);
+            this.phyRadButton.Size = new System.Drawing.Size(65, 22);
             this.phyRadButton.TabIndex = 3;
             this.phyRadButton.TabStop = true;
             this.phyRadButton.Text = "Fizica";
@@ -102,9 +115,10 @@ namespace SpaceGame
             // progRadButton
             // 
             this.progRadButton.AutoSize = true;
-            this.progRadButton.Location = new System.Drawing.Point(312, 487);
+            this.progRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.progRadButton.Location = new System.Drawing.Point(369, 490);
             this.progRadButton.Name = "progRadButton";
-            this.progRadButton.Size = new System.Drawing.Size(79, 17);
+            this.progRadButton.Size = new System.Drawing.Size(105, 22);
             this.progRadButton.TabIndex = 4;
             this.progRadButton.TabStop = true;
             this.progRadButton.Text = "Programare";
@@ -112,34 +126,45 @@ namespace SpaceGame
             // 
             // answersPanel
             // 
-            this.answersPanel.Location = new System.Drawing.Point(85, 100);
+            this.answersPanel.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.answersPanel.Location = new System.Drawing.Point(142, 103);
             this.answersPanel.Name = "answersPanel";
             this.answersPanel.Size = new System.Drawing.Size(625, 232);
             this.answersPanel.TabIndex = 5;
             // 
             // sendButton
             // 
-            this.sendButton.Location = new System.Drawing.Point(312, 548);
+            this.sendButton.BackColor = System.Drawing.Color.LemonChiffon;
+            this.sendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sendButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sendButton.Location = new System.Drawing.Point(354, 551);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(191, 46);
             this.sendButton.TabIndex = 6;
-            this.sendButton.Text = "button1";
-            this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Text = "Adauga";
+            this.sendButton.UseVisualStyleBackColor = false;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // answerButton
             // 
-            this.answerButton.Location = new System.Drawing.Point(521, 472);
+            this.answerButton.BackColor = System.Drawing.Color.LemonChiffon;
+            this.answerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.answerButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.answerButton.Location = new System.Drawing.Point(578, 475);
             this.answerButton.Name = "answerButton";
             this.answerButton.Size = new System.Drawing.Size(191, 46);
             this.answerButton.TabIndex = 7;
-            this.answerButton.Text = "button1";
-            this.answerButton.UseVisualStyleBackColor = true;
+            this.answerButton.Text = "Adauga raspuns";
+            this.answerButton.UseVisualStyleBackColor = false;
             this.answerButton.Click += new System.EventHandler(this.answerButton_Click);
             // 
             // explanationTextBox
             // 
-            this.explanationTextBox.Location = new System.Drawing.Point(87, 362);
+            this.explanationTextBox.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.explanationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.explanationTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.explanationTextBox.ForeColor = System.Drawing.Color.White;
+            this.explanationTextBox.Location = new System.Drawing.Point(144, 365);
             this.explanationTextBox.Multiline = true;
             this.explanationTextBox.Name = "explanationTextBox";
             this.explanationTextBox.Size = new System.Drawing.Size(625, 65);
@@ -149,6 +174,7 @@ namespace SpaceGame
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LemonChiffon;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idQuestionDataGridViewTextBoxColumn,
@@ -160,9 +186,9 @@ namespace SpaceGame
             this.idQuestion1DataGridViewTextBoxColumn,
             this.isValidDataGridViewCheckBoxColumn});
             this.dataGridView1.DataSource = this.qandABindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(816, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(854, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(844, 506);
+            this.dataGridView1.Size = new System.Drawing.Size(849, 506);
             this.dataGridView1.TabIndex = 9;
             // 
             // idQuestionDataGridViewTextBoxColumn
@@ -234,11 +260,86 @@ namespace SpaceGame
             // 
             this.qandATableAdapter.ClearBeforeFill = true;
             // 
+            // refreshButton
+            // 
+            this.refreshButton.BackColor = System.Drawing.Color.LemonChiffon;
+            this.refreshButton.Enabled = false;
+            this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.refreshButton.Location = new System.Drawing.Point(854, 551);
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(191, 46);
+            this.refreshButton.TabIndex = 10;
+            this.refreshButton.Text = "Refresh";
+            this.refreshButton.UseVisualStyleBackColor = false;
+            this.refreshButton.Visible = false;
+            this.refreshButton.Click += new System.EventHandler(this.eraseButton_Click);
+            // 
+            // statsButton
+            // 
+            this.statsButton.BackColor = System.Drawing.Color.LemonChiffon;
+            this.statsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statsButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.statsButton.Location = new System.Drawing.Point(1512, 551);
+            this.statsButton.Name = "statsButton";
+            this.statsButton.Size = new System.Drawing.Size(191, 46);
+            this.statsButton.TabIndex = 11;
+            this.statsButton.Text = "Statistici";
+            this.statsButton.UseVisualStyleBackColor = false;
+            this.statsButton.Click += new System.EventHandler(this.statsButton_Click);
+            // 
+            // questionLabel
+            // 
+            this.questionLabel.AutoSize = true;
+            this.questionLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.questionLabel.Location = new System.Drawing.Point(12, 15);
+            this.questionLabel.Name = "questionLabel";
+            this.questionLabel.Size = new System.Drawing.Size(99, 19);
+            this.questionLabel.TabIndex = 13;
+            this.questionLabel.Text = "Intrebare:";
+            // 
+            // answersLabel
+            // 
+            this.answersLabel.AutoSize = true;
+            this.answersLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.answersLabel.Location = new System.Drawing.Point(12, 103);
+            this.answersLabel.Name = "answersLabel";
+            this.answersLabel.Size = new System.Drawing.Size(108, 19);
+            this.answersLabel.TabIndex = 14;
+            this.answersLabel.Text = "Raspunsuri:";
+            // 
+            // explLabel
+            // 
+            this.explLabel.AutoSize = true;
+            this.explLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.explLabel.Location = new System.Drawing.Point(12, 365);
+            this.explLabel.Name = "explLabel";
+            this.explLabel.Size = new System.Drawing.Size(108, 19);
+            this.explLabel.TabIndex = 15;
+            this.explLabel.Text = "Explicatie:";
+            // 
+            // subjectLabel
+            // 
+            this.subjectLabel.AutoSize = true;
+            this.subjectLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.subjectLabel.Location = new System.Drawing.Point(12, 490);
+            this.subjectLabel.Name = "subjectLabel";
+            this.subjectLabel.Size = new System.Drawing.Size(81, 19);
+            this.subjectLabel.TabIndex = 16;
+            this.subjectLabel.Text = "Materie:";
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1688, 606);
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.ClientSize = new System.Drawing.Size(1754, 627);
+            this.Controls.Add(this.subjectLabel);
+            this.Controls.Add(this.explLabel);
+            this.Controls.Add(this.answersLabel);
+            this.Controls.Add(this.questionLabel);
+            this.Controls.Add(this.statsButton);
+            this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.explanationTextBox);
             this.Controls.Add(this.answerButton);
@@ -250,6 +351,7 @@ namespace SpaceGame
             this.Controls.Add(this.chemRadButton);
             this.Controls.Add(this.question);
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -285,5 +387,11 @@ namespace SpaceGame
         private System.Windows.Forms.DataGridViewTextBoxColumn answerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idQuestion1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isValidDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Button statsButton;
+        private System.Windows.Forms.Label questionLabel;
+        private System.Windows.Forms.Label answersLabel;
+        private System.Windows.Forms.Label explLabel;
+        private System.Windows.Forms.Label subjectLabel;
     }
 }
