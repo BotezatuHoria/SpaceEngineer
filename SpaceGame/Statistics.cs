@@ -30,10 +30,10 @@ namespace SpaceGame
 
         private void makeStats()
         {
-            maths = Convert.ToInt32(File.ReadAllText("math.txt"));
-            physics = Convert.ToInt32(File.ReadAllText("phy.txt"));
-            chemestry = Convert.ToInt32(File.ReadAllText("chem.txt"));
-            programming = Convert.ToInt32(File.ReadAllText("prog.txt"));
+            maths = Convert.ToInt32(File.ReadAllText("math.txt").Replace("\n", "").Replace("\r", ""));
+            physics = Convert.ToInt32(File.ReadAllText("phy.txt").Replace("\n", "").Replace("\r", ""));
+            chemestry = Convert.ToInt32(File.ReadAllText("chem.txt").Replace("\n", "").Replace("\r", ""));
+            programming = Convert.ToInt32(File.ReadAllText("prog.txt").Replace("\n", "").Replace("\r", ""));
             sum = maths + physics + chemestry + programming;
             maths = maths * 100 / sum;
             physics = physics * 100 / sum;
