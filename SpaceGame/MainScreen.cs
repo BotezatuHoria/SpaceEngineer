@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SpaceGame
 {
@@ -17,7 +18,11 @@ namespace SpaceGame
         public MainScreen(Users _user)
         {
             user = _user;
-            InitializeComponent();     
+            InitializeComponent();
+            using (StreamWriter writetext = new StreamWriter("math.txt")) { };
+            using (StreamWriter writetext = new StreamWriter("phy.txt")) { };
+            using (StreamWriter writetext = new StreamWriter("chem.txt")) { };
+            using (StreamWriter writetext = new StreamWriter("prog.txt")) { };
         }
 
         private void startButton_Click(object sender, EventArgs e)
