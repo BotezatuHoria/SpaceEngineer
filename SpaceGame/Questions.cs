@@ -227,7 +227,7 @@ namespace SpaceGame
                 if (scr == null)
                     writetext.WriteLine(0 + score);
                 else
-                    writetext.WriteLine(Convert.ToInt32(scr) + score);
+                    writetext.WriteLine(scr + score.ToString());
             }
         }
     }
