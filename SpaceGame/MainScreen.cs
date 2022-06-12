@@ -19,10 +19,6 @@ namespace SpaceGame
         {
             user = _user;
             InitializeComponent();
-            using (StreamWriter writetext = new StreamWriter("math.txt")) { writetext.WriteLine(0); };
-            using (StreamWriter writetext = new StreamWriter("phy.txt")) { writetext.WriteLine(0); };
-            using (StreamWriter writetext = new StreamWriter("chem.txt")) { writetext.WriteLine(0); };
-            using (StreamWriter writetext = new StreamWriter("prog.txt")) { writetext.WriteLine(0); };
         }
 
         private void startButton_Click(object sender, EventArgs e)
