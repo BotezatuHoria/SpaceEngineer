@@ -39,6 +39,18 @@ namespace SpaceGame
             {
                 writetext.WriteLine("0");
             }
+            using (StreamWriter writetext = new StreamWriter("phy.txt"))
+            {
+                writetext.WriteLine("0");
+            }
+            using (StreamWriter writetext = new StreamWriter("chem.txt"))
+            {
+                writetext.WriteLine("0");
+            }
+            using (StreamWriter writetext = new StreamWriter("prog.txt"))
+            {
+                writetext.WriteLine("0");
+            }
             scoreBoard.Text = "Score: " + File.ReadAllText("score.txt");
             userId = File.ReadAllText("user.txt");
             string file = userId.Replace("\n", "").Replace("\r", "") + ".txt";
