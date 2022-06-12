@@ -14,6 +14,7 @@ namespace SpaceGame
     public partial class Statistics : Form
     {
         private int maths, physics, chemestry, programming, sum = 0;
+        private string str;
 
         private void chart1_Click(object sender, EventArgs e)
         {
@@ -30,10 +31,14 @@ namespace SpaceGame
 
         private void makeStats()
         {
-            maths = Convert.ToInt32(File.ReadAllText("math.txt").Replace("\n", "").Replace("\r", ""));
-            physics = Convert.ToInt32(File.ReadAllText("phy.txt").Replace("\n", "").Replace("\r", ""));
-            chemestry = Convert.ToInt32(File.ReadAllText("chem.txt").Replace("\n", "").Replace("\r", ""));
-            programming = Convert.ToInt32(File.ReadAllText("prog.txt").Replace("\n", "").Replace("\r", ""));
+            str = File.ReadAllText("math.txt");
+            maths = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
+            str = File.ReadAllText("phy.txt");
+            physics = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
+            str = File.ReadAllText("chem.txt");
+            chemestry = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
+            str = File.ReadAllText("prog.txt");
+            programming = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
             sum = maths + physics + chemestry + programming;
             maths = maths * 100 / sum;
             physics = physics * 100 / sum;
