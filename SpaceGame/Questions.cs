@@ -224,7 +224,10 @@ namespace SpaceGame
             string scr = File.ReadAllText(room.Replace("\n", "").Replace("\r", "") + ".txt");
             using (StreamWriter writetext = new StreamWriter(room.Replace("\n", "").Replace("\r", "") + ".txt"))
             {
-                writetext.WriteLine(Convert.ToInt32(scr) + score);
+                if (scr == null)
+                    writetext.WriteLine(0 + score);
+                else
+                    writetext.WriteLine(Convert.ToInt32(scr) + score);
             }
         }
     }
