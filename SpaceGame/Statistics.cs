@@ -68,6 +68,8 @@ namespace SpaceGame
             }
             programming = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
             sum = maths + physics + chemestry + programming;
+            if (sum == 0)
+                sum = 1;
             maths = maths * 100 / sum;
             physics = physics * 100 / sum;
             chemestry = chemestry * 100 / sum;
