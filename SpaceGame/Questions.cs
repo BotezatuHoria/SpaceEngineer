@@ -31,6 +31,7 @@ namespace SpaceGame
 
         private void LoadQuestion(int indx)
         {
+            mistakeLabel.Visible = false;
             ClearInputs();
             if (array[indx - 1] != null)
                 textBox1.Text = array[indx - 1].Question;
@@ -138,7 +139,10 @@ namespace SpaceGame
             bool vld = ValidateAnswer();
 
             if (vld.Equals(false))
+            {
                 explButton.Visible = true;
+                mistakeLabel.Visible = true;
+            }
             else
             {
                 score++;

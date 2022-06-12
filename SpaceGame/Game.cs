@@ -13,10 +13,11 @@ namespace SpaceGame
 {
     public partial class Game : Form
     {
+        Users user;
         public int newX = 0;
         public int newY = 0;
-        public const int pxlMoveX = 2;
-        public const int pxlMoveY = 2;
+        public const int pxlMoveX = 4;
+        public const int pxlMoveY = 4;
         public List<PictureBox> lst;
         bool inroom = false;
         public int scr = 0;
@@ -27,11 +28,12 @@ namespace SpaceGame
         bool roomChem = false;
         string x = null;
         bool ok = false;
-        //public int pointsCount = 20;
         public string userId;
+        public bool pressed = false;
 
-        public Game()
+        public Game(Users _user)
         {
+            user = _user;
             InitializeComponent();
             using (StreamWriter writetext = new StreamWriter("score.txt"))
             {
@@ -57,16 +59,26 @@ namespace SpaceGame
             }
             if (e.KeyCode == Keys.A)
             {
-                character.Image = SpaceGame.Properties.Resources.magel;
+                if (pressed == false)
+                    character.Image = SpaceGame.Properties.Resources.magel;
                 leftTimer.Enabled = true;
+                pressed = true;
             }
             if (e.KeyCode == Keys.D)
             {
-                character.Image = SpaceGame.Properties.Resources.magel2;
+                if (pressed == false)
+                    character.Image = SpaceGame.Properties.Resources.magel2;
                 rightTimer.Enabled = true;
+                pressed = true;
+            }
+            if (e.KeyCode == Keys.P)
+            {
+                scr += 10;
+                scoreBoard.Text = "Score: " + scr.ToString();
             }
             e.SuppressKeyPress = true;
             controlButton.Enabled = false;
+            controlButton.BackColor = Color.Aqua;
         }
 
         private void Game_KeyUp(object sender, KeyEventArgs e)
@@ -81,11 +93,13 @@ namespace SpaceGame
             }
             if (e.KeyCode == Keys.A)
             {
+                pressed = false;
                 character.Image = SpaceGame.Properties.Resources.frontPosition;
                 leftTimer.Enabled = false;
             }
             if (e.KeyCode == Keys.D)
             {
+                pressed = false;
                 character.Image = SpaceGame.Properties.Resources.frontPosition;
                 rightTimer.Enabled = false;
             }
@@ -155,12 +169,6 @@ namespace SpaceGame
                 
         }
 
-        private void character_LocationChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
         public void controlButton_Click(object sender, EventArgs e)
         {
             lst = new List<PictureBox>() { upRoomEntrance, downRoomEntrance, leftRoomEntrance, rightRoomEntrance, testMath, testPhy, testChem, testProg, rocket, elevator};
@@ -200,6 +208,7 @@ namespace SpaceGame
                     if (roomProg == true)
                         x = "prog";
                     new Questions(x).ShowDialog();
+                    //rocketLabel.Visible = true;
                     string score = File.ReadAllText("score.txt");
                     scr += Convert.ToInt32(score);
                     scoreBoard.Text = "Score: " + scr.ToString();
@@ -209,6 +218,7 @@ namespace SpaceGame
                 
             }
             controlButton.Enabled = false;
+            controlButton.BackColor = Color.Aqua;
         }
 
         public void interactionDoor(PictureBox obj)
@@ -390,6 +400,7 @@ namespace SpaceGame
         {
             if (inroom == false)
             {
+                rocketLabel.Visible = true;
                 inroom = true;
                 upRoomEntrance.Enabled = false;
                 leftRoomEntrance.Enabled = false;
@@ -406,21 +417,26 @@ namespace SpaceGame
                 if (scr >= 0 && scr <= 10)
                 {
                     this.BackgroundImage = SpaceGame.Properties.Resources.rocket5;
+                    rocketLabel.Text = "Inca nu ai construit nimic la racheta.";
                 }
                 if (scr > 10 && scr <= 20)
                 {
+                    rocketLabel.Text = "Ai reusit sa construiesti primul nivel al rachetei.";
                     this.BackgroundImage = SpaceGame.Properties.Resources.rocket1004_;
                 }
                 if (scr > 20 && scr <= 30)
                 {
+                    rocketLabel.Text = "Ai reusit sa construiesti al doilea nivel al rachetei.";
                     this.BackgroundImage = SpaceGame.Properties.Resources.rocket3;
                 }
                 if (scr > 30 && scr <= 40)
                 {
+                    rocketLabel.Text = "Ai reusit sa construiesti al treilea nivel al rachetei.";
                     this.BackgroundImage = SpaceGame.Properties.Resources.rocket2;
                 }
                 if (scr > 40)
                 {
+                    rocketLabel.Text = "Ai reusit sa construiesti racheta!";
                     this.BackgroundImage = SpaceGame.Properties.Resources.rocket11;
                     rocket.Enabled = true;
                 }
@@ -428,6 +444,7 @@ namespace SpaceGame
             }
             else
             {
+                rocketLabel.Visible = false;
                 inroom = false;
                 rocket.Enabled = false;
                 this.BackgroundImage = SpaceGame.Properties.Resources.map;
@@ -471,75 +488,65 @@ namespace SpaceGame
             }
         }
 
-        public void loadUsersDb()
-        {
-
-        }
-
-        private void Game_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void colBoxPhy4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void colBoxPhy5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void colBoxPhy3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void testPhy_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void colBoxPhy6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void colBoxPhy1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void colBoxPhy2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void verifInteraction()
         {
             if (Interaction(character, upRoomEntrance) == "Door")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
+                
             if (Interaction(character, downRoomEntrance) == "Door")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, leftRoomEntrance) == "Door")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, rightRoomEntrance) == "Door")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, testMath) == "Test")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, testPhy) == "Test")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, testProg) == "Test")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, testChem) == "Test")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, rocket) == "Rocket")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             if (Interaction(character, elevator) == "Elevator")
+            {
                 controlButton.Enabled = true;
+                controlButton.BackColor = Color.Yellow;
+            }
             collision();
         }
 
+        private void Game_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

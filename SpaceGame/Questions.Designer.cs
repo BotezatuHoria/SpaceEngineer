@@ -36,6 +36,7 @@ namespace SpaceGame
             this.explButton = new System.Windows.Forms.Button();
             this.prevButton = new System.Windows.Forms.Button();
             this.validButton = new System.Windows.Forms.Button();
+            this.mistakeLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox1
@@ -110,12 +111,25 @@ namespace SpaceGame
             this.validButton.UseVisualStyleBackColor = false;
             this.validButton.Click += new System.EventHandler(this.validButton_Click);
             // 
+            // mistakeLabel
+            // 
+            this.mistakeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.mistakeLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mistakeLabel.ForeColor = System.Drawing.Color.Red;
+            this.mistakeLabel.Location = new System.Drawing.Point(919, 248);
+            this.mistakeLabel.Name = "mistakeLabel";
+            this.mistakeLabel.Size = new System.Drawing.Size(162, 99);
+            this.mistakeLabel.TabIndex = 6;
+            this.mistakeLabel.Text = "Raspuns gresit, verifica explicatia.";
+            this.mistakeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Questions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
             this.ClientSize = new System.Drawing.Size(1104, 578);
+            this.Controls.Add(this.mistakeLabel);
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.prevButton);
             this.Controls.Add(this.explButton);
@@ -127,7 +141,7 @@ namespace SpaceGame
             this.MinimizeBox = false;
             this.Name = "Questions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "+";
+            this.Text = "Teste";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questions_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Questions_FormClosed);
             this.Load += new System.EventHandler(this.Questions_Load);
@@ -143,5 +157,6 @@ namespace SpaceGame
         private System.Windows.Forms.Button explButton;
         private System.Windows.Forms.Button prevButton;
         private System.Windows.Forms.Button validButton;
+        private System.Windows.Forms.Label mistakeLabel;
     }
 }

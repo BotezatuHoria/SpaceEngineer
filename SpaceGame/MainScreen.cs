@@ -23,7 +23,7 @@ namespace SpaceGame
         private void startButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Game().ShowDialog();
+            new Game(user).ShowDialog();
         }
 
         private void MainScreen_Load(object sender, EventArgs e)

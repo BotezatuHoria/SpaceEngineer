@@ -38,7 +38,7 @@ namespace SpaceGame
                 else
                 {
                     this.Hide();
-                    MessageBox.Show("Utilizator gasit", "Logare efectuata cu succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Utilizator gasit", "Logare efectuata cu succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     using (StreamWriter writetext = new StreamWriter("user.txt"))
                     {
                         writetext.WriteLine(rsp.IdUser.ToString());

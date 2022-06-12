@@ -30,6 +30,7 @@ namespace SpaceGame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.question = new System.Windows.Forms.TextBox();
             this.chemRadButton = new System.Windows.Forms.RadioButton();
             this.mathsRadButton = new System.Windows.Forms.RadioButton();
@@ -350,6 +351,7 @@ namespace SpaceGame
             this.Controls.Add(this.mathsRadButton);
             this.Controls.Add(this.chemRadButton);
             this.Controls.Add(this.question);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";

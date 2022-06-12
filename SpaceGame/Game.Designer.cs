@@ -63,6 +63,7 @@ namespace SpaceGame
             this.colBoxMath2 = new System.Windows.Forms.PictureBox();
             this.colBoxMath1 = new System.Windows.Forms.PictureBox();
             this.colBoxMath3 = new System.Windows.Forms.PictureBox();
+            this.rocketLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.testMath)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.downRoomEntrance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rightRoomEntrance)).BeginInit();
@@ -113,7 +114,7 @@ namespace SpaceGame
             // 
             // controlButton
             // 
-            this.controlButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.controlButton.BackColor = System.Drawing.Color.Aqua;
             this.controlButton.Enabled = false;
             this.controlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.controlButton.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -199,7 +200,6 @@ namespace SpaceGame
             this.character.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.character.TabIndex = 0;
             this.character.TabStop = false;
-            this.character.LocationChanged += new System.EventHandler(this.character_LocationChanged);
             // 
             // scoreBoard
             // 
@@ -223,7 +223,6 @@ namespace SpaceGame
             this.testPhy.TabStop = false;
             this.testPhy.Tag = "Test";
             this.testPhy.Visible = false;
-            this.testPhy.Click += new System.EventHandler(this.testPhy_Click);
             // 
             // testProg
             // 
@@ -348,7 +347,6 @@ namespace SpaceGame
             this.colBoxPhy5.TabIndex = 19;
             this.colBoxPhy5.TabStop = false;
             this.colBoxPhy5.Visible = false;
-            this.colBoxPhy5.Click += new System.EventHandler(this.colBoxPhy5_Click);
             // 
             // colBoxPhy6
             // 
@@ -359,7 +357,6 @@ namespace SpaceGame
             this.colBoxPhy6.TabIndex = 20;
             this.colBoxPhy6.TabStop = false;
             this.colBoxPhy6.Visible = false;
-            this.colBoxPhy6.Click += new System.EventHandler(this.colBoxPhy6_Click);
             // 
             // colBoxPhy1
             // 
@@ -370,7 +367,6 @@ namespace SpaceGame
             this.colBoxPhy1.TabIndex = 21;
             this.colBoxPhy1.TabStop = false;
             this.colBoxPhy1.Visible = false;
-            this.colBoxPhy1.Click += new System.EventHandler(this.colBoxPhy1_Click);
             // 
             // colBoxPhy2
             // 
@@ -381,7 +377,6 @@ namespace SpaceGame
             this.colBoxPhy2.TabIndex = 22;
             this.colBoxPhy2.TabStop = false;
             this.colBoxPhy2.Visible = false;
-            this.colBoxPhy2.Click += new System.EventHandler(this.colBoxPhy2_Click);
             // 
             // colBoxPhy3
             // 
@@ -392,7 +387,6 @@ namespace SpaceGame
             this.colBoxPhy3.TabIndex = 23;
             this.colBoxPhy3.TabStop = false;
             this.colBoxPhy3.Visible = false;
-            this.colBoxPhy3.Click += new System.EventHandler(this.colBoxPhy3_Click);
             // 
             // colBoxPhy4
             // 
@@ -403,7 +397,6 @@ namespace SpaceGame
             this.colBoxPhy4.TabIndex = 24;
             this.colBoxPhy4.TabStop = false;
             this.colBoxPhy4.Visible = false;
-            this.colBoxPhy4.Click += new System.EventHandler(this.colBoxPhy4_Click);
             // 
             // colBoxMath2
             // 
@@ -435,6 +428,19 @@ namespace SpaceGame
             this.colBoxMath3.TabStop = false;
             this.colBoxMath3.Visible = false;
             // 
+            // rocketLabel
+            // 
+            this.rocketLabel.BackColor = System.Drawing.Color.Transparent;
+            this.rocketLabel.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rocketLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.rocketLabel.Location = new System.Drawing.Point(360, 11);
+            this.rocketLabel.Name = "rocketLabel";
+            this.rocketLabel.Size = new System.Drawing.Size(1337, 69);
+            this.rocketLabel.TabIndex = 28;
+            this.rocketLabel.Text = "Verifica racheta!";
+            this.rocketLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rocketLabel.Visible = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,6 +449,7 @@ namespace SpaceGame
             this.BackgroundImage = global::SpaceGame.Properties.Resources.map;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.rocketLabel);
             this.Controls.Add(this.colBoxMath3);
             this.Controls.Add(this.colBoxMath1);
             this.Controls.Add(this.colBoxMath2);
@@ -478,7 +485,7 @@ namespace SpaceGame
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
-            this.Load += new System.EventHandler(this.Game_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Game_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.testMath)).EndInit();
@@ -546,5 +553,6 @@ namespace SpaceGame
         private System.Windows.Forms.PictureBox colBoxMath2;
         private System.Windows.Forms.PictureBox colBoxMath1;
         private System.Windows.Forms.PictureBox colBoxMath3;
+        private System.Windows.Forms.Label rocketLabel;
     }
 }

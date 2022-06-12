@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SpaceGame.DatabaseDataSetTableAdapters;
+using System.Data.Sql;
 
 namespace SpaceGame
 {
@@ -109,15 +110,17 @@ namespace SpaceGame
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            errors();
-            getData();
-            quest = new Question(questionstr, explstr, subjectstr);
-            for (int i = 0; i < controls.Count(); i = i + 2)
+            if (errors() == true)
             {
-                Answer answer = new Answer(lastQuestionId(), controls[i], Convert.ToBoolean(controls[i + 1]));
+                getData();
+                quest = new Question(questionstr, explstr, subjectstr);
+                for (int i = 0; i < controls.Count(); i = i + 2)
+                {
+                    Answer answer = new Answer(lastQuestionId(), controls[i], Convert.ToBoolean(controls[i + 1]));
+                }
+                refreshDataGrid();
+                clearInputs();
             }
-            refreshDataGrid();
-            clearInputs();
         }
 
         private int lastQuestionId()
@@ -207,31 +210,48 @@ namespace SpaceGame
             new Statistics().ShowDialog();
         }
 
-        private void errors()
+        private bool errors()
         {
+            int cnt = 0;
             if (String.IsNullOrWhiteSpace(question.Text))
             {
                 MessageBox.Show("Nu ati introdus o intrebare.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             foreach(Control c in answersPanel.Controls)
             {
                 if (c is TextBox && String.IsNullOrWhiteSpace(c.Text))
                 {
                     MessageBox.Show("Nu ati introdus un raspuns.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
-                if (c is RadioButton && String.IsNullOrWhiteSpace(c.Text))
+                if (c is RadioButton)
                 {
-                    MessageBox.Show("Nu ati selectat raspunsul corect.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var i = (RadioButton)c;
+                    if (i.Checked == false)
+                    {
+                        cnt++;
+                    }
+                   
+                    if (cnt == answersNr)
+                    {
+                        MessageBox.Show("Nu ati selectat raspunsul corect.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    
                 }
             }
             if (String.IsNullOrWhiteSpace(explanationTextBox.Text))
             {
                 MessageBox.Show("Nu ati introdus o explicatie.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
             if (mathsRadButton.Checked == false && phyRadButton.Checked == false && chemRadButton.Checked == false && progRadButton.Checked == false)
             {
                 MessageBox.Show("Nu ati selectat materia.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
+            return true;
         }
     }
 }
