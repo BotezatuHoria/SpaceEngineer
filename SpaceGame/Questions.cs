@@ -22,6 +22,7 @@ namespace SpaceGame
         int pace = 1;
         const int maxpace = 5;
         List<QandA> array;
+        string scr;
 
         public Questions(string _room)
         {
@@ -221,13 +222,23 @@ namespace SpaceGame
 
         private void roomData(string room)
         {
-            string scr = File.ReadAllText(room.Replace("\n", "").Replace("\r", "") + ".txt");
-            using (StreamWriter writetext = new StreamWriter(room.Replace("\n", "").Replace("\r", "") + ".txt"))
+            try
+            {
+                scr = File.ReadAllText(room.Replace("\n", "").Replace("\r", "") + ".txt");
+            }
+            catch (Exception e)
             {
                 if (scr == null)
-                    writetext.WriteLine(0 + score);
-                else
-                    writetext.WriteLine(scr + score.ToString());
+                {
+                    using (StreamWriter write = new StreamWriter(room.Replace("\n", "").Replace("\r", "") + ".txt"))
+                    {
+                        write.WriteLine("0");
+                    }
+                }
+            }
+            using (StreamWriter writetext = new StreamWriter(room.Replace("\n", "").Replace("\r", "") + ".txt"))
+            {
+                writetext.WriteLine(scr + score.ToString());
             }
         }
     }

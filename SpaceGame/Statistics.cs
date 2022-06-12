@@ -31,13 +31,41 @@ namespace SpaceGame
 
         private void makeStats()
         {
-            str = File.ReadAllText("math.txt");
+            try
+            {
+                str = File.ReadAllText("math.txt");
+            }
+            catch(Exception e)
+            {
+                str = "0";
+            }
             maths = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
-            str = File.ReadAllText("phy.txt");
+            try
+            {
+                str = File.ReadAllText("phy.txt");
+            }
+            catch (Exception e)
+            {
+                str = "0";
+            }
             physics = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
-            str = File.ReadAllText("chem.txt");
+            try
+            {
+                str = File.ReadAllText("chem.txt");
+            }
+            catch (Exception e)
+            {
+                str = "0";
+            }
             chemestry = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
-            str = File.ReadAllText("prog.txt");
+            try
+            {
+                str = File.ReadAllText("prog.txt");
+            }
+            catch (Exception e)
+            {
+                str = "0";
+            }
             programming = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
             sum = maths + physics + chemestry + programming;
             maths = maths * 100 / sum;
