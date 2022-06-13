@@ -77,8 +77,11 @@ namespace SpaceGame
             }
             if (e.KeyCode == Keys.P)
             {
-                scr += 10;
-                scoreBoard.Text = "Score: " + scr.ToString();
+                if (user.IsAdmin == true)
+                {
+                    scr += 10;
+                    scoreBoard.Text = "Score: " + scr.ToString();
+                }
             }
             e.SuppressKeyPress = true;
             controlButton.Enabled = false;
