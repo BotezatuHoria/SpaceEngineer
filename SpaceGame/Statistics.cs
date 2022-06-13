@@ -19,12 +19,12 @@ namespace SpaceGame
         public Statistics()
         {
             InitializeComponent();
-            makeStats();
+            MakeStats();
             Console.WriteLine(maths + " " + physics + " " + chemestry + " " + programming);
-            dispalyChart();
+            DispalyChart();
         }
 
-        private void makeStats()
+        private void MakeStats()
         {
             try
             {
@@ -75,7 +75,7 @@ namespace SpaceGame
             programming = programming * 100 / sum;
         }
 
-        private void dispalyChart()
+        private void DispalyChart()
         {
             chart1.Series["s1"].IsValueShownAsLabel = true;
             chart1.Series["s1"].Points.AddXY("Matematica", maths.ToString());

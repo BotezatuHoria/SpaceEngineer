@@ -40,7 +40,7 @@ namespace SpaceGame
             {
                 while(array[indx - 1] == null)
                 {
-                    indx = randomIndex();
+                    indx = RandomIndex();
                 }
                 textBox1.Text = array[indx - 1].Question;
             }
@@ -63,9 +63,9 @@ namespace SpaceGame
         private void Questions_Load(object sender, EventArgs e)
         {
             qa = QandA.LoadQandAFromDatabase();
-            createNewQandA();
-            createList();
-            questionIndex = randomIndex();
+            CreateNewQandA();
+            CreateList();
+            questionIndex = RandomIndex();
             //Console.WriteLine(questionIndex);
             LoadQuestion(questionIndex);
             ///MessageBox.Show(qa[0].Answers[2].Ans.ToString());
@@ -125,7 +125,7 @@ namespace SpaceGame
             if (pace <= maxpace)
             {
                 pace++;
-                questionIndex = randomIndex();
+                questionIndex = RandomIndex();
                 LoadQuestion(questionIndex);
             }
             else
@@ -157,7 +157,7 @@ namespace SpaceGame
             //createList();
         }
 
-        public int randomIndex()
+        public int RandomIndex()
         {
             int a = 0, b = indexes.Count();
             int y = rndm.Next(a, b);
@@ -166,7 +166,7 @@ namespace SpaceGame
             return indexes[y];
         }
 
-        public void createList()
+        public void CreateList()
         {
             indexes = new List<int>();
             foreach (QandA q in qa)
@@ -197,10 +197,10 @@ namespace SpaceGame
             {
                 writetext.WriteLine(score.ToString());
             }
-            roomData(room);
+            RoomData(room);
         }
 
-        private void createNewQandA()
+        private void CreateNewQandA()
         {
             array = new List<QandA>();
             foreach (QandA q in qa)
@@ -220,7 +220,7 @@ namespace SpaceGame
         }
 
 
-        private void roomData(string room)
+        private void RoomData(string room)
         {
             try
             {

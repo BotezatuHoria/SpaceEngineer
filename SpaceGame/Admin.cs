@@ -37,7 +37,7 @@ namespace SpaceGame
             firstAnswer();
             
         }
-        public void newAnswer(int pace)
+        public void NewAnswer(int pace)
         {
             var answer = new TextBox();
             var answerButton = new RadioButton();
@@ -60,7 +60,7 @@ namespace SpaceGame
         {
             answersNr++;
             if (answersNr <= maxAnswers)
-                newAnswer(pace);
+                NewAnswer(pace);
             else
             {
                 MessageBox.Show("Puteti introduce maxim 6 raspunsuri.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -68,7 +68,7 @@ namespace SpaceGame
             
         }
 
-        private void getData()
+        private void GetData()
         {
             //Question part
             questionstr = question.Text;
@@ -110,9 +110,9 @@ namespace SpaceGame
 
         private void sendButton_Click(object sender, EventArgs e)
         {
-            if (errors() == true)
+            if (Errors() == true)
             {
-                getData();
+                GetData();
                 quest = new Question(questionstr, explstr, subjectstr);
                 for (int i = 0; i < controls.Count(); i = i + 2)
                 {
@@ -210,7 +210,7 @@ namespace SpaceGame
             new Statistics().ShowDialog();
         }
 
-        private bool errors()
+        private bool Errors()
         {
             int cnt = 0;
             if (String.IsNullOrWhiteSpace(question.Text))
