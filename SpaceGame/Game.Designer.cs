@@ -331,7 +331,7 @@ namespace SpaceGame
             // colBoxProg3
             // 
             this.colBoxProg3.Enabled = false;
-            this.colBoxProg3.Location = new System.Drawing.Point(711, 739);
+            this.colBoxProg3.Location = new System.Drawing.Point(711, 753);
             this.colBoxProg3.Name = "colBoxProg3";
             this.colBoxProg3.Size = new System.Drawing.Size(690, 50);
             this.colBoxProg3.TabIndex = 18;
