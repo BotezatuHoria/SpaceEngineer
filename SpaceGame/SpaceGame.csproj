@@ -219,6 +219,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\walk.wav" />
+    <None Include="Resources\door.wav" />
     <None Include="Resources\blackboard.jpg" />
     <None Include="Resources\blackboard.gif" />
     <None Include="Resources\uproom1000.png" />

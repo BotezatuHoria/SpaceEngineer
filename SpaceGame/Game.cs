@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 using System.Windows.Forms;
 
 namespace SpaceGame
@@ -30,6 +31,9 @@ namespace SpaceGame
         bool ok = false;
         public string userId;
         public bool pressed = false;
+        //SoundPlayer walkSound = new SoundPlayer(SpaceGame.Properties.Resources.walk);
+        //SoundPlayer doorSound = new SoundPlayer(SpaceGame.Properties.Resources.door);
+        public bool sound = false;
 
         public Game(Users _user)
         {
@@ -83,6 +87,7 @@ namespace SpaceGame
 
         private void Game_KeyUp(object sender, KeyEventArgs e)
         {
+            //walkSound.Stop();
             if (e.KeyCode == Keys.W)
             {
                 upTimer.Enabled = false;
@@ -223,6 +228,7 @@ namespace SpaceGame
 
         public void interactionDoor(PictureBox obj)
         {
+            //doorSound.Play();
             int objX = obj.Location.X;
             int objY = obj.Location.Y;
             int playerX = character.Location.X;
@@ -490,6 +496,7 @@ namespace SpaceGame
 
         private void verifInteraction()
         {
+            //doorSound.Stop();
             if (Interaction(character, upRoomEntrance) == "Door")
             {
                 controlButton.Enabled = true;
@@ -548,5 +555,6 @@ namespace SpaceGame
         {
             Application.Exit();
         }
+
     }
 }

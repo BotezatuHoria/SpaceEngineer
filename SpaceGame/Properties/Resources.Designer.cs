@@ -141,6 +141,15 @@ namespace SpaceGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream door {
+            get {
+                return ResourceManager.GetStream("door", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap door2 {
@@ -417,6 +426,15 @@ namespace SpaceGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("uproom1000", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream walk {
+            get {
+                return ResourceManager.GetStream("walk", resourceCulture);
             }
         }
     }
