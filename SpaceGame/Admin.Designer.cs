@@ -40,7 +40,7 @@ namespace SpaceGame
             this.sendButton = new System.Windows.Forms.Button();
             this.answerButton = new System.Windows.Forms.Button();
             this.explanationTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.idQuestionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.questionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.explanationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@ namespace SpaceGame
             this.answersLabel = new System.Windows.Forms.Label();
             this.explLabel = new System.Windows.Forms.Label();
             this.subjectLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
@@ -84,7 +84,7 @@ namespace SpaceGame
             this.chemRadButton.Location = new System.Drawing.Point(489, 490);
             this.chemRadButton.Name = "chemRadButton";
             this.chemRadButton.Size = new System.Drawing.Size(72, 22);
-            this.chemRadButton.TabIndex = 1;
+            this.chemRadButton.TabIndex = 6;
             this.chemRadButton.TabStop = true;
             this.chemRadButton.Text = "Chimie";
             this.chemRadButton.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@ namespace SpaceGame
             this.mathsRadButton.Location = new System.Drawing.Point(144, 490);
             this.mathsRadButton.Name = "mathsRadButton";
             this.mathsRadButton.Size = new System.Drawing.Size(103, 22);
-            this.mathsRadButton.TabIndex = 2;
+            this.mathsRadButton.TabIndex = 3;
             this.mathsRadButton.TabStop = true;
             this.mathsRadButton.Text = "Matematica";
             this.mathsRadButton.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@ namespace SpaceGame
             this.phyRadButton.Location = new System.Drawing.Point(273, 490);
             this.phyRadButton.Name = "phyRadButton";
             this.phyRadButton.Size = new System.Drawing.Size(65, 22);
-            this.phyRadButton.TabIndex = 3;
+            this.phyRadButton.TabIndex = 4;
             this.phyRadButton.TabStop = true;
             this.phyRadButton.Text = "Fizica";
             this.phyRadButton.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@ namespace SpaceGame
             this.progRadButton.Location = new System.Drawing.Point(369, 490);
             this.progRadButton.Name = "progRadButton";
             this.progRadButton.Size = new System.Drawing.Size(105, 22);
-            this.progRadButton.TabIndex = 4;
+            this.progRadButton.TabIndex = 5;
             this.progRadButton.TabStop = true;
             this.progRadButton.Text = "Programare";
             this.progRadButton.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@ namespace SpaceGame
             this.answersPanel.Location = new System.Drawing.Point(142, 103);
             this.answersPanel.Name = "answersPanel";
             this.answersPanel.Size = new System.Drawing.Size(625, 232);
-            this.answersPanel.TabIndex = 5;
+            this.answersPanel.TabIndex = 1;
             // 
             // sendButton
             // 
@@ -141,7 +141,7 @@ namespace SpaceGame
             this.sendButton.Location = new System.Drawing.Point(354, 551);
             this.sendButton.Name = "sendButton";
             this.sendButton.Size = new System.Drawing.Size(191, 46);
-            this.sendButton.TabIndex = 6;
+            this.sendButton.TabIndex = 8;
             this.sendButton.Text = "Adauga";
             this.sendButton.UseVisualStyleBackColor = false;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
@@ -169,15 +169,15 @@ namespace SpaceGame
             this.explanationTextBox.Multiline = true;
             this.explanationTextBox.Name = "explanationTextBox";
             this.explanationTextBox.Size = new System.Drawing.Size(625, 65);
-            this.explanationTextBox.TabIndex = 8;
+            this.explanationTextBox.TabIndex = 2;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LemonChiffon;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridView.AllowUserToOrderColumns = true;
+            this.dataGridView.AutoGenerateColumns = false;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.LemonChiffon;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idQuestionDataGridViewTextBoxColumn,
             this.questionDataGridViewTextBoxColumn,
             this.explanationDataGridViewTextBoxColumn,
@@ -186,11 +186,11 @@ namespace SpaceGame
             this.answerDataGridViewTextBoxColumn,
             this.idQuestion1DataGridViewTextBoxColumn,
             this.isValidDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.qandABindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(854, 15);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(849, 506);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridView.DataSource = this.qandABindingSource;
+            this.dataGridView.Location = new System.Drawing.Point(854, 15);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.Size = new System.Drawing.Size(849, 506);
+            this.dataGridView.TabIndex = 9;
             // 
             // idQuestionDataGridViewTextBoxColumn
             // 
@@ -270,7 +270,7 @@ namespace SpaceGame
             this.refreshButton.Location = new System.Drawing.Point(854, 551);
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(191, 46);
-            this.refreshButton.TabIndex = 10;
+            this.refreshButton.TabIndex = 9;
             this.refreshButton.Text = "Refresh";
             this.refreshButton.UseVisualStyleBackColor = false;
             this.refreshButton.Visible = false;
@@ -284,7 +284,7 @@ namespace SpaceGame
             this.statsButton.Location = new System.Drawing.Point(1512, 551);
             this.statsButton.Name = "statsButton";
             this.statsButton.Size = new System.Drawing.Size(191, 46);
-            this.statsButton.TabIndex = 11;
+            this.statsButton.TabIndex = 10;
             this.statsButton.Text = "Statistici";
             this.statsButton.UseVisualStyleBackColor = false;
             this.statsButton.Click += new System.EventHandler(this.statsButton_Click);
@@ -341,7 +341,7 @@ namespace SpaceGame
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.statsButton);
             this.Controls.Add(this.refreshButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.explanationTextBox);
             this.Controls.Add(this.answerButton);
             this.Controls.Add(this.sendButton);
@@ -356,7 +356,7 @@ namespace SpaceGame
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
@@ -376,7 +376,7 @@ namespace SpaceGame
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Button answerButton;
         private System.Windows.Forms.TextBox explanationTextBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.BindingSource databaseDataSetBindingSource;
         private DatabaseDataSet databaseDataSet;
         private System.Windows.Forms.BindingSource qandABindingSource;

@@ -16,11 +16,6 @@ namespace SpaceGame
         private int maths, physics, chemestry, programming, sum = 0;
         private string str;
 
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public Statistics()
         {
             InitializeComponent();
@@ -38,6 +33,7 @@ namespace SpaceGame
             catch(Exception e)
             {
                 str = "0";
+                Console.WriteLine(e);
             }
             maths = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
             try
@@ -47,6 +43,7 @@ namespace SpaceGame
             catch (Exception e)
             {
                 str = "0";
+                Console.WriteLine(e);
             }
             physics = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
             try
@@ -56,6 +53,7 @@ namespace SpaceGame
             catch (Exception e)
             {
                 str = "0";
+                Console.WriteLine(e);
             }
             chemestry = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
             try
@@ -65,6 +63,7 @@ namespace SpaceGame
             catch (Exception e)
             {
                 str = "0";
+                Console.WriteLine(e);
             }
             programming = Convert.ToInt32(str.Replace("\n", "").Replace("\r", ""));
             sum = maths + physics + chemestry + programming;

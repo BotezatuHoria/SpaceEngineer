@@ -137,9 +137,9 @@ namespace SpaceGame
             DataTable table = qanda.GetData();
             BindingSource bSource = new BindingSource();
             bSource.DataSource = table;
-            dataGridView1.DataSource = bSource;
-            dataGridView1.Update();
-            dataGridView1.Refresh();
+            dataGridView.DataSource = bSource;
+            dataGridView.Update();
+            dataGridView.Refresh();
         }
 
         private void clearInputs()

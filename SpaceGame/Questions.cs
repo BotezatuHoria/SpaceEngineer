@@ -228,6 +228,7 @@ namespace SpaceGame
             }
             catch (Exception e)
             {
+                Console.WriteLine(e);
                 if (scr == null)
                 {
                     using (StreamWriter write = new StreamWriter(room.Replace("\n", "").Replace("\r", "") + ".txt"))
