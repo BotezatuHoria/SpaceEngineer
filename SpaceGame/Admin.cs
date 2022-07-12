@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SpaceGame.DatabaseDataSetTableAdapters;
-using System.Data.Sql;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace SpaceGame
 {
@@ -24,11 +25,15 @@ namespace SpaceGame
         private string subjectstr;
         List<string> answersstr;
         List<string> controls;
+        List<QandA> qa;
+        List<QandA> array;
         Question quest;
 
         public Admin()
         {
             InitializeComponent();
+            this.Width = 1437;
+            this.Height = 717;
         }
 
         private void Admin_Load(object sender, EventArgs e)
@@ -128,7 +133,8 @@ namespace SpaceGame
             var question = new QuestionsTableAdapter();
             DataTable dataTable = question.GetData();
             DataView dataView = dataTable.DefaultView;
-            return dataView.Count;
+            return Convert.ToInt32(dataView[dataView.Count - 1][0]);
+            //return dataView.Count;
         }
 
         private void refreshDataGrid()
@@ -177,37 +183,39 @@ namespace SpaceGame
 
         private void eraseButton_Click(object sender, EventArgs e)
         {
-            refreshDataGrid();
-            /*
-            if (eraseTextBox.Enabled == false)
-            {
-                eraseTextBox.Enabled = true;
-                eraseTextBox.Visible = true;
-            }
-            else
-            {
-                var question = new QuestionsTableAdapter();
-                DataTable dataTable = question.GetData();
-                DataView dataView = dataTable.DefaultView;
-                dataView.Delete(Convert.ToInt32(eraseTextBox.Text.Replace("\n", "").Replace("\r", "")));
-                Console.WriteLine(dataView[Convert.ToInt32(eraseTextBox.Text.Replace("\n", "").Replace("\r", ""))]["IdQues"]);
-                var answer = new AnswersTableAdapter();
-                dataTable = answer.GetData();
-                dataView = dataTable.DefaultView;
-                //dataView.Sort = "IdQuestion";
-                for (int i = 0; i < dataView.Count; ++i)
-                {
-                    if (dataView[i]["IdQuestion"].ToString() == eraseTextBox.Text)
-                    {
-                        dataView.Delete(i);
-                    }
-                }
-            }*/
-        }
+            int crrCell = Convert.ToInt32(dataGridView.CurrentRow.Cells[5].Value);
+            //Console.WriteLine(crrCell);
+            qa = QandA.LoadQandAFromDatabase();
 
-        private void statsButton_Click(object sender, EventArgs e)
-        {
-            new Statistics().ShowDialog();
+            array = new List<QandA>();
+            foreach (QandA qaa in qa)
+            {
+                int cnt = array.Count();
+                while (qaa.IdQuestion - cnt > 1)
+                {
+                    array.Add(null);
+                    cnt = array.Count();
+                }
+
+                array.Add(qaa);
+                //Console.WriteLine(cnt + " " + array[cnt].IdQuestion + " " + qaa.IdQuestion + " " + qaa.Question);
+                //Console.WriteLine(q.IdQuestion + " " + q.Question + " ");
+            }
+
+            foreach (Answer a in array[Convert.ToInt32(crrCell) - 1].Answers)
+            {
+                Answer answer = new Answer(a.IdAnswer);
+                answer.Delete();
+            }
+                
+
+            refreshDataGrid();
+            //dataGridView.Rows.Remove(dataGridView.CurrentRow);
+
+            Question q = new Question(crrCell);
+            //Question q = new Question(83);
+            q.Delete();
+
         }
 
         private bool Errors()
@@ -238,7 +246,7 @@ namespace SpaceGame
                         MessageBox.Show("Nu ati selectat raspunsul corect.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
-                    
+
                 }
             }
             if (String.IsNullOrWhiteSpace(explanationTextBox.Text))
@@ -252,6 +260,15 @@ namespace SpaceGame
                 return false;
             }
             return true;
+        }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Console.WriteLine(dataGridView.CurrentCell.Value);
+            //dataGridView.Rows.Remove(dataGridView.CurrentRow);
+            //Console.WriteLine(dataGridView.CurrentCell.Value);
+            //Console.WriteLine(dataGridView.Columns[dataGridView.CurrentRow.Index]);
+            Console.WriteLine(dataGridView.CurrentRow.Cells[5].Value);
         }
     }
 }

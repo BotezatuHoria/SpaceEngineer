@@ -49,7 +49,7 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
             this.ClientSize = new System.Drawing.Size(595, 450);
             this.Controls.Add(this.highScoreLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

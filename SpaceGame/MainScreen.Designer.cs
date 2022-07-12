@@ -38,7 +38,7 @@ namespace SpaceGame
             // 
             // startButton
             // 
-            this.startButton.BackColor = System.Drawing.Color.Gold;
+            this.startButton.BackColor = System.Drawing.Color.Coral;
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.startButton.Location = new System.Drawing.Point(154, 82);
@@ -51,7 +51,7 @@ namespace SpaceGame
             // 
             // statsButton
             // 
-            this.statsButton.BackColor = System.Drawing.Color.Gold;
+            this.statsButton.BackColor = System.Drawing.Color.Coral;
             this.statsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.statsButton.Location = new System.Drawing.Point(154, 228);
@@ -64,7 +64,7 @@ namespace SpaceGame
             // 
             // storyButton
             // 
-            this.storyButton.BackColor = System.Drawing.Color.Gold;
+            this.storyButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.storyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.storyButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.storyButton.Location = new System.Drawing.Point(154, 157);
@@ -77,7 +77,7 @@ namespace SpaceGame
             // 
             // settingsButton
             // 
-            this.settingsButton.BackColor = System.Drawing.Color.Gold;
+            this.settingsButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.settingsButton.Enabled = false;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -94,7 +94,7 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
             this.ClientSize = new System.Drawing.Size(588, 450);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.storyButton);

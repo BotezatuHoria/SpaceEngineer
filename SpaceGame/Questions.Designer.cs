@@ -41,7 +41,7 @@ namespace SpaceGame
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.LemonChiffon;
+            this.textBox1.BackColor = System.Drawing.Color.PeachPuff;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.Location = new System.Drawing.Point(34, 12);
@@ -53,7 +53,7 @@ namespace SpaceGame
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
             this.panel1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.panel1.Location = new System.Drawing.Point(34, 127);
             this.panel1.Name = "panel1";
@@ -74,7 +74,7 @@ namespace SpaceGame
             // 
             // explButton
             // 
-            this.explButton.BackColor = System.Drawing.Color.Gold;
+            this.explButton.BackColor = System.Drawing.Color.Coral;
             this.explButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.explButton.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.explButton.Location = new System.Drawing.Point(919, 127);
@@ -100,7 +100,7 @@ namespace SpaceGame
             // 
             // validButton
             // 
-            this.validButton.BackColor = System.Drawing.Color.Gold;
+            this.validButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.validButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.validButton.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.validButton.Location = new System.Drawing.Point(919, 446);
@@ -127,7 +127,7 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
             this.ClientSize = new System.Drawing.Size(1104, 578);
             this.Controls.Add(this.mistakeLabel);
             this.Controls.Add(this.validButton);

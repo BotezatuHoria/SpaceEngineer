@@ -40,7 +40,7 @@ namespace SpaceGame
             this.storyLabel.ForeColor = System.Drawing.Color.White;
             this.storyLabel.Location = new System.Drawing.Point(56, 34);
             this.storyLabel.Name = "storyLabel";
-            this.storyLabel.Size = new System.Drawing.Size(471, 543);
+            this.storyLabel.Size = new System.Drawing.Size(583, 468);
             this.storyLabel.TabIndex = 3;
             this.storyLabel.Text = "label1";
             this.storyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,8 +49,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
-            this.ClientSize = new System.Drawing.Size(595, 677);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
+            this.ClientSize = new System.Drawing.Size(676, 537);
             this.Controls.Add(this.storyLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

@@ -23,6 +23,9 @@ namespace SpaceGame
             //Application.Run(new Ending());
             //Application.Run(new Admin());
             //Application.Run(new Statistics());
+            //Application.Run(new Learning());
+            //Application.Run(new Lessons("phy"));
+            //Application.Run(new PDFView());
         }
     }
 }

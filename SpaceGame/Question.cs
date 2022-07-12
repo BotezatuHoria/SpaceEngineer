@@ -39,6 +39,14 @@ namespace SpaceGame
             this.idQuestion = Convert.ToInt32(question.GetData().Last()["IdQuestion"]);
         }
 
+        public void Delete()
+        {
+            QuestionsTableAdapter questionsTableAdapter = new QuestionsTableAdapter();
+            SpaceGame.DatabaseDataSet.QuestionsDataTable questions = questionsTableAdapter.GetData();
+            questions.Rows.Remove(questions.FindByIdQuestion(this.idQuestion));
+            questionsTableAdapter.Delete(this.idQuestion, this.subject);
+        }
+
         public int IdQuestion
         {
             get { return IdQuestion; }

@@ -70,6 +70,18 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMaterials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMaterials.Designer.cs">
+      <DependentUpon>AdminMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSelect.Designer.cs">
+      <DependentUpon>AdminSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Answer.cs" />
     <Compile Include="DatabaseDataSet.cs">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
@@ -103,6 +115,18 @@
     <Compile Include="Intro.Designer.cs">
       <DependentUpon>Intro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Learning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Learning.Designer.cs">
+      <DependentUpon>Learning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lessons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lessons.Designer.cs">
+      <DependentUpon>Lessons.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +138,13 @@
     </Compile>
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials.cs" />
+    <Compile Include="PDFView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDFView.Designer.cs">
+      <DependentUpon>PDFView.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -152,6 +183,12 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminMaterials.resx">
+      <DependentUpon>AdminMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSelect.resx">
+      <DependentUpon>AdminSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ending.resx">
       <DependentUpon>Ending.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,11 +204,20 @@
     <EmbeddedResource Include="Intro.resx">
       <DependentUpon>Intro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Learning.resx">
+      <DependentUpon>Learning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lessons.resx">
+      <DependentUpon>Lessons.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDFView.resx">
+      <DependentUpon>PDFView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,6 +265,39 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\fiz1_2.png" />
+    <None Include="Resources\whiteboard_fiz_2.png" />
+    <None Include="Resources\whiteboard_fiz.png" />
+    <None Include="Resources\physet.png" />
+    <None Include="Resources\pdfs.png" />
+    <None Include="Resources\resized.jpg" />
+    <None Include="Resources\pdf.png" />
+    <None Include="Resources\filess.png" />
+    <None Include="Resources\docs.png" />
+    <None Include="Resources\files.png" />
+    <None Include="Resources\paper.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\logogo.png" />
+    <None Include="Resources\logofin.png" />
+    <None Include="Resources\photoo.jpg" />
+    <None Include="Resources\photo.jpg" />
+    <None Include="Resources\41271.jpg" />
+    <None Include="Resources\backkk.jpg" />
+    <None Include="Resources\background3.jpg" />
+    <None Include="Resources\twis-hero.jpeg" />
+    <None Include="Resources\log0.png" />
+    <None Include="Resources\logo6.png" />
+    <None Include="Resources\logo5.png" />
+    <None Include="Resources\rocket.png" />
+    <None Include="Resources\logo4.png" />
+    <None Include="Resources\logo3.jpg" />
+    <None Include="Resources\logo2.png" />
+    <None Include="Resources\backgroundspace.jpg" />
+    <None Include="Resources\spaceback.jpg" />
+    <None Include="Resources\reactor.png" />
+    <None Include="Resources\Book1.pdf" />
+    <None Include="Resources\mate1.pdf" />
+    <None Include="Resources\mate2.pdf" />
     <None Include="Resources\walk.wav" />
     <None Include="Resources\door.wav" />
     <None Include="Resources\blackboard.jpg" />
@@ -270,5 +349,25 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

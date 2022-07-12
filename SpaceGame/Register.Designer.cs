@@ -43,7 +43,7 @@ namespace SpaceGame
             // 
             // fNameBox
             // 
-            this.fNameBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.fNameBox.BackColor = System.Drawing.Color.SeaShell;
             this.fNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fNameBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fNameBox.Location = new System.Drawing.Point(217, 118);
@@ -53,7 +53,7 @@ namespace SpaceGame
             // 
             // sNameBox
             // 
-            this.sNameBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.sNameBox.BackColor = System.Drawing.Color.SeaShell;
             this.sNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sNameBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.sNameBox.Location = new System.Drawing.Point(217, 69);
@@ -63,7 +63,7 @@ namespace SpaceGame
             // 
             // emailBox
             // 
-            this.emailBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.emailBox.BackColor = System.Drawing.Color.SeaShell;
             this.emailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.emailBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.emailBox.Location = new System.Drawing.Point(217, 169);
@@ -73,7 +73,7 @@ namespace SpaceGame
             // 
             // passwordBox
             // 
-            this.passwordBox.BackColor = System.Drawing.Color.LemonChiffon;
+            this.passwordBox.BackColor = System.Drawing.Color.SeaShell;
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.passwordBox.Location = new System.Drawing.Point(217, 225);
@@ -84,7 +84,7 @@ namespace SpaceGame
             // 
             // registerButton
             // 
-            this.registerButton.BackColor = System.Drawing.Color.Gold;
+            this.registerButton.BackColor = System.Drawing.Color.Coral;
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerButton.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.registerButton.Location = new System.Drawing.Point(116, 318);
@@ -100,7 +100,7 @@ namespace SpaceGame
             this.fnameLabel.AutoSize = true;
             this.fnameLabel.BackColor = System.Drawing.Color.Transparent;
             this.fnameLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.fnameLabel.ForeColor = System.Drawing.Color.White;
+            this.fnameLabel.ForeColor = System.Drawing.Color.Gold;
             this.fnameLabel.Location = new System.Drawing.Point(112, 120);
             this.fnameLabel.Name = "fnameLabel";
             this.fnameLabel.Size = new System.Drawing.Size(90, 22);
@@ -112,7 +112,7 @@ namespace SpaceGame
             this.snameLabel.AutoSize = true;
             this.snameLabel.BackColor = System.Drawing.Color.Transparent;
             this.snameLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.snameLabel.ForeColor = System.Drawing.Color.White;
+            this.snameLabel.ForeColor = System.Drawing.Color.Gold;
             this.snameLabel.Location = new System.Drawing.Point(112, 71);
             this.snameLabel.Name = "snameLabel";
             this.snameLabel.Size = new System.Drawing.Size(60, 22);
@@ -124,7 +124,7 @@ namespace SpaceGame
             this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
             this.emailLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.emailLabel.ForeColor = System.Drawing.Color.White;
+            this.emailLabel.ForeColor = System.Drawing.Color.Gold;
             this.emailLabel.Location = new System.Drawing.Point(112, 171);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(80, 22);
@@ -136,7 +136,7 @@ namespace SpaceGame
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.passwordLabel.ForeColor = System.Drawing.Color.White;
+            this.passwordLabel.ForeColor = System.Drawing.Color.Gold;
             this.passwordLabel.Location = new System.Drawing.Point(112, 227);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(90, 22);
@@ -147,7 +147,7 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.fundal1;
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
             this.ClientSize = new System.Drawing.Size(594, 450);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.emailLabel);

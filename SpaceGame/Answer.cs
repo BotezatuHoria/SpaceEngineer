@@ -39,6 +39,14 @@ namespace SpaceGame
             answersTableAdapter.Insert(_ans, _idQuestion, _valid);
             this.idAnswer = Convert.ToInt32(answersTableAdapter.GetData().Last()["IdAnswer"]);
         }
+        
+        public void Delete()
+        {
+            AnswersTableAdapter answersTableAdapter = new AnswersTableAdapter();
+            SpaceGame.DatabaseDataSet.AnswersDataTable answers = answersTableAdapter.GetData();
+            answers.Rows.Remove(answers.FindByIdAnswer(this.idAnswer));
+            answersTableAdapter.Delete(this.idAnswer, this.ans, this.idQuestion, this.valid);
+        }
 
         public int IdAnswer
         {
