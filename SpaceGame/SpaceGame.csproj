@@ -115,12 +115,6 @@
     <Compile Include="Intro.Designer.cs">
       <DependentUpon>Intro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Learning.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Learning.Designer.cs">
-      <DependentUpon>Learning.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lessons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +198,6 @@
     <EmbeddedResource Include="Intro.resx">
       <DependentUpon>Intro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Learning.resx">
-      <DependentUpon>Learning.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Lessons.resx">
       <DependentUpon>Lessons.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +256,46 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\photo-1539721972319-f0e80a00d424.jpg" />
+    <None Include="Resources\backkk1.jpg" />
+    <None Include="Resources\photoo2.jpg" />
+    <None Include="Resources\bubblechat.png" />
+    <None Include="Resources\bubble.png" />
+    <None Include="Resources\dog2.png" />
+    <None Include="Resources\dog1.png" />
+    <None Include="Resources\dog3.png" />
+    <None Include="Resources\dog.gif" />
+    <None Include="Resources\downroom.png" />
+    <None Include="Resources\dresschem.png" />
+    <None Include="Resources\blackboard_chem.png" />
+    <None Include="Resources\chem16.png" />
+    <None Include="Resources\chem3.png" />
+    <None Include="Resources\chem1.png" />
+    <None Include="Resources\chem15.png" />
+    <None Include="Resources\calendar1.png" />
+    <None Include="Resources\lmath.png" />
+    <None Include="Resources\math1.png" />
+    <None Include="Resources\learnmath.png" />
+    <None Include="Resources\math3.png" />
+    <None Include="Resources\math2.png" />
+    <None Include="Resources\math_desk_2.png" />
+    <None Include="Resources\math_desk_1.png" />
+    <None Include="Resources\testprog.png" />
+    <None Include="Resources\comandslat.png" />
+    <None Include="Resources\comands.png" />
+    <None Include="Resources\robbot.png" />
+    <None Include="Resources\2comands.png" />
+    <None Include="Resources\whiteboard1.png" />
+    <None Include="Resources\infopcs.png" />
+    <None Include="Resources\desk3.png" />
+    <None Include="Resources\computer2_1.png" />
+    <None Include="Resources\computer1_1.png" />
+    <None Include="Resources\white2.png" />
+    <None Include="Resources\fiz4.png" />
+    <None Include="Resources\whiteboard.png" />
+    <None Include="Resources\fiz3.png" />
+    <None Include="Resources\fiz2.png" />
+    <None Include="Resources\fiz.png" />
     <None Include="Resources\fiz1_2.png" />
     <None Include="Resources\whiteboard_fiz_2.png" />
     <None Include="Resources\whiteboard_fiz.png" />
@@ -315,7 +346,6 @@
     <None Include="Resources\downroom2.png" />
     <None Include="Resources\rightroom2.png" />
     <None Include="Resources\rightroom1.png" />
-    <None Include="Resources\downroom.png" />
     <None Include="Resources\leftroom.png" />
     <None Include="Resources\rightroom.png" />
     <None Include="Resources\uproom.png" />

@@ -36,10 +36,10 @@ namespace SpaceGame
             // 
             // questionButton
             // 
-            this.questionButton.BackColor = System.Drawing.Color.Gold;
+            this.questionButton.BackColor = System.Drawing.Color.Coral;
             this.questionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.questionButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.questionButton.Location = new System.Drawing.Point(110, 70);
+            this.questionButton.Location = new System.Drawing.Point(169, 124);
             this.questionButton.Name = "questionButton";
             this.questionButton.Size = new System.Drawing.Size(283, 48);
             this.questionButton.TabIndex = 1;
@@ -49,10 +49,10 @@ namespace SpaceGame
             // 
             // materialsButton
             // 
-            this.materialsButton.BackColor = System.Drawing.Color.Gold;
+            this.materialsButton.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.materialsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.materialsButton.Location = new System.Drawing.Point(110, 164);
+            this.materialsButton.Location = new System.Drawing.Point(169, 218);
             this.materialsButton.Name = "materialsButton";
             this.materialsButton.Size = new System.Drawing.Size(283, 48);
             this.materialsButton.TabIndex = 2;
@@ -62,10 +62,10 @@ namespace SpaceGame
             // 
             // statsButton
             // 
-            this.statsButton.BackColor = System.Drawing.Color.Gold;
+            this.statsButton.BackColor = System.Drawing.Color.Coral;
             this.statsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.statsButton.Location = new System.Drawing.Point(110, 267);
+            this.statsButton.Location = new System.Drawing.Point(169, 321);
             this.statsButton.Name = "statsButton";
             this.statsButton.Size = new System.Drawing.Size(283, 48);
             this.statsButton.TabIndex = 3;
@@ -77,11 +77,13 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 418);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
+            this.ClientSize = new System.Drawing.Size(622, 508);
             this.Controls.Add(this.statsButton);
             this.Controls.Add(this.materialsButton);
             this.Controls.Add(this.questionButton);
             this.Name = "AdminSelect";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminSelect";
             this.ResumeLayout(false);
 

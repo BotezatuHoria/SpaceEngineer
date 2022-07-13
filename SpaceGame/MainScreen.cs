@@ -50,5 +50,10 @@ namespace SpaceGame
         {
             new AdminSelect().ShowDialog();
         }
+
+        private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
