@@ -81,6 +81,36 @@ namespace SpaceGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Aerul {
+            get {
+                object obj = ResourceManager.GetObject("Aerul", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Apa {
+            get {
+                object obj = ResourceManager.GetObject("Apa", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Aplicatia_Paint {
+            get {
+                object obj = ResourceManager.GetObject("Aplicatia_Paint", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap back {
@@ -281,6 +311,16 @@ namespace SpaceGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Circuitul_electric_simplu__Elemente_de_circuit {
+            get {
+                object obj = ResourceManager.GetObject("Circuitul_electric_simplu__Elemente_de_circuit", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap comands {
@@ -297,6 +337,16 @@ namespace SpaceGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("comandslat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Componentele_Calculatorului {
+            get {
+                object obj = ResourceManager.GetObject("Componentele_Calculatorului", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -347,6 +397,26 @@ namespace SpaceGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("desk3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Disp_de_intrare_iesire {
+            get {
+                object obj = ResourceManager.GetObject("Disp_de_intrare_iesire", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Divizibilitatea_numerelor_naturale_Criterii_de_divizibilitate {
+            get {
+                object obj = ResourceManager.GetObject("Divizibilitatea_numerelor_naturale_Criterii_de_divizibilitate", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -740,12 +810,32 @@ namespace SpaceGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Magneţi__Interacţiuni_magnetice__Câmp_magnetic {
+            get {
+                object obj = ResourceManager.GetObject("Magneţi__Interacţiuni_magnetice__Câmp_magnetic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap map {
             get {
                 object obj = ResourceManager.GetObject("map", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Mărimi_fizice_şi_unităţi_de_măsură {
+            get {
+                object obj = ResourceManager.GetObject("Mărimi_fizice_şi_unităţi_de_măsură", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -816,6 +906,96 @@ namespace SpaceGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("math3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Metalele {
+            get {
+                object obj = ResourceManager.GetObject("Metalele", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Microsoft_Office {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Office", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Microsoft_Word {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Word", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Multimi_Operatii_cu_multimi {
+            get {
+                object obj = ResourceManager.GetObject("Multimi_Operatii_cu_multimi", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Nr_Prime_Desc_in_factori_primi {
+            get {
+                object obj = ResourceManager.GetObject("Nr_Prime_Desc_in_factori_primi", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Numere_Intregi {
+            get {
+                object obj = ResourceManager.GetObject("Numere_Intregi", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Numere_Naturale_Operatii_cu_numere_naturale {
+            get {
+                object obj = ResourceManager.GetObject("Numere_Naturale_Operatii_cu_numere_naturale", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Numere_Rationale {
+            get {
+                object obj = ResourceManager.GetObject("Numere_Rationale", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Numere_Reale {
+            get {
+                object obj = ResourceManager.GetObject("Numere_Reale", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -896,6 +1076,26 @@ namespace SpaceGame.Properties {
             get {
                 object obj = ResourceManager.GetObject("physet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Prop__Chimice__Materie__Corp__Substanță__Material {
+            get {
+                object obj = ResourceManager.GetObject("Prop__Chimice__Materie__Corp__Substanță__Material", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Proprietati_Fizice_ale_Corpurilor {
+            get {
+                object obj = ResourceManager.GetObject("Proprietati_Fizice_ale_Corpurilor", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -1040,12 +1240,42 @@ namespace SpaceGame.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Rolul_si_functiile_componentelor_unui_calculator_personal {
+            get {
+                object obj = ResourceManager.GetObject("Rolul_si_functiile_componentelor_unui_calculator_personal", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Solul {
+            get {
+                object obj = ResourceManager.GetObject("Solul", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap spaceback {
             get {
                 object obj = ResourceManager.GetObject("spaceback", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Tensiunea_electrică__Măsurarea_tensiunii_electrice {
+            get {
+                object obj = ResourceManager.GetObject("Tensiunea_electrică__Măsurarea_tensiunii_electrice", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

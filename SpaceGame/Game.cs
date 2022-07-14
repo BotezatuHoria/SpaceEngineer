@@ -90,6 +90,14 @@ namespace SpaceGame
                     scoreBoard.Text = "Score: " + scr.ToString();
                 }
             }
+            if (e.KeyCode == Keys.Escape)
+            {
+                DialogResult dialogResult = MessageBox.Show("Esti sigur ca vrei sa inchizi jocu?", "Confirmare", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
             e.SuppressKeyPress = true;
             controlButton.Enabled = false;
             controlButton.BackColor = Color.Aqua;
@@ -118,7 +126,6 @@ namespace SpaceGame
                 character.Image = SpaceGame.Properties.Resources.frontPosition;
                 rightTimer.Enabled = false;
             }
-            
         }
 
         private void upTimer_Tick(object sender, EventArgs e)
@@ -194,17 +201,7 @@ namespace SpaceGame
             foreach (PictureBox i in lst)
             {
                 if (Interaction(character, i) == "Rocket")
-                {
-                    if (highScore < scr)
-                    {
-                        highScore = scr;
-                        
-                        using (StreamWriter writetext = new StreamWriter(userId.Replace("\n", "").Replace("\r", "") + ".txt"))
-                        {
-                            writetext.WriteLine(highScore);
-                        }
-                    }
-                        
+                {                        
                     new Ending().ShowDialog();
                     this.Close();
                 }
@@ -295,7 +292,6 @@ namespace SpaceGame
                     desksMath2.Visible = true;
                     desksMath3.Visible = true;
                     desksMath4.Visible = true;
-
                 }
                 else
                 {
@@ -600,7 +596,6 @@ namespace SpaceGame
                     this.BackgroundImage = SpaceGame.Properties.Resources.rocket11;
                     rocket.Enabled = true;
                 }
-               
             }
             else
             {
@@ -623,8 +618,6 @@ namespace SpaceGame
                 chatLabel.Location = new Point(317, 843);
                 roomRocket = false;
             }
-            
-                
         }
 
         public void elevatorOnOff(bool x)
@@ -685,7 +678,6 @@ namespace SpaceGame
             {
                 controlButton.Enabled = true;
                 controlButton.BackColor = Color.Yellow;
-                //testPhy.BackgroundImage = SpaceGame.Properties.Resources.fiz4;
             }
             if (Interaction(character, testProg) == "Test")
             {
@@ -732,6 +724,15 @@ namespace SpaceGame
 
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if (highScore < scr)
+            {
+                highScore = scr;
+
+                using (StreamWriter writetext = new StreamWriter(userId.Replace("\n", "").Replace("\r", "") + ".txt"))
+                {
+                    writetext.WriteLine(highScore);
+                }
+            }
             Application.Exit();
         }
 

@@ -54,7 +54,7 @@ namespace SpaceGame
             MaterialsTableAdapter materialsTableAdapter = new MaterialsTableAdapter();
             SpaceGame.DatabaseDataSet.MaterialsDataTable materials = materialsTableAdapter.GetData();
             materials.Rows.Remove(materials.FindById(this.id));
-            materialsTableAdapter.Delete(this.id, this.name, this.subject);
+            materialsTableAdapter.Delete(this.id, this.subject);
 
         }
 

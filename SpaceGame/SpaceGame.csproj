@@ -256,6 +256,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Aerul.pdf" />
+    <None Include="Resources\Apa.pdf" />
+    <None Include="Resources\Aplicatia Paint.pdf" />
+    <None Include="Resources\Circuitul electric simplu, Elemente de circuit.pdf" />
+    <None Include="Resources\Componentele Calculatorului.pdf" />
+    <None Include="Resources\Disp de intrare-iesire.pdf" />
+    <None Include="Resources\Divizibilitatea numerelor naturale-Criterii de divizibilitate.pdf" />
+    <None Include="Resources\Magneţi, Interacţiuni magnetice, Câmp magnetic.pdf" />
+    <None Include="Resources\Metalele.pdf" />
+    <None Include="Resources\Microsoft Office.pdf" />
+    <None Include="Resources\Microsoft Word.pdf" />
+    <None Include="Resources\Multimi-Operatii cu multimi.pdf" />
+    <None Include="Resources\Mărimi fizice şi unităţi de măsură.pdf" />
+    <None Include="Resources\Nr Prime-Desc in factori primi.pdf" />
+    <None Include="Resources\Numere Intregi.pdf" />
+    <None Include="Resources\Numere Naturale-Operatii cu numere naturale.pdf" />
+    <None Include="Resources\Numere Rationale.pdf" />
+    <None Include="Resources\Numere Reale.pdf" />
     <None Include="Resources\photo-1539721972319-f0e80a00d424.jpg" />
     <None Include="Resources\backkk1.jpg" />
     <None Include="Resources\photoo2.jpg" />
@@ -280,6 +298,11 @@
     <None Include="Resources\math2.png" />
     <None Include="Resources\math_desk_2.png" />
     <None Include="Resources\math_desk_1.png" />
+    <None Include="Resources\Prop. Chimice. Materie. Corp. Substanță. Material.pdf" />
+    <None Include="Resources\Proprietati Fizice ale Corpurilor.pdf" />
+    <None Include="Resources\Rolul si functiile componentelor unui calculator personal.pdf" />
+    <None Include="Resources\Solul.pdf" />
+    <None Include="Resources\Tensiunea electrică, Măsurarea tensiunii electrice.pdf" />
     <None Include="Resources\testprog.png" />
     <None Include="Resources\comandslat.png" />
     <None Include="Resources\comands.png" />

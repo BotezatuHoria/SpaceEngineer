@@ -22,7 +22,8 @@ namespace SpaceGame
         int pace = 1;
         const int maxpace = 5;
         List<QandA> array;
-        string scr;
+        string scr = null;
+        public int finScore = 0;
 
         public Questions(string _room)
         {
@@ -35,14 +36,18 @@ namespace SpaceGame
             mistakeLabel.Visible = false;
             ClearInputs();
             if (array[indx - 1] != null)
-                textBox1.Text = array[indx - 1].Question;
+            {
+                //textBox1.Text = array[indx - 1].Question;
+                label1.Text = array[indx - 1].Question;
+            }    
             else
             {
                 while(array[indx - 1] == null)
                 {
                     indx = RandomIndex();
                 }
-                textBox1.Text = array[indx - 1].Question;
+                //textBox1.Text = array[indx - 1].Question;
+                label1.Text = array[indx - 1].Question;
             }
             //if (array[indx])
             //textBox1.Text = qa[array[indx] - 1].Question;
@@ -55,6 +60,8 @@ namespace SpaceGame
                 answer.Location = new Point(100 , 30 + i * 55);
                 answer.Text = a.Ans;
                 answer.Tag = a.Valid;
+                answer.ForeColor = Color.White;
+                answer.Font = new Font("Consolas", 16);
                 panel1.Controls.Add(answer);
                 i++;
             }
@@ -98,7 +105,7 @@ namespace SpaceGame
 
         public void ClearInputs()
         {
-            textBox1.Clear();
+            //textBox1.Clear();            
             panel1.Controls.Clear();
         }
 
@@ -195,7 +202,7 @@ namespace SpaceGame
         {
             using (StreamWriter writetext = new StreamWriter("score.txt"))
             {
-                writetext.WriteLine(score.ToString());
+                writetext.Write(score.ToString());
             }
             RoomData(room);
         }
@@ -237,9 +244,11 @@ namespace SpaceGame
                     }
                 }
             }
+            //Console.WriteLine("Score final " + scr.Trim());
+            finScore = Convert.ToInt32(scr) + score;
             using (StreamWriter writetext = new StreamWriter(room.Replace("\n", "").Replace("\r", "") + ".txt"))
             {
-                writetext.WriteLine(scr + score.ToString());
+                writetext.WriteLine(finScore);
             }
         }
     }

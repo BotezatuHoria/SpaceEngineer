@@ -21003,4 +21003,73 @@
   <data name="photo-1539721972319-f0e80a00d424" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo-1539721972319-f0e80a00d424.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Aerul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aerul.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Apa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apa.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Aplicatia_Paint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Aplicatia Paint.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Circuitul_electric_simplu__Elemente_de_circuit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circuitul electric simplu, Elemente de circuit.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Componentele_Calculatorului" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Componentele Calculatorului.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Disp_de_intrare_iesire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Disp de intrare-iesire.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Divizibilitatea_numerelor_naturale_Criterii_de_divizibilitate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Divizibilitatea numerelor naturale-Criterii de divizibilitate.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Magneţi__Interacţiuni_magnetice__Câmp_magnetic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magneţi, Interacţiuni magnetice, Câmp magnetic.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Metalele" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Metalele.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Microsoft_Office" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Microsoft Office.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Microsoft_Word" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Microsoft Word.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Multimi_Operatii_cu_multimi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multimi-Operatii cu multimi.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mărimi_fizice_şi_unităţi_de_măsură" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mărimi fizice şi unităţi de măsură.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Nr_Prime_Desc_in_factori_primi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nr Prime-Desc in factori primi.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Numere_Intregi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Numere Intregi.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Numere_Naturale_Operatii_cu_numere_naturale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Numere Naturale-Operatii cu numere naturale.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Numere_Rationale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Numere Rationale.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Numere_Reale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Numere Reale.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Proprietati_Fizice_ale_Corpurilor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proprietati Fizice ale Corpurilor.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Prop__Chimice__Materie__Corp__Substanță__Material" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Prop. Chimice. Materie. Corp. Substanță. Material.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Rolul_si_functiile_componentelor_unui_calculator_personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rolul si functiile componentelor unui calculator personal.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Solul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Solul.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tensiunea_electrică__Măsurarea_tensiunii_electrice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tensiunea electrică, Măsurarea tensiunii electrice.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
