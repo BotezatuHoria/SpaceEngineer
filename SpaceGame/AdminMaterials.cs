@@ -14,8 +14,6 @@ namespace SpaceGame
 {
     public partial class AdminMaterials : Form
     {
-        List<Materials> materials;
-        List<Materials> array;
 
         public AdminMaterials()
         {

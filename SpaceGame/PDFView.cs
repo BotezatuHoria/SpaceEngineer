@@ -21,11 +21,6 @@ namespace SpaceGame
             InitializeComponent();
         }
 
-        private void axAcroPDF1_OnError(object sender, EventArgs e)
-        {
-
-        }
-
         private void PDFView_Load(object sender, EventArgs e)
         {
             

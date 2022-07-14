@@ -796,6 +796,7 @@ namespace SpaceGame
             this.BackgroundImage = global::SpaceGame.Properties.Resources.map;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.scoreBoard);
             this.Controls.Add(this.chatLabel);
             this.Controls.Add(this.chatBubble);
             this.Controls.Add(this.dog);
@@ -831,7 +832,6 @@ namespace SpaceGame
             this.Controls.Add(this.character);
             this.Controls.Add(this.rocket);
             this.Controls.Add(this.testChem);
-            this.Controls.Add(this.scoreBoard);
             this.Controls.Add(this.rightRoomEntrance);
             this.Controls.Add(this.leftRoomEntrance);
             this.Controls.Add(this.upRoomEntrance);
