@@ -25,17 +25,6 @@ namespace SpaceGame
             InitializeComponent();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            genPanel("aaa");
-            //LoadFromDb();
-        }
-
         private void genPanel(string name)
         {
             Panel panel = new Panel();
@@ -70,7 +59,7 @@ namespace SpaceGame
             panel.Controls.Add(label);
             //panel.BorderStyle = BorderStyle.None;
             
-            flowLayoutPanel1.Controls.Add(panel);
+            flowLayoutPanel.Controls.Add(panel);
         }
 
         private void read_Click(object sender, EventArgs e)

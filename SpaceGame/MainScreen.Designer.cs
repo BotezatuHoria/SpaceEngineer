@@ -34,6 +34,7 @@ namespace SpaceGame
             this.statsButton = new System.Windows.Forms.Button();
             this.storyButton = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
+            this.controlsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startButton
@@ -77,11 +78,11 @@ namespace SpaceGame
             // 
             // settingsButton
             // 
-            this.settingsButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.settingsButton.BackColor = System.Drawing.Color.Coral;
             this.settingsButton.Enabled = false;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.settingsButton.Location = new System.Drawing.Point(154, 303);
+            this.settingsButton.Location = new System.Drawing.Point(154, 367);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(283, 48);
             this.settingsButton.TabIndex = 3;
@@ -90,12 +91,28 @@ namespace SpaceGame
             this.settingsButton.Visible = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
+            // controlsButton
+            // 
+            this.controlsButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.controlsButton.Enabled = false;
+            this.controlsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.controlsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.controlsButton.Location = new System.Drawing.Point(154, 297);
+            this.controlsButton.Name = "controlsButton";
+            this.controlsButton.Size = new System.Drawing.Size(283, 48);
+            this.controlsButton.TabIndex = 4;
+            this.controlsButton.Text = "Controale";
+            this.controlsButton.UseVisualStyleBackColor = false;
+            this.controlsButton.Visible = false;
+            this.controlsButton.Click += new System.EventHandler(this.controlsButton_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
             this.ClientSize = new System.Drawing.Size(588, 450);
+            this.Controls.Add(this.controlsButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.storyButton);
             this.Controls.Add(this.statsButton);
@@ -118,5 +135,6 @@ namespace SpaceGame
         private System.Windows.Forms.Button statsButton;
         private System.Windows.Forms.Button storyButton;
         private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Button controlsButton;
     }
 }

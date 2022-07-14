@@ -43,18 +43,21 @@ namespace SpaceGame
             this.axAcroPDF1.Location = new System.Drawing.Point(0, 0);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(1092, 937);
+            this.axAcroPDF1.Size = new System.Drawing.Size(1478, 955);
             this.axAcroPDF1.TabIndex = 0;
             // 
             // PDFView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1092, 938);
+            this.ClientSize = new System.Drawing.Size(1478, 956);
             this.Controls.Add(this.axAcroPDF1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PDFView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PDFView";
+            this.Text = "PDF";
             this.Load += new System.EventHandler(this.PDFView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);

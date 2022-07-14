@@ -36,8 +36,8 @@ namespace SpaceGame
             this.registerLabel = new System.Windows.Forms.LinkLabel();
             this.emailLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.logo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
             // loginButton
@@ -113,16 +113,16 @@ namespace SpaceGame
             this.passwordLabel.Text = "Parola: ";
             this.passwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // logo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SpaceGame.Properties.Resources.logogo;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 141);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.logo.BackColor = System.Drawing.Color.Transparent;
+            this.logo.Image = global::SpaceGame.Properties.Resources.logogo;
+            this.logo.Location = new System.Drawing.Point(128, 41);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(318, 141);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.logo.TabIndex = 7;
+            this.logo.TabStop = false;
             // 
             // Login
             // 
@@ -136,7 +136,7 @@ namespace SpaceGame
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.emailBox);
             this.Controls.Add(this.loginButton);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logo);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -144,7 +144,7 @@ namespace SpaceGame
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,7 +157,7 @@ namespace SpaceGame
         private System.Windows.Forms.LinkLabel registerLabel;
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label passwordLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox logo;
     }
 }
 

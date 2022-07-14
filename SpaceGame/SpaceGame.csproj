@@ -83,6 +83,12 @@
       <DependentUpon>AdminSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="Answer.cs" />
+    <Compile Include="Controls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls.Designer.cs">
+      <DependentUpon>Controls.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseDataSet.cs">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
@@ -183,6 +189,9 @@
     <EmbeddedResource Include="AdminSelect.resx">
       <DependentUpon>AdminSelect.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls.resx">
+      <DependentUpon>Controls.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ending.resx">
       <DependentUpon>Ending.cs</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +265,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icons8-esc-48.png" />
+    <None Include="Resources\icons8-e-key-48.png" />
+    <None Include="Resources\icons8-d-key-48.png" />
+    <None Include="Resources\icons8-a-key-48.png" />
+    <None Include="Resources\icons8-s-key-48.png" />
+    <None Include="Resources\icons8-w-key-48.png" />
     <None Include="Resources\Aerul.pdf" />
     <None Include="Resources\Apa.pdf" />
     <None Include="Resources\Aplicatia Paint.pdf" />

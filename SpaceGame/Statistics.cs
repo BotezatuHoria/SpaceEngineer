@@ -77,11 +77,11 @@ namespace SpaceGame
 
         private void DispalyChart()
         {
-            chart1.Series["s1"].IsValueShownAsLabel = true;
-            chart1.Series["s1"].Points.AddXY("Matematica", maths.ToString());
-            chart1.Series["s1"].Points.AddXY("Fizica", physics.ToString());
-            chart1.Series["s1"].Points.AddXY("Chimie", chemestry.ToString());
-            chart1.Series["s1"].Points.AddXY("Programare", programming.ToString());
+            chart.Series["s1"].IsValueShownAsLabel = true;
+            chart.Series["s1"].Points.AddXY("Matematica", maths.ToString());
+            chart.Series["s1"].Points.AddXY("Fizica", physics.ToString());
+            chart.Series["s1"].Points.AddXY("Chimie", chemestry.ToString());
+            chart.Series["s1"].Points.AddXY("Programare", programming.ToString());
         }
     }
 }

@@ -71,7 +71,7 @@ namespace SpaceGame
             this.MinimizeBox = false;
             this.Name = "Ending";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ending";
+            this.Text = "Final";
             this.Load += new System.EventHandler(this.Ending_Load);
             this.ResumeLayout(false);
 

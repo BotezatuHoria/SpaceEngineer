@@ -56,7 +56,7 @@ namespace SpaceGame
             this.MinimizeBox = false;
             this.Name = "Explain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Explain";
+            this.Text = "Explicatie";
             this.Load += new System.EventHandler(this.Explain_Load);
             this.ResumeLayout(false);
 

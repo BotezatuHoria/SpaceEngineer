@@ -24,6 +24,8 @@ namespace SpaceGame
             if (emailBox.Text == "admin@admin.com" && passwordBox.Text == "admin1234")
             {
                 isAdmin = true;
+                emailBox.Clear();
+                passwordBox.Clear();
                 new Register(isAdmin).Show();
             }
             else
@@ -50,6 +52,8 @@ namespace SpaceGame
 
         private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            emailBox.Clear();
+            passwordBox.Clear();
             new Register(isAdmin).ShowDialog();
         }
     }

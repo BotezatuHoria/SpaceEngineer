@@ -57,7 +57,7 @@ namespace SpaceGame
             this.MinimizeBox = false;
             this.Name = "Intro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Intro";
+            this.Text = "Poveste";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Intro_FormClosed);
             this.ResumeLayout(false);
 

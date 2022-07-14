@@ -38,7 +38,7 @@ namespace SpaceGame
             if (array[indx - 1] != null)
             {
                 //textBox1.Text = array[indx - 1].Question;
-                label1.Text = array[indx - 1].Question;
+                questionLabel.Text = array[indx - 1].Question;
             }    
             else
             {
@@ -47,7 +47,7 @@ namespace SpaceGame
                     indx = RandomIndex();
                 }
                 //textBox1.Text = array[indx - 1].Question;
-                label1.Text = array[indx - 1].Question;
+                questionLabel.Text = array[indx - 1].Question;
             }
             //if (array[indx])
             //textBox1.Text = qa[array[indx] - 1].Question;
@@ -62,7 +62,7 @@ namespace SpaceGame
                 answer.Tag = a.Valid;
                 answer.ForeColor = Color.White;
                 answer.Font = new Font("Consolas", 16);
-                panel1.Controls.Add(answer);
+                ansPanel.Controls.Add(answer);
                 i++;
             }
         }
@@ -91,7 +91,7 @@ namespace SpaceGame
 
         public bool ValidateAnswer()
         {
-            foreach (Control i in panel1.Controls)
+            foreach (Control i in ansPanel.Controls)
             {
                 if (i is RadioButton)
                 {
@@ -106,7 +106,7 @@ namespace SpaceGame
         public void ClearInputs()
         {
             //textBox1.Clear();            
-            panel1.Controls.Clear();
+            ansPanel.Controls.Clear();
         }
 
         private void explButton_Click(object sender, EventArgs e)

@@ -29,6 +29,7 @@ namespace SpaceGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSelect));
             this.questionButton = new System.Windows.Forms.Button();
             this.materialsButton = new System.Windows.Forms.Button();
             this.statsButton = new System.Windows.Forms.Button();
@@ -82,9 +83,12 @@ namespace SpaceGame
             this.Controls.Add(this.statsButton);
             this.Controls.Add(this.materialsButton);
             this.Controls.Add(this.questionButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AdminSelect";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminSelect";
+            this.Text = "Meniu Administrator";
             this.ResumeLayout(false);
 
         }

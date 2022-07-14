@@ -57,7 +57,7 @@ namespace SpaceGame
             this.subjectLabel = new System.Windows.Forms.Label();
             this.qandATableAdapter = new SpaceGame.DatabaseDataSetTableAdapters.QandATableAdapter();
             this.addLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.deleteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
@@ -327,17 +327,17 @@ namespace SpaceGame
             this.addLabel.TabIndex = 17;
             this.addLabel.Text = "Adauga o intrebare";
             // 
-            // label1
+            // deleteLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(960, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 32);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Sterge o intrebare";
+            this.deleteLabel.AutoSize = true;
+            this.deleteLabel.BackColor = System.Drawing.Color.Transparent;
+            this.deleteLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.deleteLabel.ForeColor = System.Drawing.Color.White;
+            this.deleteLabel.Location = new System.Drawing.Point(960, 21);
+            this.deleteLabel.Name = "deleteLabel";
+            this.deleteLabel.Size = new System.Drawing.Size(285, 32);
+            this.deleteLabel.TabIndex = 18;
+            this.deleteLabel.Text = "Sterge o intrebare";
             // 
             // Admin
             // 
@@ -346,7 +346,7 @@ namespace SpaceGame
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.photo_1539721972319_f0e80a00d424;
             this.ClientSize = new System.Drawing.Size(1443, 676);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.deleteLabel);
             this.Controls.Add(this.addLabel);
             this.Controls.Add(this.subjectLabel);
             this.Controls.Add(this.explLabel);
@@ -364,9 +364,11 @@ namespace SpaceGame
             this.Controls.Add(this.chemRadButton);
             this.Controls.Add(this.question);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Admin";
+            this.Text = "Administrare intrebari";
             this.Load += new System.EventHandler(this.Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qandABindingSource)).EndInit();
@@ -405,6 +407,6 @@ namespace SpaceGame
         private System.Windows.Forms.DataGridViewCheckBoxColumn isValidDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdQuestion;
         private System.Windows.Forms.Label addLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label deleteLabel;
     }
 }

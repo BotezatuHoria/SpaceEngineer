@@ -30,23 +30,23 @@ namespace SpaceGame
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Questions));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ansPanel = new System.Windows.Forms.Panel();
             this.nextButton = new System.Windows.Forms.Button();
             this.explButton = new System.Windows.Forms.Button();
             this.prevButton = new System.Windows.Forms.Button();
             this.validButton = new System.Windows.Forms.Button();
             this.mistakeLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.questionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // panel1
+            // ansPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.panel1.Location = new System.Drawing.Point(34, 127);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(754, 388);
-            this.panel1.TabIndex = 1;
+            this.ansPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ansPanel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ansPanel.Location = new System.Drawing.Point(34, 127);
+            this.ansPanel.Name = "ansPanel";
+            this.ansPanel.Size = new System.Drawing.Size(754, 388);
+            this.ansPanel.TabIndex = 1;
             // 
             // nextButton
             // 
@@ -111,16 +111,16 @@ namespace SpaceGame
             this.mistakeLabel.Text = "Raspuns gresit, verifica explicatia.";
             this.mistakeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // questionLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(30, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(943, 100);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
+            this.questionLabel.BackColor = System.Drawing.Color.Transparent;
+            this.questionLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.questionLabel.ForeColor = System.Drawing.Color.White;
+            this.questionLabel.Location = new System.Drawing.Point(30, 9);
+            this.questionLabel.Name = "questionLabel";
+            this.questionLabel.Size = new System.Drawing.Size(943, 100);
+            this.questionLabel.TabIndex = 7;
+            this.questionLabel.Text = "label1";
             // 
             // Questions
             // 
@@ -128,19 +128,19 @@ namespace SpaceGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.photo_1539721972319_f0e80a00d424;
             this.ClientSize = new System.Drawing.Size(993, 578);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.mistakeLabel);
             this.Controls.Add(this.validButton);
             this.Controls.Add(this.prevButton);
             this.Controls.Add(this.explButton);
             this.Controls.Add(this.nextButton);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ansPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Questions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Teste";
+            this.Text = "Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questions_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Questions_FormClosed);
             this.Load += new System.EventHandler(this.Questions_Load);
@@ -149,12 +149,12 @@ namespace SpaceGame
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel ansPanel;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button explButton;
         private System.Windows.Forms.Button prevButton;
         private System.Windows.Forms.Button validButton;
         private System.Windows.Forms.Label mistakeLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label questionLabel;
     }
 }

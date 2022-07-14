@@ -30,6 +30,7 @@ namespace SpaceGame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMaterials));
             this.fileLabel = new System.Windows.Forms.Label();
             this.radioButtonProg = new System.Windows.Forms.RadioButton();
             this.radioButtonPhy = new System.Windows.Forms.RadioButton();
@@ -46,8 +47,8 @@ namespace SpaceGame
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new SpaceGame.DatabaseDataSet();
             this.materialsTableAdapter = new SpaceGame.DatabaseDataSetTableAdapters.MaterialsTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.addLabel = new System.Windows.Forms.Label();
+            this.deleteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
@@ -213,31 +214,31 @@ namespace SpaceGame
             // 
             this.materialsTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // addLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(150, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 37);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Adauga materiale";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addLabel.AutoSize = true;
+            this.addLabel.BackColor = System.Drawing.Color.Transparent;
+            this.addLabel.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addLabel.ForeColor = System.Drawing.Color.White;
+            this.addLabel.Location = new System.Drawing.Point(150, 23);
+            this.addLabel.Name = "addLabel";
+            this.addLabel.Size = new System.Drawing.Size(305, 37);
+            this.addLabel.TabIndex = 36;
+            this.addLabel.Text = "Adauga materiale";
+            this.addLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // deleteLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(649, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 37);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Sterge materiale";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.deleteLabel.AutoSize = true;
+            this.deleteLabel.BackColor = System.Drawing.Color.Transparent;
+            this.deleteLabel.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.deleteLabel.ForeColor = System.Drawing.Color.White;
+            this.deleteLabel.Location = new System.Drawing.Point(649, 23);
+            this.deleteLabel.Name = "deleteLabel";
+            this.deleteLabel.Size = new System.Drawing.Size(305, 37);
+            this.deleteLabel.TabIndex = 37;
+            this.deleteLabel.Text = "Sterge materiale";
+            this.deleteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // AdminMaterials
             // 
@@ -245,8 +246,8 @@ namespace SpaceGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.photo_1539721972319_f0e80a00d424;
             this.ClientSize = new System.Drawing.Size(1026, 434);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.deleteLabel);
+            this.Controls.Add(this.addLabel);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.eraseButton);
             this.Controls.Add(this.fileLabel);
@@ -256,6 +257,9 @@ namespace SpaceGame
             this.Controls.Add(this.radioButtonChem);
             this.Controls.Add(this.fileName);
             this.Controls.Add(this.fileUpload);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AdminMaterials";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrare Materiale";
@@ -286,7 +290,7 @@ namespace SpaceGame
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn subjectDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label addLabel;
+        private System.Windows.Forms.Label deleteLabel;
     }
 }
