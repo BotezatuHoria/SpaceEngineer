@@ -43,7 +43,7 @@ namespace SpaceGame
             this.questionButton.Location = new System.Drawing.Point(169, 124);
             this.questionButton.Name = "questionButton";
             this.questionButton.Size = new System.Drawing.Size(283, 48);
-            this.questionButton.TabIndex = 1;
+            this.questionButton.TabIndex = 0;
             this.questionButton.Text = "Intrebari";
             this.questionButton.UseVisualStyleBackColor = false;
             this.questionButton.Click += new System.EventHandler(this.questionButton_Click);
@@ -56,7 +56,7 @@ namespace SpaceGame
             this.materialsButton.Location = new System.Drawing.Point(169, 218);
             this.materialsButton.Name = "materialsButton";
             this.materialsButton.Size = new System.Drawing.Size(283, 48);
-            this.materialsButton.TabIndex = 2;
+            this.materialsButton.TabIndex = 1;
             this.materialsButton.Text = "Materiale";
             this.materialsButton.UseVisualStyleBackColor = false;
             this.materialsButton.Click += new System.EventHandler(this.materialsButton_Click);
@@ -69,7 +69,7 @@ namespace SpaceGame
             this.statsButton.Location = new System.Drawing.Point(169, 321);
             this.statsButton.Name = "statsButton";
             this.statsButton.Size = new System.Drawing.Size(283, 48);
-            this.statsButton.TabIndex = 3;
+            this.statsButton.TabIndex = 2;
             this.statsButton.Text = "Statistici";
             this.statsButton.UseVisualStyleBackColor = false;
             this.statsButton.Click += new System.EventHandler(this.statsButton_Click);

@@ -85,7 +85,7 @@ namespace SpaceGame
             this.settingsButton.Location = new System.Drawing.Point(154, 367);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(283, 48);
-            this.settingsButton.TabIndex = 3;
+            this.settingsButton.TabIndex = 4;
             this.settingsButton.Text = "Setari";
             this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Visible = false;
@@ -99,7 +99,7 @@ namespace SpaceGame
             this.controlsButton.Location = new System.Drawing.Point(154, 297);
             this.controlsButton.Name = "controlsButton";
             this.controlsButton.Size = new System.Drawing.Size(283, 48);
-            this.controlsButton.TabIndex = 4;
+            this.controlsButton.TabIndex = 3;
             this.controlsButton.Text = "Controale";
             this.controlsButton.UseVisualStyleBackColor = false;
             this.controlsButton.Click += new System.EventHandler(this.controlsButton_Click);

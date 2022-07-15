@@ -77,7 +77,7 @@ namespace SpaceGame
             this.radioButtonProg.Location = new System.Drawing.Point(308, 254);
             this.radioButtonProg.Name = "radioButtonProg";
             this.radioButtonProg.Size = new System.Drawing.Size(110, 24);
-            this.radioButtonProg.TabIndex = 30;
+            this.radioButtonProg.TabIndex = 3;
             this.radioButtonProg.TabStop = true;
             this.radioButtonProg.Text = "Programare";
             this.radioButtonProg.UseVisualStyleBackColor = false;
@@ -91,7 +91,7 @@ namespace SpaceGame
             this.radioButtonPhy.Location = new System.Drawing.Point(212, 254);
             this.radioButtonPhy.Name = "radioButtonPhy";
             this.radioButtonPhy.Size = new System.Drawing.Size(68, 24);
-            this.radioButtonPhy.TabIndex = 29;
+            this.radioButtonPhy.TabIndex = 2;
             this.radioButtonPhy.TabStop = true;
             this.radioButtonPhy.Text = "Fizica";
             this.radioButtonPhy.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@ namespace SpaceGame
             this.radioButtonMath.Location = new System.Drawing.Point(83, 254);
             this.radioButtonMath.Name = "radioButtonMath";
             this.radioButtonMath.Size = new System.Drawing.Size(110, 24);
-            this.radioButtonMath.TabIndex = 28;
+            this.radioButtonMath.TabIndex = 1;
             this.radioButtonMath.TabStop = true;
             this.radioButtonMath.Text = "Matematica";
             this.radioButtonMath.UseVisualStyleBackColor = false;
@@ -119,7 +119,7 @@ namespace SpaceGame
             this.radioButtonChem.Location = new System.Drawing.Point(428, 254);
             this.radioButtonChem.Name = "radioButtonChem";
             this.radioButtonChem.Size = new System.Drawing.Size(75, 24);
-            this.radioButtonChem.TabIndex = 31;
+            this.radioButtonChem.TabIndex = 4;
             this.radioButtonChem.TabStop = true;
             this.radioButtonChem.Text = "Chimie";
             this.radioButtonChem.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@ namespace SpaceGame
             this.fileName.Multiline = true;
             this.fileName.Name = "fileName";
             this.fileName.Size = new System.Drawing.Size(370, 62);
-            this.fileName.TabIndex = 27;
+            this.fileName.TabIndex = 0;
             // 
             // fileUpload
             // 
@@ -143,7 +143,7 @@ namespace SpaceGame
             this.fileUpload.Location = new System.Drawing.Point(181, 348);
             this.fileUpload.Name = "fileUpload";
             this.fileUpload.Size = new System.Drawing.Size(191, 47);
-            this.fileUpload.TabIndex = 26;
+            this.fileUpload.TabIndex = 5;
             this.fileUpload.Text = "Adauga";
             this.fileUpload.UseVisualStyleBackColor = false;
             this.fileUpload.Click += new System.EventHandler(this.button1_Click);
@@ -156,7 +156,7 @@ namespace SpaceGame
             this.eraseButton.Location = new System.Drawing.Point(718, 348);
             this.eraseButton.Name = "eraseButton";
             this.eraseButton.Size = new System.Drawing.Size(191, 47);
-            this.eraseButton.TabIndex = 34;
+            this.eraseButton.TabIndex = 6;
             this.eraseButton.Text = "Sterge";
             this.eraseButton.UseVisualStyleBackColor = false;
             this.eraseButton.Click += new System.EventHandler(this.eraseButton_Click);

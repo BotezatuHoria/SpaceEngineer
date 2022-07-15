@@ -69,7 +69,7 @@ namespace SpaceGame
             this.question.BackColor = System.Drawing.Color.PeachPuff;
             this.question.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.question.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.question.ForeColor = System.Drawing.Color.White;
+            this.question.ForeColor = System.Drawing.Color.Black;
             this.question.Location = new System.Drawing.Point(142, 82);
             this.question.Multiline = true;
             this.question.Name = "question";
@@ -171,7 +171,7 @@ namespace SpaceGame
             this.explanationTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.explanationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.explanationTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.explanationTextBox.ForeColor = System.Drawing.Color.White;
+            this.explanationTextBox.ForeColor = System.Drawing.Color.Black;
             this.explanationTextBox.Location = new System.Drawing.Point(144, 432);
             this.explanationTextBox.Multiline = true;
             this.explanationTextBox.Name = "explanationTextBox";
