@@ -47,6 +47,7 @@ namespace SpaceGame
                             System.IO.File.Copy(openFileDialog.FileName, FileName);
                             AddMaterial();
                             MessageBox.Show("Fisierul a fost adaugat cu succes.", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            fileName.Clear();
                         }
                         catch (Exception ex)
                         {
@@ -89,7 +90,8 @@ namespace SpaceGame
 
         private void eraseButton_Click(object sender, EventArgs e)
         {
-            int crrCell = Convert.ToInt32(dataGridView.CurrentRow.Cells[0].Value);
+            refreshDataGrid();
+            int crrCell = Convert.ToInt32(dataGridView.CurrentRow.Cells[2].Value);
             Console.WriteLine(crrCell);
 
             Materials mat = new Materials(crrCell);
@@ -98,8 +100,10 @@ namespace SpaceGame
 
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\{1}.pdf", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")), dataGridView.CurrentRow.Cells[1].Value.ToString().Trim());
+            
             System.IO.File.Delete(FileName);
-            refreshDataGrid();
+            MessageBox.Show("Fisierul a fost sters cu succes", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void AdminMaterials_Load(object sender, EventArgs e)

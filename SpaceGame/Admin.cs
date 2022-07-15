@@ -215,6 +215,7 @@ namespace SpaceGame
             Question q = new Question(crrCell);
             //Question q = new Question(83);
             q.Delete();
+            MessageBox.Show("Intrebarea a fost stearsa cu succes", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
