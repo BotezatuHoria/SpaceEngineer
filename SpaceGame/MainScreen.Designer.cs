@@ -94,7 +94,6 @@ namespace SpaceGame
             // controlsButton
             // 
             this.controlsButton.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.controlsButton.Enabled = false;
             this.controlsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.controlsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.controlsButton.Location = new System.Drawing.Point(154, 297);
@@ -103,7 +102,6 @@ namespace SpaceGame
             this.controlsButton.TabIndex = 4;
             this.controlsButton.Text = "Controale";
             this.controlsButton.UseVisualStyleBackColor = false;
-            this.controlsButton.Visible = false;
             this.controlsButton.Click += new System.EventHandler(this.controlsButton_Click);
             // 
             // MainScreen

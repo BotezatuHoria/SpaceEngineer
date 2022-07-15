@@ -60,7 +60,7 @@ namespace SpaceGame
             series1.Legend = "Legend1";
             series1.Name = "s1";
             this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(737, 451);
+            this.chart.Size = new System.Drawing.Size(927, 561);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart";
             title1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -72,7 +72,7 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 450);
+            this.ClientSize = new System.Drawing.Size(924, 559);
             this.Controls.Add(this.chart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
