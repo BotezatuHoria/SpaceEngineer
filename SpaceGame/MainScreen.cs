@@ -13,7 +13,7 @@ namespace SpaceGame
 {
     public partial class MainScreen : Form
     {
-        Users user = null;
+        public Users user = null;
 
         public MainScreen(Users _user)
         {

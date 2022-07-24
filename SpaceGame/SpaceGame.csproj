@@ -265,6 +265,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\dooropen.wav" />
+    <None Include="Resources\footsteps.wav" />
+    <None Include="Resources\pdfs.png" />
     <None Include="Resources\icons8-esc-48.png" />
     <None Include="Resources\icons8-e-key-48.png" />
     <None Include="Resources\icons8-d-key-48.png" />
@@ -338,7 +341,6 @@
     <None Include="Resources\whiteboard_fiz_2.png" />
     <None Include="Resources\whiteboard_fiz.png" />
     <None Include="Resources\physet.png" />
-    <None Include="Resources\pdfs.png" />
     <None Include="Resources\resized.jpg" />
     <None Include="Resources\pdf.png" />
     <None Include="Resources\filess.png" />

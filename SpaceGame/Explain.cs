@@ -12,7 +12,7 @@ namespace SpaceGame
 {
     public partial class Explain : Form
     {
-        QandA qa;
+        public QandA qa;
         public Explain(QandA _qa)
         {
             qa = _qa;

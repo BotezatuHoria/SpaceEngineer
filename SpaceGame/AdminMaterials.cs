@@ -77,7 +77,7 @@ namespace SpaceGame
             new Materials(fileName.Text, subject);
         }
 
-        private void refreshDataGrid()
+        private void RefreshDataGrid()
         {
             MaterialsTableAdapter materialsTableAdapter = new MaterialsTableAdapter();
             DataTable table = materialsTableAdapter.GetData();
@@ -90,7 +90,7 @@ namespace SpaceGame
 
         private void eraseButton_Click(object sender, EventArgs e)
         {
-            refreshDataGrid();
+            RefreshDataGrid();
             int crrCell = Convert.ToInt32(dataGridView.CurrentRow.Cells[2].Value);
             Console.WriteLine(crrCell);
 

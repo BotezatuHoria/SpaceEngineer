@@ -16,7 +16,7 @@ namespace SpaceGame
         private int panY;
         List<Materials> materials;
         List<Materials> subject;
-        string room = null;
+        public string room = null;
         string file = null;
 
         public Lessons(string _room)
@@ -25,7 +25,7 @@ namespace SpaceGame
             InitializeComponent();
         }
 
-        private void genPanel(string name)
+        private void GenPanel(string name)
         {
             Panel panel = new Panel();
             panel.Width = 266;
@@ -50,7 +50,10 @@ namespace SpaceGame
 
             Label label = new Label();
             label.Text = name;
-            label.AutoSize = true;
+            //label.AutoSize = true;
+            label.Width = 150;
+            label.Height = 200;
+            label.TextAlign = ContentAlignment.TopLeft;
             //label.TextAlign.Equals("MiddleCenter");
             label.Location = new Point(panX + 45, panY + 8);
             label.Font = new Font("Consolas", 14);
@@ -90,7 +93,7 @@ namespace SpaceGame
             LoadFromDb();
             foreach(Materials m in subject)
             {
-                genPanel(m.Name);
+                GenPanel(m.Name);
             }
         }
     }

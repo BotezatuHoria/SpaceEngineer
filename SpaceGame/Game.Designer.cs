@@ -247,7 +247,7 @@ namespace SpaceGame
             this.scoreBoard.ForeColor = System.Drawing.Color.Red;
             this.scoreBoard.Location = new System.Drawing.Point(27, 11);
             this.scoreBoard.Name = "scoreBoard";
-            this.scoreBoard.Size = new System.Drawing.Size(368, 38);
+            this.scoreBoard.Size = new System.Drawing.Size(185, 38);
             this.scoreBoard.TabIndex = 7;
             this.scoreBoard.Text = "label1";
             // 

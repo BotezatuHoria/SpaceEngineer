@@ -13,7 +13,7 @@ namespace SpaceGame
 {
     public partial class Register : Form
     {
-        bool isAdmin;
+        public bool isAdmin;
         public Register(bool _isAdmin)
         {
             isAdmin = _isAdmin;

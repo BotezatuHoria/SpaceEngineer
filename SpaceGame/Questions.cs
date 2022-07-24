@@ -15,10 +15,10 @@ namespace SpaceGame
     {
         List<QandA> qa;
         List<int> indexes;
-        Random rndm = new Random();
+        public Random rndm = new Random();
         int score = 0;
         int questionIndex = 0;
-        string room = null;
+        public string room = null;
         int pace = 1;
         const int maxpace = 5;
         List<QandA> array;

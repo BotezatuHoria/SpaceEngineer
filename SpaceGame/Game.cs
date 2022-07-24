@@ -14,11 +14,11 @@ namespace SpaceGame
 {
     public partial class Game : Form
     {
-        Users user;
+        public Users user;
         public int newX = 0;
         public int newY = 0;
-        public const int pxlMoveX = 4;
-        public const int pxlMoveY = 4;
+        public const int pxlMoveX = 6;
+        public const int pxlMoveY = 6;
         public List<PictureBox> lst;
         bool inroom = false;
         public int scr = 0;
@@ -31,8 +31,6 @@ namespace SpaceGame
         bool ok = false;
         public string userId;
         public bool pressed = false;
-        //SoundPlayer walkSound = new SoundPlayer(SpaceGame.Properties.Resources.walk);
-        //SoundPlayer doorSound = new SoundPlayer(SpaceGame.Properties.Resources.door);
         public bool sound = false;
         private bool roomRocket = false;
         private bool finale = false;
@@ -134,7 +132,7 @@ namespace SpaceGame
             {
                 newY = character.Location.Y - pxlMoveY;
                 character.Location = new Point(character.Location.X, newY);
-                verifInteraction();
+                VerifInteraction();
                 //Keep();
             }
         }
@@ -145,7 +143,7 @@ namespace SpaceGame
             {
                 newY = character.Location.Y + pxlMoveY;
                 character.Location = new Point(character.Location.X, newY);
-                verifInteraction();
+                VerifInteraction();
                 //Keep();
             }
         }
@@ -156,7 +154,7 @@ namespace SpaceGame
             {
                 newX = character.Location.X + pxlMoveX;
                 character.Location = new Point(newX, character.Location.Y);
-                verifInteraction();
+                VerifInteraction();
                 //Keep();
             }
         }
@@ -167,7 +165,7 @@ namespace SpaceGame
             {
                 newX = character.Location.X - pxlMoveX;
                 character.Location = new Point(newX, character.Location.Y);
-                verifInteraction();
+                VerifInteraction();
                 //Keep();
             }
         }
@@ -207,11 +205,11 @@ namespace SpaceGame
                 }
                 if (Interaction(character, i) == "Elevator")
                 {
-                    rocketShow();
+                    RocketShow();
                 }
                 if (Interaction(character, i) == "Door")
                 {
-                    interactionDoor(i);
+                    InteractionDoor(i);
                 }
                 if (Interaction(character, i) == "Test")
                 {
@@ -251,7 +249,7 @@ namespace SpaceGame
             controlButton.BackColor = Color.Aqua;
         }
 
-        public void interactionDoor(PictureBox obj)
+        public void InteractionDoor(PictureBox obj)
         {
             //doorSound.Play();
             int objX = obj.Location.X;
@@ -271,7 +269,7 @@ namespace SpaceGame
                     Turn(false, obj);
                     testMath.Enabled = true;
                     testMath.Visible = true;
-                    elevatorOnOff(false);
+                    ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.uproom;
                     //colBoxMath1.Enabled = true;
                     //colBoxMath2.Enabled = true;
@@ -304,7 +302,7 @@ namespace SpaceGame
                     testMath.Enabled = false;
                     testMath.Visible = false;
                     //rocketShow();
-                    elevatorOnOff(true);
+                    ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
                     //colBoxMath1.Enabled = false;
                     //colBoxMath2.Enabled = false;
@@ -341,7 +339,7 @@ namespace SpaceGame
                     Turn(false, obj);
                     testChem.Enabled = true;
                     testChem.Visible = true;
-                    elevatorOnOff(false);
+                    ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.downroom;
                     //colBoxChem1.Enabled = true;
                     //colBoxChem2.Enabled = true;
@@ -372,7 +370,7 @@ namespace SpaceGame
                     testChem.Enabled = false;
                     testChem.Visible = false;
                     //rocketShow();
-                    elevatorOnOff(true);
+                    ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
                     //colBoxChem1.Enabled = false;
                     //colBoxChem2.Enabled = false;
@@ -408,7 +406,7 @@ namespace SpaceGame
                     Turn(false, obj);
                     testPhy.Enabled = true;
                     testPhy.Visible = true;
-                    elevatorOnOff(false);
+                    ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.leftroom;
                     reactor1.Enabled = true;
                     reactor2.Enabled = true;
@@ -434,7 +432,7 @@ namespace SpaceGame
                     testPhy.Enabled = false;
                     testPhy.Visible = false;
                     //rocketShow();
-                    elevatorOnOff(true);
+                    ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
                     reactor1.Enabled = false;
                     reactor2.Enabled = false;
@@ -464,7 +462,7 @@ namespace SpaceGame
                     Turn(false, obj);
                     testProg.Enabled = true;
                     testProg.Visible = true;
-                    elevatorOnOff(false);
+                    ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.rightroom;
                     //colBoxProg1.Enabled = true;
                     //colBoxProg2.Enabled = true;
@@ -501,7 +499,7 @@ namespace SpaceGame
                     testProg.Enabled = false;
                     testProg.Visible = false;
                     //rocketShow();
-                    elevatorOnOff(true);
+                    ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
                     //colBoxProg1.Enabled = false;
                     //colBoxProg2.Enabled = false;
@@ -544,7 +542,7 @@ namespace SpaceGame
             }
         }
 
-        public void rocketShow()
+        public void RocketShow()
         {
             if (inroom == false)
             {
@@ -620,7 +618,7 @@ namespace SpaceGame
             }
         }
 
-        public void elevatorOnOff(bool x)
+        public void ElevatorOnOff(bool x)
         {
             if (ok == true)
             {
@@ -629,7 +627,7 @@ namespace SpaceGame
             }
         }
 
-        public void collision()
+        public void Collision()
         {
             List<PictureBox> lst = new List<PictureBox> { reactor1, reactor2, reactor3, comp1, comp3, testPhy, learnProg, testProg, progComs1, progComs2, progComs3, progComs4, progComs5, progComs6, progStation1, progStation2, robot, deskMath, desksMath1, desksMath2, desksMath3, desksMath4, calMath, learnMath, testMath, shelfMath1, shelfMath2, compChem, brewChem1, brewChem2, chlotesChem, deskChem, rackChem, learnChem, testChem, dog, chatBubble};
             foreach(PictureBox box in lst)
@@ -645,7 +643,7 @@ namespace SpaceGame
             }
         }
 
-        private void verifInteraction()
+        private void VerifInteraction()
         {
             //doorSound.Stop();
             if (Interaction(character, upRoomEntrance) == "Door")
@@ -719,7 +717,7 @@ namespace SpaceGame
                 controlButton.Enabled = true;
                 controlButton.BackColor = Color.Yellow;
             }
-            collision();
+            Collision();
         }
 
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
@@ -754,12 +752,6 @@ namespace SpaceGame
                 this.WindowState = FormWindowState.Maximized;
                 this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             }
-        }
-
-        private void Keep()
-        {
-            learnPhy.BackgroundImage = SpaceGame.Properties.Resources.whiteboard_fiz;
-            testPhy.BackgroundImage = SpaceGame.Properties.Resources.reactor;
         }
 
         private void dog_MouseHover(object sender, EventArgs e)
