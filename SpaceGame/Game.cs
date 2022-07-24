@@ -90,7 +90,7 @@ namespace SpaceGame
             }
             if (e.KeyCode == Keys.Escape)
             {
-                DialogResult dialogResult = MessageBox.Show("Esti sigur ca vrei sa inchizi jocu?", "Confirmare", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogResult = MessageBox.Show("Esti sigur ca vrei sa inchizi jocul?", "Confirmare", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
                     this.Close();
