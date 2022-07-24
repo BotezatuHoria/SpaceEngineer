@@ -293,6 +293,7 @@ namespace SpaceGame
                 }
                 else
                 {
+                    roomMath = false;
                     inroom = false;
                     obj.Location = new Point(objX, 0);
                     character.Location = new Point(playerX, 100);
