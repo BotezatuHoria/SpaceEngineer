@@ -65,7 +65,7 @@ namespace SpaceGame
             this.chart.Text = "chart";
             title1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             title1.Name = "Title1";
-            title1.Text = "Statistici privind interesul utilizatorilor";
+            title1.Text = "Raspunsurile corecte ale utilizatorilor";
             this.chart.Titles.Add(title1);
             // 
             // Statistics
