@@ -58,7 +58,6 @@ namespace SpaceGame
             {
                 Answer ans = new Answer();
                 ans.IdAnswer = Convert.ToInt32(dr["IdAnswer"]);
-                ///ans.IdQuestion = Convert.ToInt32(dr["IdQuestion"]);
                 ans.Ans = dr["Answer"].ToString();
                 ans.Valid = Convert.ToBoolean(dr["isValid"]);
 
@@ -80,17 +79,7 @@ namespace SpaceGame
 
                 qandaList[qandaList.Count - 1].Answers.Add(ans);                
             }
-/*
-            foreach (var item in qandaList)
-            {
-                MessageBox.Show(item.question);
-                foreach (var answer in item.answers)
-                {
-                    MessageBox.Show(answer.Ans);
-                }
-                
-            }
-*/
+
             return qandaList;
         }
 
