@@ -646,7 +646,7 @@ namespace SpaceGame
 
         private void VerifInteraction()
         {
-            //doorSound.Stop();
+            //doorSound.Stop();Lis
             if (Interaction(character, upRoomEntrance) == "Door")
             {
                 controlButton.Enabled = true;
