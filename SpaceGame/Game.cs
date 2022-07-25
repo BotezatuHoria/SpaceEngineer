@@ -649,7 +649,7 @@ namespace SpaceGame
             //doorSound.Stop();
             if (Interaction(character, upRoomEntrance) == "Door")
             {
-                controlButton.Enabled = true;
+                controlButton.Enabled = false;
                 controlButton.BackColor = Color.Yellow;
             }
                 
