@@ -245,9 +245,9 @@ namespace SpaceGame
             this.scoreBoard.BackColor = System.Drawing.Color.Transparent;
             this.scoreBoard.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.scoreBoard.ForeColor = System.Drawing.Color.Red;
-            this.scoreBoard.Location = new System.Drawing.Point(27, 11);
+            this.scoreBoard.Location = new System.Drawing.Point(2, 12);
             this.scoreBoard.Name = "scoreBoard";
-            this.scoreBoard.Size = new System.Drawing.Size(185, 38);
+            this.scoreBoard.Size = new System.Drawing.Size(202, 38);
             this.scoreBoard.TabIndex = 7;
             this.scoreBoard.Text = "label1";
             // 
@@ -345,7 +345,6 @@ namespace SpaceGame
             this.reactor1.TabIndex = 29;
             this.reactor1.TabStop = false;
             this.reactor1.Visible = false;
-            this.reactor1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // reactor2
             // 

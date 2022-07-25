@@ -103,7 +103,6 @@ namespace SpaceGame
 
         private void Game_KeyUp(object sender, KeyEventArgs e)
         {
-            //walkSound.Stop();
             if (e.KeyCode == Keys.W)
             {
                 upTimer.Enabled = false;
@@ -133,7 +132,6 @@ namespace SpaceGame
                 newY = character.Location.Y - pxlMoveY;
                 character.Location = new Point(character.Location.X, newY);
                 VerifInteraction();
-                //Keep();
             }
         }
 
@@ -144,7 +142,6 @@ namespace SpaceGame
                 newY = character.Location.Y + pxlMoveY;
                 character.Location = new Point(character.Location.X, newY);
                 VerifInteraction();
-                //Keep();
             }
         }
 
@@ -155,7 +152,6 @@ namespace SpaceGame
                 newX = character.Location.X + pxlMoveX;
                 character.Location = new Point(newX, character.Location.Y);
                 VerifInteraction();
-                //Keep();
             }
         }
 
@@ -166,7 +162,6 @@ namespace SpaceGame
                 newX = character.Location.X - pxlMoveX;
                 character.Location = new Point(newX, character.Location.Y);
                 VerifInteraction();
-                //Keep();
             }
         }
 
@@ -213,34 +208,13 @@ namespace SpaceGame
                 }
                 if (Interaction(character, i) == "Test")
                 {
-                    if (roomMath == true)
-                        x = "math";
-                    if (roomChem == true)
-                        x = "chem";
-                    if (roomPhy == true)
-                        x = "phy";
-                    if (roomProg == true)
-                        x = "prog";
+                    x = RoomIn();
                     new Questions(x).ShowDialog();
-                    //rocketLabel.Visible = true;
-                    string score = File.ReadAllText("score.txt");
-                    scr += Convert.ToInt32(score);
-                    scoreBoard.Text = "Score: " + scr.ToString();
-                    if (scr >= 0)
-                        ok = true;
-                    if (scr > 40)
-                        finale = true;
+                    ScoreAfterQandA();
                 }
                 if (Interaction(character, i) == "Learn")
                 {
-                    if (roomMath == true)
-                        x = "math";
-                    if (roomChem == true)
-                        x = "chem";
-                    if (roomPhy == true)
-                        x = "phy";
-                    if (roomProg == true)
-                        x = "prog";
+                    x = RoomIn();
                     new Lessons(x).ShowDialog();
                 }
                 
@@ -251,79 +225,29 @@ namespace SpaceGame
 
         public void InteractionDoor(PictureBox obj)
         {
-            //doorSound.Play();
             int objX = obj.Location.X;
             int objY = obj.Location.Y;
             int playerX = character.Location.X;
             int playerY = character.Location.Y;
             if (obj == upRoomEntrance)
             {
-                roomMath = true;
                 if (inroom == false)
                 {
-                    inroom = true;
                     obj.Location = new Point(objX, this.Height - 100);
                     character.Location = new Point(playerX, this.Height - 300);
-                    learnMath.Enabled = true;
-                    learnMath.Visible = true;
                     Turn(false, obj);
-                    testMath.Enabled = true;
-                    testMath.Visible = true;
                     ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.uproom;
-                    //colBoxMath1.Enabled = true;
-                    //colBoxMath2.Enabled = true;
-                    //colBoxMath3.Enabled = true;
-                    calMath.Enabled = true;
-                    shelfMath1.Enabled = true;
-                    shelfMath2.Enabled = true;
-                    deskMath.Enabled = true;
-                    desksMath1.Enabled = true;
-                    desksMath2.Enabled = true;
-                    desksMath3.Enabled = true;
-                    desksMath4.Enabled = true;
-                    calMath.Visible = true;
-                    shelfMath1.Visible = true;
-                    shelfMath2.Visible = true;
-                    deskMath.Visible = true;
-                    desksMath1.Visible = true;
-                    desksMath2.Visible = true;
-                    desksMath3.Visible = true;
-                    desksMath4.Visible = true;
+                    MathObj(true);
                 }
                 else
                 {
-                    roomMath = false;
-                    inroom = false;
                     obj.Location = new Point(objX, 0);
                     character.Location = new Point(playerX, 100);
-                    learnMath.Enabled = false;
-                    learnMath.Visible = false;
                     Turn(true, obj);
-                    testMath.Enabled = false;
-                    testMath.Visible = false;
-                    //rocketShow();
                     ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
-                    //colBoxMath1.Enabled = false;
-                    //colBoxMath2.Enabled = false;
-                    //colBoxMath3.Enabled = false;
-                    calMath.Enabled = false;
-                    shelfMath1.Enabled = false;
-                    shelfMath2.Enabled = false;
-                    deskMath.Enabled = false;
-                    desksMath1.Enabled = false;
-                    desksMath2.Enabled = false;
-                    desksMath3.Enabled = false;
-                    desksMath4.Enabled = false;
-                    calMath.Visible = false;
-                    shelfMath1.Visible = false;
-                    shelfMath2.Visible = false;
-                    deskMath.Visible = false;
-                    desksMath1.Visible = false;
-                    desksMath2.Visible = false;
-                    desksMath3.Visible = false;
-                    desksMath4.Visible = false;
+                    MathObj(false);
                 }
             }
             if (obj == downRoomEntrance)
@@ -331,64 +255,21 @@ namespace SpaceGame
                 
                 if (inroom == false)
                 {
-                    roomChem = true;
-                    inroom = true;
                     obj.Location = new Point(objX, 10);
                     character.Location = new Point(playerX, 150);
-                    learnChem.Enabled = true;
-                    learnChem.Visible = true;
                     Turn(false, obj);
-                    testChem.Enabled = true;
-                    testChem.Visible = true;
                     ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.downroom;
-                    //colBoxChem1.Enabled = true;
-                    //colBoxChem2.Enabled = true;
-                    //colBoxChem2.Enabled = true;
-                    brewChem1.Enabled = true;
-                    brewChem2.Enabled = true;
-                    chlotesChem.Enabled = true;
-                    compChem.Enabled = true;
-                    deskChem.Enabled = true;
-                    rackChem.Enabled = true;
-
-                    brewChem1.Visible= true;
-                    brewChem2.Visible = true;
-                    chlotesChem.Visible = true;
-                    compChem.Visible = true;
-                    deskChem.Visible = true;
-                    rackChem.Visible = true;
+                    ChemObj(true);
                 }
                 else
                 {
-                    roomChem = false;
-                    inroom = false;
                     obj.Location = new Point(objX, this.Height - 100);
                     character.Location = new Point(playerX, this.Height - 300);
-                    learnChem.Enabled = false;
-                    learnChem.Visible = false;
                     Turn(true, obj);
-                    testChem.Enabled = false;
-                    testChem.Visible = false;
-                    //rocketShow();
                     ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
-                    //colBoxChem1.Enabled = false;
-                    //colBoxChem2.Enabled = false;
-                    //colBoxChem2.Enabled = false;
-                    brewChem1.Enabled = false;
-                    brewChem2.Enabled = false;
-                    chlotesChem.Enabled = false;
-                    compChem.Enabled = false;
-                    deskChem.Enabled = false;
-                    rackChem.Enabled = false;
-
-                    brewChem1.Visible = false;
-                    brewChem2.Visible = false;
-                    chlotesChem.Visible = false;
-                    compChem.Visible = false;
-                    deskChem.Visible = false;
-                    rackChem.Visible = false;
+                    ChemObj(false);
                 }
                 
             }
@@ -397,54 +278,23 @@ namespace SpaceGame
                 
                 if (inroom == false)
                 {
-                    roomPhy = true;
-                    inroom = true;
                     obj.Image = SpaceGame.Properties.Resources.door4;
                     obj.Location = new Point(1600, objY);
                     character.Location = new Point(1650, playerY);
-                    learnPhy.Enabled = true;
-                    learnPhy.Visible = true;
                     Turn(false, obj);
-                    testPhy.Enabled = true;
-                    testPhy.Visible = true;
                     ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.leftroom;
-                    reactor1.Enabled = true;
-                    reactor2.Enabled = true;
-                    reactor3.Enabled = true;
-                    comp1.Enabled = true;
-                    comp3.Enabled = true;
-                    reactor1.Visible = true;
-                    reactor2.Visible = true;
-                    reactor3.Visible = true;
-                    comp1.Visible = true;
-                    comp3.Visible = true;
+                    PhyObj(true);
                 }
                 else
                 {
-                    roomPhy = false;
-                    inroom = false;
                     obj.Image = SpaceGame.Properties.Resources.door5;
                     obj.Location = new Point(-100, objY);
                     character.Location = new Point(200, playerY);
-                    learnPhy.Enabled = false;
-                    learnPhy.Visible = false;
                     Turn(true, obj);
-                    testPhy.Enabled = false;
-                    testPhy.Visible = false;
-                    //rocketShow();
                     ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
-                    reactor1.Enabled = false;
-                    reactor2.Enabled = false;
-                    reactor3.Enabled = false;
-                    comp1.Enabled = false;
-                    comp3.Enabled = false;
-                    reactor1.Visible = false;
-                    reactor2.Visible = false;
-                    reactor3.Visible = false;
-                    comp1.Visible = false;
-                    comp3.Visible = false;
+                    PhyObj(false);
                 }
                 
             }
@@ -453,76 +303,23 @@ namespace SpaceGame
                 
                 if (inroom == false)
                 {
-                    roomProg = true;
-                    inroom = true;
                     obj.Location = new Point(-100, objY);
                     character.Location = new Point(200, playerY);
                     obj.Image = SpaceGame.Properties.Resources.door5;
-                    learnProg.Enabled = true;
-                    learnProg.Visible = true;
                     Turn(false, obj);
-                    testProg.Enabled = true;
-                    testProg.Visible = true;
                     ElevatorOnOff(false);
                     this.BackgroundImage = SpaceGame.Properties.Resources.rightroom;
-                    //colBoxProg1.Enabled = true;
-                    //colBoxProg2.Enabled = true;
-                    //colBoxProg3.Enabled = true;
-                    progComs1.Enabled = true;
-                    progComs2.Enabled = true;
-                    progComs3.Enabled = true;
-                    progComs4.Enabled = true;
-                    progComs5.Enabled = true;
-                    progComs6.Enabled = true;
-                    progStation1.Enabled = true;
-                    progStation2.Enabled = true;
-                    robot.Enabled = true;
-                    progComs1.Visible = true;
-                    progComs2.Visible = true;
-                    progComs3.Visible = true;
-                    progComs4.Visible = true;
-                    progComs5.Visible = true;
-                    progComs6.Visible = true;
-                    progStation1.Visible = true;
-                    progStation2.Visible = true;
-                    robot.Visible = true;
+                    ProgObj(true);
                 }
                 else
                 {
-                    roomProg = false;
-                    inroom = false;
                     obj.Image = SpaceGame.Properties.Resources.door4;
                     obj.Location = new Point(1600, objY);
                     character.Location = new Point(1600, playerY);
-                    learnProg.Enabled = false;
-                    learnProg.Visible = false;
                     Turn(true, obj);
-                    testProg.Enabled = false;
-                    testProg.Visible = false;
-                    //rocketShow();
                     ElevatorOnOff(true);
                     this.BackgroundImage = SpaceGame.Properties.Resources.map;
-                    //colBoxProg1.Enabled = false;
-                    //colBoxProg2.Enabled = false;
-                    //colBoxProg3.Enabled = false;
-                    progComs1.Enabled = false;
-                    progComs2.Enabled = false;
-                    progComs3.Enabled = false;
-                    progComs4.Enabled = false;
-                    progComs5.Enabled = false;
-                    progComs6.Enabled = false;
-                    progStation1.Enabled = false;
-                    progStation2.Enabled = false;
-                    robot.Enabled = false;
-                    progComs1.Visible = false;
-                    progComs2.Visible = false;
-                    progComs3.Visible = false;
-                    progComs4.Visible = false;
-                    progComs5.Visible = false;
-                    progComs6.Visible = false;
-                    progStation1.Visible = false;
-                    progStation2.Visible = false;
-                    robot.Visible = false;
+                    ProgObj(false);
                 }
                 
             }
@@ -549,14 +346,7 @@ namespace SpaceGame
             {
                 rocketLabel.Visible = true;
                 inroom = true;
-                upRoomEntrance.Enabled = false;
-                leftRoomEntrance.Enabled = false;
-                rightRoomEntrance.Enabled = false;
-                downRoomEntrance.Enabled = false;
-                upRoomEntrance.Visible = false;
-                leftRoomEntrance.Visible = false;
-                rightRoomEntrance.Visible = false;
-                downRoomEntrance.Visible = false;
+                RoomsSwitch(false);
                 character.Location = new Point(200, 800);
                 elevator.Location = new Point(0, 750);
                 elevator.Visible = true;
@@ -568,33 +358,7 @@ namespace SpaceGame
                 {
                     dog.Image = SpaceGame.Properties.Resources.dog1;
                 }
-                //pictureBox7.Enabled = true;
-                if (scr >= 0 && scr <= 10)
-                {
-                    this.BackgroundImage = SpaceGame.Properties.Resources.rocket5;
-                    rocketLabel.Text = "Inca nu ai construit nimic la racheta.";
-                }
-                if (scr > 10 && scr <= 20)
-                {
-                    rocketLabel.Text = "Ai reusit sa construiesti primul nivel al rachetei.";
-                    this.BackgroundImage = SpaceGame.Properties.Resources.rocket1004_;
-                }
-                if (scr > 20 && scr <= 30)
-                {
-                    rocketLabel.Text = "Ai reusit sa construiesti al doilea nivel al rachetei.";
-                    this.BackgroundImage = SpaceGame.Properties.Resources.rocket3;
-                }
-                if (scr > 30 && scr <= 40)
-                {
-                    rocketLabel.Text = "Ai reusit sa construiesti al treilea nivel al rachetei.";
-                    this.BackgroundImage = SpaceGame.Properties.Resources.rocket2;
-                }
-                if (scr > 40)
-                {
-                    rocketLabel.Text = "Ai reusit sa construiesti racheta!";
-                    this.BackgroundImage = SpaceGame.Properties.Resources.rocket11;
-                    rocket.Enabled = true;
-                }
+                RocketScores();
             }
             else
             {
@@ -602,14 +366,7 @@ namespace SpaceGame
                 inroom = false;
                 rocket.Enabled = false;
                 this.BackgroundImage = SpaceGame.Properties.Resources.map;
-                upRoomEntrance.Enabled = true;
-                leftRoomEntrance.Enabled = true;
-                rightRoomEntrance.Enabled = true;
-                downRoomEntrance.Enabled = true;
-                upRoomEntrance.Visible = true;
-                leftRoomEntrance.Visible = true;
-                rightRoomEntrance.Visible = true;
-                downRoomEntrance.Visible = true;
+                RoomsSwitch(true);
                 character.Location = new Point(938, 452);
                 elevator.Location = new Point(864, 376);
                 dog.Location = new Point(159, 917);
@@ -646,77 +403,14 @@ namespace SpaceGame
 
         private void VerifInteraction()
         {
-            //doorSound.Stop();Lis
-            if (Interaction(character, upRoomEntrance) == "Door")
+            List<PictureBox> pics = new List<PictureBox> { upRoomEntrance, downRoomEntrance, leftRoomEntrance, rightRoomEntrance, testMath, testPhy, testProg, testChem, rocket, elevator, learnChem, learnPhy, learnMath, learnProg };
+            foreach (PictureBox pic in pics)
             {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-                
-            if (Interaction(character, downRoomEntrance) == "Door")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, leftRoomEntrance) == "Door")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, rightRoomEntrance) == "Door")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, testMath) == "Test")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, testPhy) == "Test")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, testProg) == "Test")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, testChem) == "Test")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, rocket) == "Rocket")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, elevator) == "Elevator")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, learnPhy) == "Learn")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, learnProg) == "Learn")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, learnMath) == "Learn")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
-            }
-            if (Interaction(character, learnChem) == "Learn")
-            {
-                controlButton.Enabled = true;
-                controlButton.BackColor = Color.Yellow;
+                if (Interaction(character, pic) != null)
+                {
+                    controlButton.Enabled = true;
+                    controlButton.BackColor = Color.Yellow;
+                }  
             }
             Collision();
         }
@@ -733,11 +427,6 @@ namespace SpaceGame
                 }
             }
             Application.Exit();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Fullscreen(bool fullscreen)
@@ -773,11 +462,11 @@ namespace SpaceGame
             if (roomProg == true)
                 chatLabel.Text = "Acesta este laboratorul de informatica. \nPentru a invata lucruri noi verifica tabla, iar pentri a-ti testa cunostintele de informatician poti folosi calculatorul.";
             if (roomRocket == true)
-                chatLabel.Text = "Aici este ateleriul rachetei. \nPe masura ce avansezi aceasta va fi construita.";
+                chatLabel.Text = "Acesta este ateleriul rachetei. \nPe masura ce avansezi aceasta va fi construita.";
             if (finale == true)
             {
                 dog.Image = SpaceGame.Properties.Resources.dog1;
-                chatLabel.Text = "Bravoo ai terminat racheta!!! Hai sa mergem sa gasim leacul!";
+                chatLabel.Text = "Bravooo ai terminat racheta!!! Hai sa mergem sa gasim leacul!";
             }
         }
 
@@ -791,6 +480,168 @@ namespace SpaceGame
             {
                 dog.Image = SpaceGame.Properties.Resources.dog1;
             }
+        }
+
+        private void MathObj(bool change)
+        {
+            roomMath = change;
+            inroom = change;
+            learnMath.Enabled = change;
+            learnMath.Visible = change;
+            testMath.Enabled = change;
+            testMath.Visible = change;
+            calMath.Enabled = change;
+            shelfMath1.Enabled = change;
+            shelfMath2.Enabled = change;
+            deskMath.Enabled = change;
+            desksMath1.Enabled = change;
+            desksMath2.Enabled = change;
+            desksMath3.Enabled = change;
+            desksMath4.Enabled = change;
+            calMath.Visible = change;
+            shelfMath1.Visible = change;
+            shelfMath2.Visible = change;
+            deskMath.Visible = change;
+            desksMath1.Visible = change;
+            desksMath2.Visible = change;
+            desksMath3.Visible = change;
+            desksMath4.Visible = change;
+        }
+        
+        private void ChemObj(bool change)
+        {
+            roomChem = change;
+            inroom = change;
+            learnChem.Enabled = change;
+            learnChem.Visible = change;
+            testChem.Enabled = change;
+            testChem.Visible = change;
+            brewChem1.Enabled = change;
+            brewChem2.Enabled = change;
+            chlotesChem.Enabled = change;
+            compChem.Enabled = change;
+            deskChem.Enabled = change;
+            rackChem.Enabled = change;
+            brewChem1.Visible = change;
+            brewChem2.Visible = change;
+            chlotesChem.Visible = change;
+            compChem.Visible = change;
+            deskChem.Visible = change;
+            rackChem.Visible = change;
+        }
+
+        private void PhyObj(bool change)
+        {
+            roomPhy = change;
+            inroom = change;
+            learnPhy.Enabled = change;
+            learnPhy.Visible = change;
+            testPhy.Enabled = change;
+            testPhy.Visible = change;
+            reactor1.Enabled = change;
+            reactor2.Enabled = change;
+            reactor3.Enabled = change;
+            comp1.Enabled = change;
+            comp3.Enabled = change;
+            reactor1.Visible = change;
+            reactor2.Visible = change;
+            reactor3.Visible = change;
+            comp1.Visible = change;
+            comp3.Visible = change;
+        }
+
+        private void ProgObj(bool changed)
+        {
+            roomProg = changed;
+            inroom = changed;
+            learnProg.Enabled = changed;
+            learnProg.Visible = changed;
+            testProg.Enabled = changed;
+            testProg.Visible = changed;
+            progComs1.Enabled = changed;
+            progComs2.Enabled = changed;
+            progComs3.Enabled = changed;
+            progComs4.Enabled = changed;
+            progComs5.Enabled = changed;
+            progComs6.Enabled = changed;
+            progStation1.Enabled = changed;
+            progStation2.Enabled = changed;
+            robot.Enabled = changed;
+            progComs1.Visible = changed;
+            progComs2.Visible = changed;
+            progComs3.Visible = changed;
+            progComs4.Visible = changed;
+            progComs5.Visible = changed;
+            progComs6.Visible = changed;
+            progStation1.Visible = changed;
+            progStation2.Visible = changed;
+            robot.Visible = changed;
+        }
+
+        private void RocketScores()
+        {
+            if (scr >= 0 && scr <= 10)
+            {
+                this.BackgroundImage = SpaceGame.Properties.Resources.rocket5;
+                rocketLabel.Text = "Inca nu ai construit nimic la racheta.";
+            }
+            if (scr > 10 && scr <= 20)
+            {
+                rocketLabel.Text = "Ai reusit sa construiesti primul nivel al rachetei.";
+                this.BackgroundImage = SpaceGame.Properties.Resources.rocket1004_;
+            }
+            if (scr > 20 && scr <= 30)
+            {
+                rocketLabel.Text = "Ai reusit sa construiesti al doilea nivel al rachetei.";
+                this.BackgroundImage = SpaceGame.Properties.Resources.rocket3;
+            }
+            if (scr > 30 && scr <= 40)
+            {
+                rocketLabel.Text = "Ai reusit sa construiesti al treilea nivel al rachetei.";
+                this.BackgroundImage = SpaceGame.Properties.Resources.rocket2;
+            }
+            if (scr > 40)
+            {
+                rocketLabel.Text = "Ai reusit sa construiesti racheta!";
+                this.BackgroundImage = SpaceGame.Properties.Resources.rocket11;
+                rocket.Enabled = true;
+            }
+        }
+
+        private void RoomsSwitch(bool change)
+        {
+            upRoomEntrance.Enabled = change;
+            leftRoomEntrance.Enabled = change;
+            rightRoomEntrance.Enabled = change;
+            downRoomEntrance.Enabled = change;
+            upRoomEntrance.Visible = change;
+            leftRoomEntrance.Visible = change;
+            rightRoomEntrance.Visible = change;
+            downRoomEntrance.Visible = change;
+        }
+
+        private string RoomIn()
+        {
+            if (roomMath == true)
+                return "math";
+            if (roomChem == true)
+                return "chem";
+            if (roomPhy == true)
+                return "phy";
+            if (roomProg == true)
+                return "prog";
+            return null;
+        }
+
+        private void ScoreAfterQandA()
+        {
+            string score = File.ReadAllText("score.txt");
+            scr += Convert.ToInt32(score);
+            scoreBoard.Text = "Score: " + scr.ToString();
+            if (scr >= 0)
+                ok = true;
+            if (scr > 40)
+                finale = true;
         }
     }
 }
