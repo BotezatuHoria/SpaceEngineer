@@ -75,6 +75,7 @@ namespace SpaceGame
                 subject = "phy";
 
             new Materials(fileName.Text, subject);
+            RefreshDataGrid();
         }
 
         private void RefreshDataGrid()
@@ -90,20 +91,21 @@ namespace SpaceGame
 
         private void eraseButton_Click(object sender, EventArgs e)
         {
-            RefreshDataGrid();
+            
             int crrCell = Convert.ToInt32(dataGridView.CurrentRow.Cells[2].Value);
             Console.WriteLine(crrCell);
 
             Materials mat = new Materials(crrCell);
             Console.WriteLine(mat.Id);
-            mat.Delete();
+            
 
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\{1}.pdf", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")), dataGridView.CurrentRow.Cells[1].Value.ToString().Trim());
-            
+
+            mat.Delete();
             System.IO.File.Delete(FileName);
             MessageBox.Show("Fisierul a fost sters cu succes", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+            RefreshDataGrid();
         }
 
         private void AdminMaterials_Load(object sender, EventArgs e)
