@@ -39,9 +39,13 @@ namespace SpaceGame
         private void Admin_Load(object sender, EventArgs e)
         {
             this.qandATableAdapter.Fill(this.databaseDataSet.QandA);
-            firstAnswer();
-            
+            firstAnswer();   
         }
+
+
+        /// This function creates a TextBox with a RadioButton next to it.
+        /// These 2 new controls are then added to the Panel so they can be displayed.
+
         public void NewAnswer(int pace)
         {
             var answer = new TextBox();
@@ -61,6 +65,7 @@ namespace SpaceGame
             answersPanel.Controls.Add(answerButton);
         }
 
+        /// This function counts how many answers the user has created and if it goes over the value of maxAnswers an error message will be displayed.
         private void answerButton_Click(object sender, EventArgs e)
         {
             answersNr++;
@@ -73,6 +78,7 @@ namespace SpaceGame
             
         }
 
+        /// This function gahters all the data the user has entered.
         private void GetData()
         {
             //Question part
@@ -113,6 +119,7 @@ namespace SpaceGame
                 Console.WriteLine(controls[i]);
         }
 
+        /// This function creates a new Qusetion and it's answers from the data that has been gathered from the user.  
         private void sendButton_Click(object sender, EventArgs e)
         {
             if (Errors() == true)
@@ -128,6 +135,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function finds the last id from the Questions table.
         private int lastQuestionId()
         {
             var question = new QuestionsTableAdapter();
@@ -137,6 +145,7 @@ namespace SpaceGame
             //return dataView.Count;
         }
 
+        /// This function is used to refresh the DataGrid.
         private void refreshDataGrid()
         {
             QandATableAdapter qanda = new QandATableAdapter();
@@ -148,6 +157,7 @@ namespace SpaceGame
             dataGridView.Refresh();
         }
 
+        /// This function is used to clear all the inputs from the user in order to add a new one.
         private void clearInputs()
         {
             question.Clear();
@@ -163,6 +173,7 @@ namespace SpaceGame
             firstAnswer();
         }
 
+        /// This function is used to generate the new answer TextBox and RadioButton that the user can interact with.
         private void firstAnswer()
         {
             var answer = new TextBox();
@@ -181,6 +192,7 @@ namespace SpaceGame
             answersPanel.Controls.Add(answerButton);
         }
 
+        /// This function deletes the question and it's answers from the database based on the cell that the user had selected before clicking the button. After this the DataGird refreshes.
         private void eraseButton_Click(object sender, EventArgs e)
         {
             int crrCell = Convert.ToInt32(dataGridView.CurrentRow.Cells[5].Value);
@@ -219,6 +231,7 @@ namespace SpaceGame
 
         }
 
+        /// This function encludes all the errors that might occur in case the user did not pay attention to all the fields that had to be filled.
         private bool Errors()
         {
             int cnt = 0;
@@ -263,6 +276,7 @@ namespace SpaceGame
             return true;
         }
 
+        /// This is a function that displays in the output console the value in the DataGrid that the user selected.
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //Console.WriteLine(dataGridView.CurrentCell.Value);

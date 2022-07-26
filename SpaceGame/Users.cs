@@ -14,6 +14,7 @@ namespace SpaceGame
         private int idUser;
         private bool isadmin;
 
+        /// The constructors for a new Users object.
         public Users(int _idUser)
         {
             UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
@@ -51,6 +52,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function is used to make a list of Users objects from the data gathered from the database.
         public static List<Users> ReturnUsersFromDb()
         {
             List<Users> userList = new List<Users>();
@@ -63,6 +65,7 @@ namespace SpaceGame
             return userList;
         }
 
+        /// This function is used in order to return an user by his credentials.
         public static Users ReturnUserByCredentials(string email, string password)
         {
             UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
@@ -80,36 +83,41 @@ namespace SpaceGame
                 return null;
         }
 
+        /// This gets and sets the FirstName string of the object.
         public string FirstName
         {
             get { return fName; }
             set { fName = value; }
         }
 
-
+        /// This gets and sets the SecondName string of the object.
         public string SecondName
         {
             get { return sName; }
             set { sName = value; }
         }
 
+        /// This gets and sets the email string of the object.
         public string Email
         {
             get { return email; }
         }
 
+        /// This gets and sets the password string of the object.
         public string Password
         {
             get { return password; }
             set { password = value; }
         }
 
+        /// This gets and sets the if of the object.
         public int IdUser
         {
             get { return idUser; }
             set { idUser = value; }
         }
 
+        /// This gets and sets the state of the object.
         public bool IsAdmin
         {
             get { return isadmin; }

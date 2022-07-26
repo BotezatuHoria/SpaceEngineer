@@ -20,6 +20,7 @@ namespace SpaceGame
             InitializeComponent();
         }
 
+        /// This function verifies if all the fileds are completed properly and also adds a new material to the database and resources folder.
         private void button1_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(fileName.Text))
@@ -61,7 +62,7 @@ namespace SpaceGame
             }
 
         }
-
+        /// This function adds the new material only to the database.
         private void AddMaterial()
         {
             string subject = null;
@@ -78,6 +79,7 @@ namespace SpaceGame
             RefreshDataGrid();
         }
 
+        /// This function is used to refresh the DataGrid.
         private void RefreshDataGrid()
         {
             MaterialsTableAdapter materialsTableAdapter = new MaterialsTableAdapter();
@@ -89,6 +91,7 @@ namespace SpaceGame
             dataGridView.Refresh();
         }
 
+        /// This function is used to remove a material from the database and the resources folder.
         private void eraseButton_Click(object sender, EventArgs e)
         {
             
@@ -108,6 +111,7 @@ namespace SpaceGame
             RefreshDataGrid();
         }
 
+        /// This function is used in order to fill the TableAdapter with information from the database.
         private void AdminMaterials_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'databaseDataSet.Materials' table. You can move, or remove it, as needed.

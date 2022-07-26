@@ -24,6 +24,7 @@ namespace SpaceGame
             DispalyChart();
         }
 
+        /// This function is used to calculate the statistics.
         private void MakeStats()
         {
             try
@@ -75,6 +76,7 @@ namespace SpaceGame
             programming = programming * 100 / sum;
         }
 
+        /// This function is used to display the PieChart
         private void DispalyChart()
         {
             chart.Series["s1"].IsValueShownAsLabel = true;

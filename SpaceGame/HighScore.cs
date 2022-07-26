@@ -13,6 +13,7 @@ namespace SpaceGame
 {
     public partial class HighScore : Form
     {
+        /// This function gets the last score that has been update on the file of the user that logged in and displays it with a Label.
         public HighScore()
         {
             InitializeComponent();

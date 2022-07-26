@@ -19,12 +19,14 @@ namespace SpaceGame
         public string room = null;
         string file = null;
 
+        /// This function initializes the components of the form and also gets the room that the player is in.
         public Lessons(string _room)
         {
             room = _room;
             InitializeComponent();
         }
 
+        /// This function is used to generate a new Panel with the name of the file and a button that opens a PDF view and also add it to the FlowLayoutPanel.
         private void GenPanel(string name)
         {
             Panel panel = new Panel();
@@ -65,12 +67,14 @@ namespace SpaceGame
             flowLayoutPanel.Controls.Add(panel);
         }
 
+        /// This function is used to get the tag of the button that has been pressed and open the PDF view.
         private void read_Click(object sender, EventArgs e)
         {
             file = ((Button)sender).Tag.ToString();
             new PDFView(file).ShowDialog();
         }
 
+        /// This function gathers all the materials from the database and displays the ones that are specific to the room that the user is in.
         private void LoadFromDb()
         {
             materials = Materials.GetMaterials();
@@ -88,6 +92,7 @@ namespace SpaceGame
             
         }
 
+        /// This function loads all the panels when the form is being loaded.
         private void Lessons_Load(object sender, EventArgs e)
         {
             LoadFromDb();

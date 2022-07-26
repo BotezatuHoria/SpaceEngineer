@@ -13,6 +13,7 @@ namespace SpaceGame
         private int idQuestion;
         private string question, expl, subject;
 
+        /// The constructors for a new Question object.
         public Question(int _idQuestion)
         {
             this.idQuestion = _idQuestion;
@@ -39,6 +40,7 @@ namespace SpaceGame
             this.idQuestion = Convert.ToInt32(question.GetData().Last()["IdQuestion"]);
         }
 
+        /// This function deletes the object from the database.
         public void Delete()
         {
             QuestionsTableAdapter questionsTableAdapter = new QuestionsTableAdapter();
@@ -47,24 +49,28 @@ namespace SpaceGame
             questionsTableAdapter.Delete(this.idQuestion, this.subject);
         }
 
+        /// This gets and sets the id of an Question object.
         public int IdQuestion
         {
             get { return IdQuestion; }
             set { this.IdQuestion = value; }
         }
 
+        /// This gets and sets the question string of an Question object.
         public string Quest
         {
             get { return question; }
             set{ this.question = value;}
         }
 
+        /// This gets and sets the explanation string of an Question object.
         public string Explanation
         {
             get { return expl; }
             set { this.expl = value; }
         }
 
+        /// This gets and sets the subject of an Question object.
         public string Subject
         {
             get { return subject; }

@@ -35,6 +35,7 @@ namespace SpaceGame
         private bool roomRocket = false;
         private bool finale = false;
 
+        /// This function initializes all the components, sets the game in fullscreen and gathers infromation about the user's score.
         public Game(Users _user)
         {
             Fullscreen(true);
@@ -50,6 +51,8 @@ namespace SpaceGame
             highScore = Convert.ToInt32(File.ReadAllText(file));
         }
 
+        /// This function is used for all the controls that the player can use in the game.
+        /// It can start the timer for the character to move or have other abilities like interacting with objects.
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.E)
@@ -101,6 +104,7 @@ namespace SpaceGame
             controlButton.BackColor = Color.Aqua;
         }
 
+        /// This function is used to set all the timers to false so that the character doesn't move without the users action.
         private void Game_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W)
@@ -125,6 +129,7 @@ namespace SpaceGame
             }
         }
 
+        /// These function are used to update the location of the character on the map at every timer tick and also verifies if it is there somthing that the character can interact with.
         private void upTimer_Tick(object sender, EventArgs e)
         {
             if (character.Location.Y > 150)
@@ -165,11 +170,13 @@ namespace SpaceGame
             }
         }
 
+        /// This function calculates the distance between 2 objects.
         private static double GetDistance(double x1, double y1, double x2, double y2)
         {
             return Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
         }
 
+        /// This function is used to see if the character is interacting with an object in his surroundings.
         public string Interaction(PictureBox player, PictureBox obj)
         {
             double dist = GetDistance(player.Location.X + player.Width / 2, player.Location.Y + player.Height / 2, obj.Location.X + obj.Width / 2, obj.Location.Y + obj.Height / 2);
@@ -188,6 +195,8 @@ namespace SpaceGame
                 
         }
 
+        /// This function is used to interact with diferent objects.
+        /// Each object has a different thing that it can do.
         public void controlButton_Click(object sender, EventArgs e)
         {
             lst = new List<PictureBox>() { upRoomEntrance, downRoomEntrance, leftRoomEntrance, rightRoomEntrance, testMath, testPhy, testChem, testProg, rocket, elevator, learnPhy, learnProg, learnMath, learnChem};
@@ -223,6 +232,7 @@ namespace SpaceGame
             controlButton.BackColor = Color.Aqua;
         }
 
+        /// This function is used in case the character interacts with one of the doors so it can show the specific objects of every room.
         public void InteractionDoor(PictureBox obj)
         {
             int objX = obj.Location.X;
@@ -325,6 +335,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function is used in order to turn on or off the visibility of 3 of the doors in certain situations.
         public void Turn(bool x, PictureBox obj)
         {
             
@@ -340,6 +351,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function is used in order to interact with the rocket and load the room's special objects.
         public void RocketShow()
         {
             if (inroom == false)
@@ -376,6 +388,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function is used in order to turn on and off the elevator when is needed.
         public void ElevatorOnOff(bool x)
         {
             if (ok == true)
@@ -385,6 +398,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function detects colision with other objects so that the character can't walk on everything he wants.
         public void Collision()
         {
             List<PictureBox> lst = new List<PictureBox> { reactor1, reactor2, reactor3, comp1, comp3, testPhy, learnProg, testProg, progComs1, progComs2, progComs3, progComs4, progComs5, progComs6, progStation1, progStation2, robot, deskMath, desksMath1, desksMath2, desksMath3, desksMath4, calMath, learnMath, testMath, shelfMath1, shelfMath2, compChem, brewChem1, brewChem2, chlotesChem, deskChem, rackChem, learnChem, testChem, dog, chatBubble};
@@ -401,6 +415,7 @@ namespace SpaceGame
             }
         }
 
+        /// This functiom is used to verify the interaction with other objects.
         private void VerifInteraction()
         {
             List<PictureBox> pics = new List<PictureBox> { upRoomEntrance, downRoomEntrance, leftRoomEntrance, rightRoomEntrance, testMath, testPhy, testProg, testChem, rocket, elevator, learnChem, learnPhy, learnMath, learnProg };
@@ -415,6 +430,7 @@ namespace SpaceGame
             Collision();
         }
 
+        /// This function is used to update the highscore of every user if it has to change.
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (highScore < scr)
@@ -429,6 +445,7 @@ namespace SpaceGame
             Application.Exit();
         }
 
+        /// This functio is used to set the app in fullscreen mode.
         private void Fullscreen(bool fullscreen)
         {
             if (fullscreen)
@@ -444,6 +461,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function is used to controll what the helper can say and do.
         private void dog_MouseHover(object sender, EventArgs e)
         {
             dog.Image = SpaceGame.Properties.Resources.dog2;
@@ -470,6 +488,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function is used to reset the helpers inactive position
         private void dog_MouseLeave(object sender, EventArgs e)
         {
             dog.Image = SpaceGame.Properties.Resources.dog3;
@@ -482,6 +501,7 @@ namespace SpaceGame
             }
         }
 
+        /// These functions are used to turn on or off the objects related to every room.
         private void MathObj(bool change)
         {
             roomMath = change;
@@ -578,6 +598,7 @@ namespace SpaceGame
             robot.Visible = changed;
         }
 
+        /// This function is used to uodate the progress on the rocket.
         private void RocketScores()
         {
             if (scr >= 0 && scr <= 10)
@@ -608,6 +629,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function is used to turn on and off the doors.
         private void RoomsSwitch(bool change)
         {
             upRoomEntrance.Enabled = change;
@@ -620,6 +642,7 @@ namespace SpaceGame
             downRoomEntrance.Visible = change;
         }
 
+        /// This function returns in which camera the character is in as a string.
         private string RoomIn()
         {
             if (roomMath == true)
@@ -633,6 +656,7 @@ namespace SpaceGame
             return null;
         }
 
+        /// This fucntion is used to read and update the score.
         private void ScoreAfterQandA()
         {
             string score = File.ReadAllText("score.txt");

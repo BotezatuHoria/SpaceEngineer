@@ -18,7 +18,7 @@ namespace SpaceGame
             qa = _qa;
             InitializeComponent();
         }
-
+        /// This function gets the QandA object that it is provided in the constructor and displays it's explanation.
         private void Explain_Load(object sender, EventArgs e)
         {
             explainLabel.Text = Convert.ToString(qa.Explanation);

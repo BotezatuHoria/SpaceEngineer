@@ -13,6 +13,7 @@ namespace SpaceGame
         private int id;
         private string name, subject;
 
+        /// The constructors for a new Materials object.
         public Materials(int _id)
         {
             this.id = _id;
@@ -34,7 +35,8 @@ namespace SpaceGame
             materialsTableAdapter.Insert(_name, _subject);
             this.id = Convert.ToInt32(materialsTableAdapter.GetData().Last()["Id"]);
         }
-
+        
+        /// This is the function thats creates a list out of all the information provided in the database.
         public static List<Materials> GetMaterials()
         {
             List<Materials> materials = new List<Materials>();
@@ -49,6 +51,7 @@ namespace SpaceGame
             return materials;
         }
 
+        /// This function deletes the object from the database.
         public void Delete()
         {
             MaterialsTableAdapter materialsTableAdapter = new MaterialsTableAdapter();
@@ -58,18 +61,21 @@ namespace SpaceGame
 
         }
 
+        /// This gets and sets the id of the object.
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
 
+        /// This gets and sets the name of the object.
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
 
+        /// This gets and sets the subject of the object.
         public string Subject
         {
             get { return subject; }

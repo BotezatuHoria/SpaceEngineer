@@ -20,6 +20,7 @@ namespace SpaceGame
             InitializeComponent();
         }
 
+        /// This function is used in order to create a new account.
         private void registerButton_Click(object sender, EventArgs e)
         {
             if (Users.ReturnUserByCredentials(emailBox.Text, null) == null)

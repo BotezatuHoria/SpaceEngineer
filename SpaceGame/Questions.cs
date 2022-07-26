@@ -31,6 +31,7 @@ namespace SpaceGame
             InitializeComponent();
         }
 
+        /// This function displays a question and it's answers from the array that contains them.
         private void LoadQuestion(int indx)
         {
             mistakeLabel.Visible = false;
@@ -67,6 +68,7 @@ namespace SpaceGame
             }
         }
 
+        /// This function gets all the data from the database when the form is being loaded.
         private void Questions_Load(object sender, EventArgs e)
         {
             qa = QandA.LoadQandAFromDatabase();
@@ -78,17 +80,7 @@ namespace SpaceGame
             ///MessageBox.Show(qa[0].Answers[2].Ans.ToString());
         }
 
-        private void nextButton_Click(object sender, EventArgs e)
-        {
-            /*if (questionIndex + 1 < qa.Count)
-            {
-                questionIndex++;
-                LoadQuestion(questionIndex);
-            }*/
-            //createList();
-            
-        }
-
+        /// This function validates the answer.
         public bool ValidateAnswer()
         {
             foreach (Control i in ansPanel.Controls)
@@ -103,27 +95,21 @@ namespace SpaceGame
             return false;
         }
 
+        /// This function clears the inputs.
         public void ClearInputs()
         {
             //textBox1.Clear();            
             ansPanel.Controls.Clear();
         }
 
+        /// This function opens a new Explain form based on the question that the user got wrong.
         private void explButton_Click(object sender, EventArgs e)
         {
             new Explain(array[questionIndex - 1]).ShowDialog();
             NextQandA();
         }
 
-        private void prevButton_Click(object sender, EventArgs e)
-        {
-            if (questionIndex - 1 > -1)
-            {
-                questionIndex--;
-                LoadQuestion(questionIndex);
-            }
-        }
-
+        /// This function loads a new QandA.
         private void NextQandA()
         {
             
@@ -142,6 +128,8 @@ namespace SpaceGame
             
         }
 
+        /// This function sees if the answer is correct or not and based on that gets to the next question or makes visible and active the explanation button.
+
         private void validButton_Click(object sender, EventArgs e)
         {
             bool vld = ValidateAnswer();
@@ -159,11 +147,8 @@ namespace SpaceGame
             
         }
 
-        private void Questions_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //createList();
-        }
 
+        /// This function generates a new random index.
         public int RandomIndex()
         {
             int a = 0, b = indexes.Count();
@@ -173,6 +158,7 @@ namespace SpaceGame
             return indexes[y];
         }
 
+        /// This function is used in order to populate a list of all the indexes.
         public void CreateList()
         {
             indexes = new List<int>();
@@ -198,6 +184,7 @@ namespace SpaceGame
             set { score = value; }
         }
 
+        /// This function is used in order to write in a .txt file the score that the user got during the QandA session.
         private void Questions_FormClosing(object sender, FormClosingEventArgs e)
         {
             using (StreamWriter writetext = new StreamWriter("score.txt"))
@@ -207,6 +194,7 @@ namespace SpaceGame
             RoomData(room);
         }
 
+        /// This function is used to create an list of QandA objects.
         private void CreateNewQandA()
         {
             array = new List<QandA>();
@@ -226,7 +214,7 @@ namespace SpaceGame
             Console.WriteLine(qa.Count());
         }
 
-
+        /// This function is used in order to wite data in a .txt file with the room's name so it can be used to calculate the statistics.
         private void RoomData(string room)
         {
             try

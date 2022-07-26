@@ -18,7 +18,7 @@ namespace SpaceGame
         {
 
         }
-
+        /// The constructors for a new Answer object.
         public Answer(int _idAnswer)
         {
             idAnswer = _idAnswer;
@@ -40,6 +40,7 @@ namespace SpaceGame
             this.idAnswer = Convert.ToInt32(answersTableAdapter.GetData().Last()["IdAnswer"]);
         }
         
+        /// This function deletes the object from the database.
         public void Delete()
         {
             AnswersTableAdapter answersTableAdapter = new AnswersTableAdapter();
@@ -48,24 +49,25 @@ namespace SpaceGame
             answersTableAdapter.Delete(this.idAnswer, this.ans, this.idQuestion, this.valid);
         }
 
+        /// This gets and sets the id of an Answer object.
         public int IdAnswer
         {
             get { return idAnswer; }
             set { idAnswer = value; }
         }
-
+        /// This gets and sets the id of the question that the anser is related to of an Answer object.
         public int IdQuestion
         {
             get { return IdQuestion; }
             set { this.IdQuestion = value; }
         }
-
+        /// This gets and sets the answer string of an Answer object
         public string Ans
         {
             get { return ans; }
             set { this.ans = value; }
         }
-
+        /// This gets and sets the state of an Answer object.
         public bool Valid
         {
             get { return valid; }

@@ -21,6 +21,7 @@ namespace SpaceGame
             InitializeComponent();
         }
 
+        /// This function displays in a PDF view a certain file that has been selected by the user from the resources folder.
         private void PDFView_Load(object sender, EventArgs e)
         {
             

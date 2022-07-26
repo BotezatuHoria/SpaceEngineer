@@ -58,7 +58,6 @@ namespace SpaceGame
             this.nextButton.Text = "button1";
             this.nextButton.UseVisualStyleBackColor = true;
             this.nextButton.Visible = false;
-            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // explButton
             // 
@@ -84,7 +83,6 @@ namespace SpaceGame
             this.prevButton.Text = "button1";
             this.prevButton.UseVisualStyleBackColor = true;
             this.prevButton.Visible = false;
-            this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
             // 
             // validButton
             // 
@@ -142,7 +140,6 @@ namespace SpaceGame
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Test";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Questions_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Questions_FormClosed);
             this.Load += new System.EventHandler(this.Questions_Load);
             this.ResumeLayout(false);
 

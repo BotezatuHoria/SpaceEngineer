@@ -19,6 +19,7 @@ namespace SpaceGame
             InitializeComponent();
         }
 
+        /// This function verifies if the user is registered in the database. If he is not, then an error message will be displayed.
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (emailBox.Text == "admin@admin.com" && passwordBox.Text == "admin1234")
@@ -49,7 +50,7 @@ namespace SpaceGame
                 }
             }
         }
-
+        /// This function clears all the fields and opens the registration form.
         private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             emailBox.Clear();
