@@ -133,6 +133,26 @@ namespace SpaceGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Black_Sky_Galaxy_Stars_Desktop_Wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Black Sky Galaxy Stars Desktop Wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Black_Sky_Galaxy_Stars_Desktop_Wallpaper__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Black Sky Galaxy Stars Desktop Wallpaper (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blackboard_chem {
             get {
                 object obj = ResourceManager.GetObject("blackboard_chem", resourceCulture);
@@ -590,9 +610,39 @@ namespace SpaceGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lgin {
+            get {
+                object obj = ResourceManager.GetObject("lgin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lmath {
             get {
                 object obj = ResourceManager.GetObject("lmath", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login2 {
+            get {
+                object obj = ResourceManager.GetObject("login2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login3 {
+            get {
+                object obj = ResourceManager.GetObject("login3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -883,6 +933,16 @@ namespace SpaceGame.Properties {
         internal static System.Drawing.Bitmap reactor {
             get {
                 object obj = ResourceManager.GetObject("reactor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Register {
+            get {
+                object obj = ResourceManager.GetObject("Register", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

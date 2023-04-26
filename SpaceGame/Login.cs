@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace SpaceGame
 {
@@ -17,6 +18,15 @@ namespace SpaceGame
         public Login()
         {
             InitializeComponent();
+        }
+
+        static string hashing(string txt)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(txt));
+                return BitConverter.ToString(hashValue).Replace("-", "");
+            }
         }
 
         /// This function verifies if the user is registered in the database. If he is not, then an error message will be displayed.
@@ -31,7 +41,7 @@ namespace SpaceGame
             }
             else
             {
-                Users rsp = Users.ReturnUserByCredentials(emailBox.Text, passwordBox.Text);
+                Users rsp = Users.ReturnUserByCredentials(emailBox.Text, hashing(passwordBox.Text));
 
                 if (rsp == null)
                 {
@@ -56,6 +66,11 @@ namespace SpaceGame
             emailBox.Clear();
             passwordBox.Clear();
             new Register(isAdmin).ShowDialog();
+        }
+
+        private void logo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

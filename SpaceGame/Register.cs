@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace SpaceGame
 {
@@ -18,6 +19,15 @@ namespace SpaceGame
         {
             isAdmin = _isAdmin;
             InitializeComponent();
+        }
+
+        static string hashing(string txt)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] hashValue = sha256.ComputeHash(Encoding.UTF8.GetBytes(txt));
+                return BitConverter.ToString(hashValue).Replace("-", "");
+            }
         }
 
         /// This function is used in order to create a new account.
@@ -35,7 +45,8 @@ namespace SpaceGame
                             return;
                         }
                     }
-                Users x = new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, passwordBox.Text, isAdmin);
+                Console.WriteLine(hashing(passwordBox.Text));
+                Users x = new Users(fNameBox.Text, sNameBox.Text, emailBox.Text, hashing(passwordBox.Text), isAdmin);
                 MessageBox.Show("Cont creat cu succes.", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 using (StreamWriter writetext = new StreamWriter(x.IdUser + ".txt"))
                 {

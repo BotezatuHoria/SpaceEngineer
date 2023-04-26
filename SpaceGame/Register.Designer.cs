@@ -87,9 +87,9 @@ namespace SpaceGame
             this.registerButton.BackColor = System.Drawing.Color.Coral;
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerButton.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.registerButton.Location = new System.Drawing.Point(181, 342);
+            this.registerButton.Location = new System.Drawing.Point(502, 519);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(364, 44);
+            this.registerButton.Size = new System.Drawing.Size(216, 67);
             this.registerButton.TabIndex = 5;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
@@ -147,8 +147,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
-            this.ClientSize = new System.Drawing.Size(736, 508);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Register;
+            this.ClientSize = new System.Drawing.Size(1237, 658);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.snameLabel);

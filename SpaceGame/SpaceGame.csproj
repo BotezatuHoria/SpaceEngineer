@@ -265,6 +265,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Register.jpg" />
+    <None Include="Resources\Black Sky Galaxy Stars Desktop Wallpaper.png" />
+    <None Include="Resources\login3.jpg" />
+    <None Include="Resources\login2.jpg" />
+    <None Include="Resources\lgin.jpg" />
+    <None Include="Resources\Black Sky Galaxy Stars Desktop Wallpaper %281%29.png" />
     <None Include="Resources\dooropen.wav" />
     <None Include="Resources\footsteps.wav" />
     <None Include="Resources\pdfs.png" />
