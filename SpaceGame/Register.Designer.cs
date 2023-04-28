@@ -87,7 +87,7 @@ namespace SpaceGame
             this.registerButton.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.registerButton.Location = new System.Drawing.Point(487, 516);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(250, 75);
+            this.registerButton.Size = new System.Drawing.Size(249, 75);
             this.registerButton.TabIndex = 5;
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
