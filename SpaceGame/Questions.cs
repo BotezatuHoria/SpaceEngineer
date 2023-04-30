@@ -57,12 +57,13 @@ namespace SpaceGame
             {
                 var answer = new RadioButton();
                 answer.AutoSize = false;
-                answer.Width = 770;
-                answer.Location = new Point(100 , 30 + i * 55);
+                answer.Width = 670;
+                answer.Height = 75;
+                answer.Location = new Point(100 , i * 75);
                 answer.Text = a.Ans;
                 answer.Tag = a.Valid;
                 answer.ForeColor = Color.White;
-                answer.Font = new Font("Consolas", 16);
+                answer.Font = new Font("Consolas", 20);
                 ansPanel.Controls.Add(answer);
                 i++;
             }
@@ -112,7 +113,7 @@ namespace SpaceGame
         /// This function loads a new QandA.
         private void NextQandA()
         {
-            
+            BackgroundImage = SpaceGame.Properties.Resources.Explicatienobutton1;
             explButton.Visible = false;
           
             if (pace <= maxpace)
@@ -138,6 +139,7 @@ namespace SpaceGame
             {
                 explButton.Visible = true;
                 mistakeLabel.Visible = true;
+                BackgroundImage = SpaceGame.Properties.Resources.Explicatie12;
             }
             else
             {
@@ -238,6 +240,11 @@ namespace SpaceGame
             {
                 writetext.WriteLine(finScore);
             }
+        }
+
+        private void ansPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

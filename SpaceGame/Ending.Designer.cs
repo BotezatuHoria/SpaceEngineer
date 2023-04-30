@@ -37,11 +37,11 @@ namespace SpaceGame
             // endText
             // 
             this.endText.BackColor = System.Drawing.Color.Transparent;
-            this.endText.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.endText.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.endText.ForeColor = System.Drawing.Color.White;
-            this.endText.Location = new System.Drawing.Point(53, 95);
+            this.endText.Location = new System.Drawing.Point(27, 19);
             this.endText.Name = "endText";
-            this.endText.Size = new System.Drawing.Size(491, 202);
+            this.endText.Size = new System.Drawing.Size(674, 318);
             this.endText.TabIndex = 0;
             this.endText.Text = "label1";
             this.endText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,11 +49,11 @@ namespace SpaceGame
             // shutDownLabel
             // 
             this.shutDownLabel.BackColor = System.Drawing.Color.Transparent;
-            this.shutDownLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.shutDownLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.shutDownLabel.ForeColor = System.Drawing.Color.White;
-            this.shutDownLabel.Location = new System.Drawing.Point(63, 323);
+            this.shutDownLabel.Location = new System.Drawing.Point(12, 352);
             this.shutDownLabel.Name = "shutDownLabel";
-            this.shutDownLabel.Size = new System.Drawing.Size(471, 79);
+            this.shutDownLabel.Size = new System.Drawing.Size(674, 99);
             this.shutDownLabel.TabIndex = 1;
             this.shutDownLabel.Text = "label1";
             this.shutDownLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,8 +62,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
-            this.ClientSize = new System.Drawing.Size(594, 450);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Black_Sky_Galaxy_Stars_Desktop_Wallpaper;
+            this.ClientSize = new System.Drawing.Size(728, 506);
             this.Controls.Add(this.shutDownLabel);
             this.Controls.Add(this.endText);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

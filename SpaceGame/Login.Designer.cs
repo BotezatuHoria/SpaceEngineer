@@ -33,7 +33,7 @@ namespace SpaceGame
             this.loginButton = new System.Windows.Forms.Button();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
-            this.registerLabel = new System.Windows.Forms.LinkLabel();
+            this.registerButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // loginButton
@@ -73,20 +73,21 @@ namespace SpaceGame
             this.passwordBox.Size = new System.Drawing.Size(367, 38);
             this.passwordBox.TabIndex = 2;
             // 
-            // registerLabel
+            // registerButton
             // 
-            this.registerLabel.AutoSize = true;
-            this.registerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.registerLabel.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.registerLabel.LinkColor = System.Drawing.Color.White;
-            this.registerLabel.Location = new System.Drawing.Point(617, 521);
-            this.registerLabel.Name = "registerLabel";
-            this.registerLabel.Padding = new System.Windows.Forms.Padding(280, 50, 0, 0);
-            this.registerLabel.Size = new System.Drawing.Size(396, 78);
-            this.registerLabel.TabIndex = 4;
-            this.registerLabel.TabStop = true;
-            this.registerLabel.Text = "REGISTER";
-            this.registerLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registerLabel_LinkClicked);
+            this.registerButton.BackColor = System.Drawing.Color.Transparent;
+            this.registerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.registerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.registerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerButton.Font = new System.Drawing.Font("Consolas", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.registerButton.ForeColor = System.Drawing.Color.Transparent;
+            this.registerButton.Location = new System.Drawing.Point(782, 516);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(294, 87);
+            this.registerButton.TabIndex = 4;
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // Login
             // 
@@ -94,7 +95,7 @@ namespace SpaceGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.login3;
             this.ClientSize = new System.Drawing.Size(1237, 658);
-            this.Controls.Add(this.registerLabel);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.emailBox);
             this.Controls.Add(this.loginButton);
@@ -114,7 +115,7 @@ namespace SpaceGame
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.TextBox passwordBox;
-        private System.Windows.Forms.LinkLabel registerLabel;
+        private System.Windows.Forms.Button registerButton;
     }
 }
 

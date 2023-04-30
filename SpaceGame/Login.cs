@@ -61,16 +61,12 @@ namespace SpaceGame
             }
         }
         /// This function clears all the fields and opens the registration form.
-        private void registerLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void registerButton_Click(object sender, EventArgs e)
         {
             emailBox.Clear();
             passwordBox.Clear();
             new Register(isAdmin).ShowDialog();
-        }
-
-        private void logo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

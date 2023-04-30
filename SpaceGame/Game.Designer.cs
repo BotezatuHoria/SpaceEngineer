@@ -779,9 +779,10 @@ namespace SpaceGame
             // chatLabel
             // 
             this.chatLabel.BackColor = System.Drawing.Color.White;
-            this.chatLabel.Location = new System.Drawing.Point(317, 843);
+            this.chatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chatLabel.Location = new System.Drawing.Point(310, 837);
             this.chatLabel.Name = "chatLabel";
-            this.chatLabel.Size = new System.Drawing.Size(123, 106);
+            this.chatLabel.Size = new System.Drawing.Size(130, 102);
             this.chatLabel.TabIndex = 65;
             this.chatLabel.Text = "label1";
             this.chatLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -265,6 +265,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\StartAdmin.png" />
+    <None Include="Resources\Start.png" />
+    <None Include="Resources\Intrebari.png" />
+    <None Include="Resources\Explicatie12.png" />
+    <None Include="Resources\Explicatie11.png" />
+    <None Include="Resources\Explicatienobutton1.png" />
+    <None Include="Resources\Explicatienobutton.png" />
+    <None Include="Resources\Explicatie.png" />
+    <None Include="Resources\Loginon.png" />
     <None Include="Resources\Register.jpg" />
     <None Include="Resources\Black Sky Galaxy Stars Desktop Wallpaper.png" />
     <None Include="Resources\login3.jpg" />

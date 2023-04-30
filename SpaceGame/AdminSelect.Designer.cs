@@ -37,40 +37,45 @@ namespace SpaceGame
             // 
             // questionButton
             // 
-            this.questionButton.BackColor = System.Drawing.Color.Coral;
+            this.questionButton.BackColor = System.Drawing.Color.Transparent;
+            this.questionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.questionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.questionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.questionButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.questionButton.Location = new System.Drawing.Point(169, 124);
+            this.questionButton.Location = new System.Drawing.Point(385, 112);
             this.questionButton.Name = "questionButton";
-            this.questionButton.Size = new System.Drawing.Size(283, 48);
+            this.questionButton.Size = new System.Drawing.Size(327, 112);
             this.questionButton.TabIndex = 0;
-            this.questionButton.Text = "Intrebari";
             this.questionButton.UseVisualStyleBackColor = false;
             this.questionButton.Click += new System.EventHandler(this.questionButton_Click);
             // 
             // materialsButton
             // 
-            this.materialsButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.materialsButton.BackColor = System.Drawing.Color.Transparent;
+            this.materialsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.materialsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.materialsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.materialsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.materialsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.materialsButton.Location = new System.Drawing.Point(169, 218);
+            this.materialsButton.Location = new System.Drawing.Point(385, 246);
             this.materialsButton.Name = "materialsButton";
-            this.materialsButton.Size = new System.Drawing.Size(283, 48);
+            this.materialsButton.Size = new System.Drawing.Size(327, 104);
             this.materialsButton.TabIndex = 1;
-            this.materialsButton.Text = "Materiale";
             this.materialsButton.UseVisualStyleBackColor = false;
             this.materialsButton.Click += new System.EventHandler(this.materialsButton_Click);
             // 
             // statsButton
             // 
-            this.statsButton.BackColor = System.Drawing.Color.Coral;
+            this.statsButton.BackColor = System.Drawing.Color.Transparent;
+            this.statsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.statsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.statsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.statsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statsButton.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.statsButton.Location = new System.Drawing.Point(169, 321);
+            this.statsButton.Location = new System.Drawing.Point(385, 383);
             this.statsButton.Name = "statsButton";
-            this.statsButton.Size = new System.Drawing.Size(283, 48);
+            this.statsButton.Size = new System.Drawing.Size(327, 108);
             this.statsButton.TabIndex = 2;
-            this.statsButton.Text = "Statistici";
             this.statsButton.UseVisualStyleBackColor = false;
             this.statsButton.Click += new System.EventHandler(this.statsButton_Click);
             // 
@@ -78,8 +83,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
-            this.ClientSize = new System.Drawing.Size(622, 508);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Intrebari;
+            this.ClientSize = new System.Drawing.Size(1095, 622);
             this.Controls.Add(this.statsButton);
             this.Controls.Add(this.materialsButton);
             this.Controls.Add(this.questionButton);

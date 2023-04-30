@@ -42,16 +42,17 @@ namespace SpaceGame
             // ansPanel
             // 
             this.ansPanel.BackColor = System.Drawing.Color.Transparent;
-            this.ansPanel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ansPanel.Location = new System.Drawing.Point(34, 127);
+            this.ansPanel.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ansPanel.Location = new System.Drawing.Point(12, 145);
             this.ansPanel.Name = "ansPanel";
-            this.ansPanel.Size = new System.Drawing.Size(754, 388);
+            this.ansPanel.Size = new System.Drawing.Size(776, 390);
             this.ansPanel.TabIndex = 1;
+            this.ansPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ansPanel_Paint);
             // 
             // nextButton
             // 
             this.nextButton.Enabled = false;
-            this.nextButton.Location = new System.Drawing.Point(822, 543);
+            this.nextButton.Location = new System.Drawing.Point(678, 555);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(75, 23);
             this.nextButton.TabIndex = 2;
@@ -61,14 +62,15 @@ namespace SpaceGame
             // 
             // explButton
             // 
-            this.explButton.BackColor = System.Drawing.Color.Coral;
+            this.explButton.BackColor = System.Drawing.Color.Transparent;
+            this.explButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.explButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.explButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.explButton.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.explButton.Location = new System.Drawing.Point(811, 127);
+            this.explButton.Location = new System.Drawing.Point(794, 164);
             this.explButton.Name = "explButton";
-            this.explButton.Size = new System.Drawing.Size(162, 65);
+            this.explButton.Size = new System.Drawing.Size(244, 81);
             this.explButton.TabIndex = 3;
-            this.explButton.Text = "Explicatie";
             this.explButton.UseVisualStyleBackColor = false;
             this.explButton.Visible = false;
             this.explButton.Click += new System.EventHandler(this.explButton_Click);
@@ -76,7 +78,7 @@ namespace SpaceGame
             // prevButton
             // 
             this.prevButton.Enabled = false;
-            this.prevButton.Location = new System.Drawing.Point(34, 543);
+            this.prevButton.Location = new System.Drawing.Point(34, 555);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(75, 23);
             this.prevButton.TabIndex = 4;
@@ -86,37 +88,38 @@ namespace SpaceGame
             // 
             // validButton
             // 
-            this.validButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.validButton.BackColor = System.Drawing.Color.Transparent;
+            this.validButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.validButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.validButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.validButton.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.validButton.Location = new System.Drawing.Point(811, 446);
+            this.validButton.Location = new System.Drawing.Point(794, 478);
             this.validButton.Name = "validButton";
-            this.validButton.Size = new System.Drawing.Size(162, 69);
+            this.validButton.Size = new System.Drawing.Size(244, 82);
             this.validButton.TabIndex = 5;
-            this.validButton.Text = "Verifica";
             this.validButton.UseVisualStyleBackColor = false;
             this.validButton.Click += new System.EventHandler(this.validButton_Click);
             // 
             // mistakeLabel
             // 
             this.mistakeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.mistakeLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mistakeLabel.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.mistakeLabel.ForeColor = System.Drawing.Color.Red;
-            this.mistakeLabel.Location = new System.Drawing.Point(811, 248);
+            this.mistakeLabel.Location = new System.Drawing.Point(811, 273);
             this.mistakeLabel.Name = "mistakeLabel";
-            this.mistakeLabel.Size = new System.Drawing.Size(162, 99);
+            this.mistakeLabel.Size = new System.Drawing.Size(227, 139);
             this.mistakeLabel.TabIndex = 6;
-            this.mistakeLabel.Text = "Raspuns gresit, verifica explicatia.";
+            this.mistakeLabel.Text = "Răspuns greșit, verifică explicația.";
             this.mistakeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // questionLabel
             // 
             this.questionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.questionLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.questionLabel.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.questionLabel.ForeColor = System.Drawing.Color.White;
-            this.questionLabel.Location = new System.Drawing.Point(30, 9);
+            this.questionLabel.Location = new System.Drawing.Point(12, 9);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(943, 100);
+            this.questionLabel.Size = new System.Drawing.Size(1038, 130);
             this.questionLabel.TabIndex = 7;
             this.questionLabel.Text = "label1";
             // 
@@ -124,8 +127,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photo_1539721972319_f0e80a00d424;
-            this.ClientSize = new System.Drawing.Size(993, 578);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Explicatienobutton1;
+            this.ClientSize = new System.Drawing.Size(1062, 590);
             this.Controls.Add(this.questionLabel);
             this.Controls.Add(this.mistakeLabel);
             this.Controls.Add(this.validButton);

@@ -40,18 +40,18 @@ namespace SpaceGame
             // 
             // chart
             // 
-            this.chart.BackColor = System.Drawing.Color.Coral;
-            chartArea1.BackColor = System.Drawing.Color.Coral;
+            this.chart.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.chart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Coral;
-            legend1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            legend1.ForeColor = System.Drawing.Color.White;
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(-3, 0);
+            this.chart.Location = new System.Drawing.Point(12, 12);
             this.chart.Name = "chart";
-            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             series1.BackSecondaryColor = System.Drawing.Color.White;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -60,19 +60,21 @@ namespace SpaceGame
             series1.Legend = "Legend1";
             series1.Name = "s1";
             this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(927, 561);
+            this.chart.Size = new System.Drawing.Size(995, 618);
             this.chart.TabIndex = 0;
             this.chart.Text = "chart";
             title1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            title1.ForeColor = System.Drawing.Color.White;
             title1.Name = "Title1";
-            title1.Text = "Raspunsurile corecte ale utilizatorilor";
+            title1.Text = "Pasiunile utilizatorilor";
             this.chart.Titles.Add(title1);
             // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 559);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Black_Sky_Galaxy_Stars_Desktop_Wallpaper;
+            this.ClientSize = new System.Drawing.Size(1019, 642);
             this.Controls.Add(this.chart);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

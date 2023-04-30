@@ -34,6 +34,7 @@ namespace SpaceGame
         {
             if (user.IsAdmin == true)
             {
+                this.BackgroundImage = SpaceGame.Properties.Resources.StartAdmin;
                 settingsButton.Enabled = true;
                 settingsButton.Visible = true;
             }

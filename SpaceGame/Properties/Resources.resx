@@ -121,6 +121,9 @@
   <data name="Black Sky Galaxy Stars Desktop Wallpaper (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Black Sky Galaxy Stars Desktop Wallpaper (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dresschem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dresschem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="walk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\walk.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -142,9 +145,6 @@
   <data name="Divizibilitatea_numerelor_naturale_Criterii_de_divizibilitate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Divizibilitatea numerelor naturale-Criterii de divizibilitate.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="computerpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\computerpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="map" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,14 +154,14 @@
   <data name="rocket1004 " type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rocket1004 .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="door3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Prop__Chimice__Materie__Corp__Substanță__Material" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Prop. Chimice. Materie. Corp. Substanță. Material.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="math_desk_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\math_desk_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Proprietati_Fizice_ale_Corpurilor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Proprietati Fizice ale Corpurilor.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dog2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dog2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,14 +169,17 @@
   <data name="Aplicatia_Paint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aplicatia Paint.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="math3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\math3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Magneţi__Interacţiuni_magnetice__Câmp_magnetic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magneţi, Interacţiuni magnetice, Câmp magnetic.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Explicatie12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Explicatie12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="leftroom1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\leftroom1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dresschem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dresschem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Explicatie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Explicatie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +187,8 @@
   <data name="testprog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\testprog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo-1539721972319-f0e80a00d424" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo-1539721972319-f0e80a00d424.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Numere_Rationale" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Numere Rationale.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -193,20 +196,23 @@
   <data name="rightroom1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rightroom1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="math1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\math1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="chem1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chem1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mate1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mate1.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="chem15" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chem15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Intrebari" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Intrebari.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Register.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Multimi_Operatii_cu_multimi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Multimi-Operatii cu multimi.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="rightroom2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rightroom2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="uproom1000" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uproom1000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20781,8 +20787,8 @@
   <data name="door4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\door4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chem16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chem16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Loginon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Loginon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="downroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\downroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20796,8 +20802,14 @@
   <data name="dog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dog1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-d-key-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-d-key-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Microsoft_Office" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Microsoft Office.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Explicatie11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Explicatie11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lmath" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lmath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20805,8 +20817,11 @@
   <data name="rocket1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rocket1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fiz2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fiz2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-d-key-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-d-key-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leftroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leftroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="blackboard_chem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blackboard_chem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20847,23 +20862,26 @@
   <data name="learnmath" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\learnmath.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Apa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apa.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="door5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\door5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="whiteboard_fiz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\whiteboard_fiz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="comands" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\comands.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="math3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\math3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reactor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-a-key-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-a-key-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Rolul_si_functiile_componentelor_unui_calculator_personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rolul si functiile componentelor unui calculator personal.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="rocket11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rocket11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dog3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dog3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20876,6 +20894,9 @@
   </data>
   <data name="elevator2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elevator2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="math_desk_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\math_desk_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-w-key-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-w-key-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20916,17 +20937,14 @@
   <data name="calendar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photoo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="magel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magel2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="door3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\door3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chem16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chem16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Disp_de_intrare_iesire" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Disp de intrare-iesire.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="robbot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\robbot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Componentele_Calculatorului" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Componentele Calculatorului.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -20940,35 +20958,38 @@
   <data name="Nr_Prime_Desc_in_factori_primi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Nr Prime-Desc in factori primi.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Magneţi__Interacţiuni_magnetice__Câmp_magnetic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Magneţi, Interacţiuni magnetice, Câmp magnetic.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="robbot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\robbot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pdfs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pdfs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="math_desk_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\math_desk_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rocket11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photo-1539721972319-f0e80a00d424" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo-1539721972319-f0e80a00d424.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fiz2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fiz2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="leftroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\leftroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chem15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chem15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="whiteboard1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\whiteboard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Explicatienobutton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Explicatienobutton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Microsoft_Office" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Microsoft Office.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Numere_Naturale_Operatii_cu_numere_naturale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Numere Naturale-Operatii cu numere naturale.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="icons8-a-key-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-a-key-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Proprietati_Fizice_ale_Corpurilor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Proprietati Fizice ale Corpurilor.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Microsoft_Word" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Microsoft Word.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Aerul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aerul.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="comands" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comands.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="2comands" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2comands.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20979,8 +21000,14 @@
   <data name="Mărimi_fizice_şi_unităţi_de_măsură" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mărimi fizice şi unităţi de măsură.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Numere_Naturale_Operatii_cu_numere_naturale" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Numere Naturale-Operatii cu numere naturale.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="whiteboard1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whiteboard1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Explicatienobutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Explicatienobutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Apa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apa.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="rocket2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rocket2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -20991,8 +21018,8 @@
   <data name="dooropen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dooropen.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="magel2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\magel2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="computerpng" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computerpng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="math2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\math2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -21003,10 +21030,10 @@
   <data name="chem3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chem3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rightroom2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rightroom2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="math1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\math1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Register.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="StartAdmin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StartAdmin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

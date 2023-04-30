@@ -36,11 +36,11 @@ namespace SpaceGame
             // storyLabel
             // 
             this.storyLabel.BackColor = System.Drawing.Color.Transparent;
-            this.storyLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.storyLabel.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.storyLabel.ForeColor = System.Drawing.Color.White;
-            this.storyLabel.Location = new System.Drawing.Point(56, 34);
+            this.storyLabel.Location = new System.Drawing.Point(46, 9);
             this.storyLabel.Name = "storyLabel";
-            this.storyLabel.Size = new System.Drawing.Size(583, 468);
+            this.storyLabel.Size = new System.Drawing.Size(1037, 598);
             this.storyLabel.TabIndex = 3;
             this.storyLabel.Text = "label1";
             this.storyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,8 +49,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
-            this.ClientSize = new System.Drawing.Size(676, 537);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Black_Sky_Galaxy_Stars_Desktop_Wallpaper;
+            this.ClientSize = new System.Drawing.Size(1125, 647);
             this.Controls.Add(this.storyLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

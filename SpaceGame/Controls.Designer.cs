@@ -54,11 +54,11 @@ namespace SpaceGame
             // 
             this.upLabel.AutoSize = true;
             this.upLabel.BackColor = System.Drawing.Color.Transparent;
-            this.upLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.upLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.upLabel.ForeColor = System.Drawing.Color.White;
-            this.upLabel.Location = new System.Drawing.Point(163, 68);
+            this.upLabel.Location = new System.Drawing.Point(80, 75);
             this.upLabel.Name = "upLabel";
-            this.upLabel.Size = new System.Drawing.Size(190, 24);
+            this.upLabel.Size = new System.Drawing.Size(239, 32);
             this.upLabel.TabIndex = 0;
             this.upLabel.Text = "Miscarea in sus";
             // 
@@ -66,11 +66,11 @@ namespace SpaceGame
             // 
             this.downLabel.AutoSize = true;
             this.downLabel.BackColor = System.Drawing.Color.Transparent;
-            this.downLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.downLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.downLabel.ForeColor = System.Drawing.Color.White;
-            this.downLabel.Location = new System.Drawing.Point(163, 137);
+            this.downLabel.Location = new System.Drawing.Point(80, 144);
             this.downLabel.Name = "downLabel";
-            this.downLabel.Size = new System.Drawing.Size(190, 24);
+            this.downLabel.Size = new System.Drawing.Size(239, 32);
             this.downLabel.TabIndex = 1;
             this.downLabel.Text = "Miscarea in jos";
             // 
@@ -78,11 +78,11 @@ namespace SpaceGame
             // 
             this.leftLabel.AutoSize = true;
             this.leftLabel.BackColor = System.Drawing.Color.Transparent;
-            this.leftLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.leftLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.leftLabel.ForeColor = System.Drawing.Color.White;
-            this.leftLabel.Location = new System.Drawing.Point(163, 199);
+            this.leftLabel.Location = new System.Drawing.Point(80, 206);
             this.leftLabel.Name = "leftLabel";
-            this.leftLabel.Size = new System.Drawing.Size(226, 24);
+            this.leftLabel.Size = new System.Drawing.Size(284, 32);
             this.leftLabel.TabIndex = 2;
             this.leftLabel.Text = "Miscarea in stanga";
             // 
@@ -90,11 +90,11 @@ namespace SpaceGame
             // 
             this.rightLabel.AutoSize = true;
             this.rightLabel.BackColor = System.Drawing.Color.Transparent;
-            this.rightLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rightLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rightLabel.ForeColor = System.Drawing.Color.White;
-            this.rightLabel.Location = new System.Drawing.Point(163, 270);
+            this.rightLabel.Location = new System.Drawing.Point(80, 277);
             this.rightLabel.Name = "rightLabel";
-            this.rightLabel.Size = new System.Drawing.Size(238, 24);
+            this.rightLabel.Size = new System.Drawing.Size(299, 32);
             this.rightLabel.TabIndex = 3;
             this.rightLabel.Text = "Miscarea in dreapta";
             // 
@@ -102,11 +102,11 @@ namespace SpaceGame
             // 
             this.interactLabel.AutoSize = true;
             this.interactLabel.BackColor = System.Drawing.Color.Transparent;
-            this.interactLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.interactLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.interactLabel.ForeColor = System.Drawing.Color.White;
-            this.interactLabel.Location = new System.Drawing.Point(163, 338);
+            this.interactLabel.Location = new System.Drawing.Point(80, 345);
             this.interactLabel.Name = "interactLabel";
-            this.interactLabel.Size = new System.Drawing.Size(322, 24);
+            this.interactLabel.Size = new System.Drawing.Size(404, 32);
             this.interactLabel.TabIndex = 4;
             this.interactLabel.Text = "Interactiunea cu obiectele";
             // 
@@ -114,11 +114,11 @@ namespace SpaceGame
             // 
             this.closeLabel.AutoSize = true;
             this.closeLabel.BackColor = System.Drawing.Color.Transparent;
-            this.closeLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.closeLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.closeLabel.ForeColor = System.Drawing.Color.White;
-            this.closeLabel.Location = new System.Drawing.Point(163, 410);
+            this.closeLabel.Location = new System.Drawing.Point(80, 417);
             this.closeLabel.Name = "closeLabel";
-            this.closeLabel.Size = new System.Drawing.Size(226, 24);
+            this.closeLabel.Size = new System.Drawing.Size(284, 32);
             this.closeLabel.TabIndex = 5;
             this.closeLabel.Text = "Inchiderea jocului";
             // 
@@ -126,7 +126,7 @@ namespace SpaceGame
             // 
             this.upPic.BackColor = System.Drawing.Color.Transparent;
             this.upPic.Image = global::SpaceGame.Properties.Resources.icons8_w_key_48;
-            this.upPic.Location = new System.Drawing.Point(380, 59);
+            this.upPic.Location = new System.Drawing.Point(351, 75);
             this.upPic.Name = "upPic";
             this.upPic.Size = new System.Drawing.Size(48, 48);
             this.upPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -137,7 +137,7 @@ namespace SpaceGame
             // 
             this.interactPic.BackColor = System.Drawing.Color.Transparent;
             this.interactPic.Image = global::SpaceGame.Properties.Resources.icons8_e_key_48;
-            this.interactPic.Location = new System.Drawing.Point(491, 328);
+            this.interactPic.Location = new System.Drawing.Point(500, 345);
             this.interactPic.Name = "interactPic";
             this.interactPic.Size = new System.Drawing.Size(48, 48);
             this.interactPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -148,7 +148,7 @@ namespace SpaceGame
             // 
             this.rightPic.BackColor = System.Drawing.Color.Transparent;
             this.rightPic.Image = global::SpaceGame.Properties.Resources.icons8_d_key_48;
-            this.rightPic.Location = new System.Drawing.Point(407, 257);
+            this.rightPic.Location = new System.Drawing.Point(395, 277);
             this.rightPic.Name = "rightPic";
             this.rightPic.Size = new System.Drawing.Size(48, 48);
             this.rightPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -159,7 +159,7 @@ namespace SpaceGame
             // 
             this.leftPic.BackColor = System.Drawing.Color.Transparent;
             this.leftPic.Image = global::SpaceGame.Properties.Resources.icons8_a_key_48;
-            this.leftPic.Location = new System.Drawing.Point(395, 190);
+            this.leftPic.Location = new System.Drawing.Point(395, 203);
             this.leftPic.Name = "leftPic";
             this.leftPic.Size = new System.Drawing.Size(48, 48);
             this.leftPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -170,7 +170,7 @@ namespace SpaceGame
             // 
             this.downPic.BackColor = System.Drawing.Color.Transparent;
             this.downPic.Image = global::SpaceGame.Properties.Resources.icons8_s_key_48;
-            this.downPic.Location = new System.Drawing.Point(380, 126);
+            this.downPic.Location = new System.Drawing.Point(351, 136);
             this.downPic.Name = "downPic";
             this.downPic.Size = new System.Drawing.Size(48, 48);
             this.downPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -181,7 +181,7 @@ namespace SpaceGame
             // 
             this.closePic.BackColor = System.Drawing.Color.Transparent;
             this.closePic.Image = global::SpaceGame.Properties.Resources.icons8_esc_48;
-            this.closePic.Location = new System.Drawing.Point(395, 401);
+            this.closePic.Location = new System.Drawing.Point(395, 417);
             this.closePic.Name = "closePic";
             this.closePic.Size = new System.Drawing.Size(48, 48);
             this.closePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -192,8 +192,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photo_1539721972319_f0e80a00d424;
-            this.ClientSize = new System.Drawing.Size(645, 525);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Black_Sky_Galaxy_Stars_Desktop_Wallpaper;
+            this.ClientSize = new System.Drawing.Size(626, 525);
             this.Controls.Add(this.closePic);
             this.Controls.Add(this.downPic);
             this.Controls.Add(this.leftPic);

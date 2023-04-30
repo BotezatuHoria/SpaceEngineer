@@ -36,11 +36,11 @@ namespace SpaceGame
             // explainLabel
             // 
             this.explainLabel.BackColor = System.Drawing.Color.Transparent;
-            this.explainLabel.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.explainLabel.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.explainLabel.ForeColor = System.Drawing.Color.White;
-            this.explainLabel.Location = new System.Drawing.Point(28, 33);
+            this.explainLabel.Location = new System.Drawing.Point(12, 9);
             this.explainLabel.Name = "explainLabel";
-            this.explainLabel.Size = new System.Drawing.Size(513, 374);
+            this.explainLabel.Size = new System.Drawing.Size(794, 535);
             this.explainLabel.TabIndex = 0;
             this.explainLabel.Text = "label1";
             // 
@@ -48,8 +48,8 @@ namespace SpaceGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photoo;
-            this.ClientSize = new System.Drawing.Size(597, 450);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Black_Sky_Galaxy_Stars_Desktop_Wallpaper;
+            this.ClientSize = new System.Drawing.Size(818, 566);
             this.Controls.Add(this.explainLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
