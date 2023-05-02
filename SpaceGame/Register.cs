@@ -41,7 +41,7 @@ namespace SpaceGame
                         var box = (TextBox)ctrl;
                         if (String.IsNullOrWhiteSpace(box.Text))
                         {
-                            MessageBox.Show("Completati toate campurile", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Completați toate câmpurile.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
                     }
@@ -56,7 +56,7 @@ namespace SpaceGame
             }
             else
             {
-                MessageBox.Show("Exista deja un utilizator cu acest email.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Există deja un utilizator cu acest email.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

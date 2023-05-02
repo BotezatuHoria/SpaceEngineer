@@ -45,7 +45,7 @@ namespace SpaceGame
 
                 if (rsp == null)
                 {
-                    MessageBox.Show("User not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Utilizatorul nu a fost găsit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else

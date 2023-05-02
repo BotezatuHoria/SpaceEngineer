@@ -25,12 +25,12 @@ namespace SpaceGame
         {
             if (String.IsNullOrWhiteSpace(fileName.Text))
             {
-                MessageBox.Show("Nu ai introdus numele materialului.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nu ați introdus numele materialului.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
                 if (radioButtonMath.Checked == false && radioButtonPhy.Checked == false && radioButtonChem.Checked == false && radioButtonProg.Checked == false)
             {
-                MessageBox.Show("Nu ati selectat materia.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nu ați selectat materia.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -47,17 +47,17 @@ namespace SpaceGame
                         {
                             System.IO.File.Copy(openFileDialog.FileName, FileName);
                             AddMaterial();
-                            MessageBox.Show("Fisierul a fost adaugat cu succes.", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Fișierul a fost adăugat cu succes.", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             fileName.Clear();
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine(ex);
-                            MessageBox.Show("Exista un fisier cu aceasta denumire.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Există un fisier cu această denumire.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
-                        MessageBox.Show("Fisierul nu a fost adaugat cu succes", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Fișierul nu a fost adăugat.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -107,7 +107,7 @@ namespace SpaceGame
 
             mat.Delete();
             System.IO.File.Delete(FileName);
-            MessageBox.Show("Fisierul a fost sters cu succes", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Fișierul a fost șters cu succes", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefreshDataGrid();
         }
 

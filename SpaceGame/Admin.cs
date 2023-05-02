@@ -73,7 +73,7 @@ namespace SpaceGame
                 NewAnswer(pace);
             else
             {
-                MessageBox.Show("Puteti introduce maxim 6 raspunsuri.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Puteți introduce maxim 6 răspunsuri.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -227,7 +227,7 @@ namespace SpaceGame
             Question q = new Question(crrCell);
             //Question q = new Question(83);
             q.Delete();
-            MessageBox.Show("Intrebarea a fost stearsa cu succes", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Întrebarea a fost ștearsă cu succes.", "Informare", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -237,14 +237,14 @@ namespace SpaceGame
             int cnt = 0;
             if (String.IsNullOrWhiteSpace(question.Text))
             {
-                MessageBox.Show("Nu ati introdus o intrebare.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nu ați introdus o întrebare.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             foreach(Control c in answersPanel.Controls)
             {
                 if (c is TextBox && String.IsNullOrWhiteSpace(c.Text))
                 {
-                    MessageBox.Show("Nu ati introdus un raspuns.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Nu ați introdus un răspuns.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 if (c is RadioButton)
@@ -257,7 +257,7 @@ namespace SpaceGame
                    
                     if (cnt == answersNr)
                     {
-                        MessageBox.Show("Nu ati selectat raspunsul corect.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Nu ați selectat răspunsul corect.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
 
@@ -265,12 +265,12 @@ namespace SpaceGame
             }
             if (String.IsNullOrWhiteSpace(explanationTextBox.Text))
             {
-                MessageBox.Show("Nu ati introdus o explicatie.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nu ați introdus o explicație.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (mathsRadButton.Checked == false && phyRadButton.Checked == false && chemRadButton.Checked == false && progRadButton.Checked == false)
             {
-                MessageBox.Show("Nu ati selectat materia.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nu ați selectat materia.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
