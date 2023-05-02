@@ -20,8 +20,8 @@ namespace SpaceGame
         /// This function displays 2 labes when loading the form.
         private void Ending_Load(object sender, EventArgs e)
         {
-            endText.Text = "Bravo!!! Ai ajuns la final, Nikola iti este recunoscator pentru ca l-ai ajutat sa plece in cautarea unei noi planete.";
-            shutDownLabel.Text = "Apasa pe X pentru a inchide jocul.";
+            endText.Text = "Bravo!!! Ai ajuns la final, Nikola îți este recunoscător pentru că l-ai ajutat să plece în cautarea unei noi planete.";
+            shutDownLabel.Text = "Apasă pe X pentru a închide jocul.";
         }
     }
 }

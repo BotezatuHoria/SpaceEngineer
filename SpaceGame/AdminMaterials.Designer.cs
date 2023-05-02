@@ -40,15 +40,15 @@ namespace SpaceGame
             this.fileUpload = new System.Windows.Forms.Button();
             this.eraseButton = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new SpaceGame.DatabaseDataSet();
             this.materialsTableAdapter = new SpaceGame.DatabaseDataSetTableAdapters.MaterialsTableAdapter();
             this.addLabel = new System.Windows.Forms.Label();
             this.deleteLabel = new System.Windows.Forms.Label();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSetBindingSource)).BeginInit();
@@ -59,11 +59,11 @@ namespace SpaceGame
             // 
             this.fileLabel.AutoSize = true;
             this.fileLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fileLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.fileLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fileLabel.ForeColor = System.Drawing.Color.White;
-            this.fileLabel.Location = new System.Drawing.Point(12, 123);
+            this.fileLabel.Location = new System.Drawing.Point(21, 123);
             this.fileLabel.Name = "fileLabel";
-            this.fileLabel.Size = new System.Drawing.Size(189, 19);
+            this.fileLabel.Size = new System.Drawing.Size(210, 22);
             this.fileLabel.TabIndex = 32;
             this.fileLabel.Text = "Numele materialului:";
             this.fileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,11 +72,11 @@ namespace SpaceGame
             // 
             this.radioButtonProg.AutoSize = true;
             this.radioButtonProg.BackColor = System.Drawing.Color.Transparent;
-            this.radioButtonProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonProg.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButtonProg.ForeColor = System.Drawing.Color.White;
-            this.radioButtonProg.Location = new System.Drawing.Point(308, 254);
+            this.radioButtonProg.Location = new System.Drawing.Point(295, 254);
             this.radioButtonProg.Name = "radioButtonProg";
-            this.radioButtonProg.Size = new System.Drawing.Size(110, 24);
+            this.radioButtonProg.Size = new System.Drawing.Size(127, 28);
             this.radioButtonProg.TabIndex = 3;
             this.radioButtonProg.TabStop = true;
             this.radioButtonProg.Text = "Programare";
@@ -86,39 +86,39 @@ namespace SpaceGame
             // 
             this.radioButtonPhy.AutoSize = true;
             this.radioButtonPhy.BackColor = System.Drawing.Color.Transparent;
-            this.radioButtonPhy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonPhy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButtonPhy.ForeColor = System.Drawing.Color.White;
             this.radioButtonPhy.Location = new System.Drawing.Point(212, 254);
             this.radioButtonPhy.Name = "radioButtonPhy";
-            this.radioButtonPhy.Size = new System.Drawing.Size(68, 24);
+            this.radioButtonPhy.Size = new System.Drawing.Size(77, 28);
             this.radioButtonPhy.TabIndex = 2;
             this.radioButtonPhy.TabStop = true;
-            this.radioButtonPhy.Text = "Fizica";
+            this.radioButtonPhy.Text = "Fizică";
             this.radioButtonPhy.UseVisualStyleBackColor = false;
             // 
             // radioButtonMath
             // 
             this.radioButtonMath.AutoSize = true;
             this.radioButtonMath.BackColor = System.Drawing.Color.Transparent;
-            this.radioButtonMath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonMath.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButtonMath.ForeColor = System.Drawing.Color.White;
             this.radioButtonMath.Location = new System.Drawing.Point(83, 254);
             this.radioButtonMath.Name = "radioButtonMath";
-            this.radioButtonMath.Size = new System.Drawing.Size(110, 24);
+            this.radioButtonMath.Size = new System.Drawing.Size(123, 28);
             this.radioButtonMath.TabIndex = 1;
             this.radioButtonMath.TabStop = true;
-            this.radioButtonMath.Text = "Matematica";
+            this.radioButtonMath.Text = "Matematică";
             this.radioButtonMath.UseVisualStyleBackColor = false;
             // 
             // radioButtonChem
             // 
             this.radioButtonChem.AutoSize = true;
             this.radioButtonChem.BackColor = System.Drawing.Color.Transparent;
-            this.radioButtonChem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.radioButtonChem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.radioButtonChem.ForeColor = System.Drawing.Color.White;
             this.radioButtonChem.Location = new System.Drawing.Point(428, 254);
             this.radioButtonChem.Name = "radioButtonChem";
-            this.radioButtonChem.Size = new System.Drawing.Size(75, 24);
+            this.radioButtonChem.Size = new System.Drawing.Size(87, 28);
             this.radioButtonChem.TabIndex = 4;
             this.radioButtonChem.TabStop = true;
             this.radioButtonChem.Text = "Chimie";
@@ -126,10 +126,10 @@ namespace SpaceGame
             // 
             // fileName
             // 
-            this.fileName.BackColor = System.Drawing.Color.PeachPuff;
+            this.fileName.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.fileName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fileName.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.fileName.Location = new System.Drawing.Point(214, 123);
+            this.fileName.Location = new System.Drawing.Point(237, 123);
             this.fileName.Multiline = true;
             this.fileName.Name = "fileName";
             this.fileName.Size = new System.Drawing.Size(370, 62);
@@ -137,44 +137,65 @@ namespace SpaceGame
             // 
             // fileUpload
             // 
-            this.fileUpload.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.fileUpload.BackColor = System.Drawing.Color.Transparent;
+            this.fileUpload.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.fileUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.fileUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fileUpload.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fileUpload.Location = new System.Drawing.Point(181, 348);
             this.fileUpload.Name = "fileUpload";
-            this.fileUpload.Size = new System.Drawing.Size(191, 47);
+            this.fileUpload.Size = new System.Drawing.Size(203, 71);
             this.fileUpload.TabIndex = 5;
-            this.fileUpload.Text = "Adauga";
             this.fileUpload.UseVisualStyleBackColor = false;
             this.fileUpload.Click += new System.EventHandler(this.button1_Click);
             // 
             // eraseButton
             // 
-            this.eraseButton.BackColor = System.Drawing.Color.Coral;
+            this.eraseButton.BackColor = System.Drawing.Color.Transparent;
+            this.eraseButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.eraseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.eraseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eraseButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.eraseButton.Location = new System.Drawing.Point(718, 348);
+            this.eraseButton.Location = new System.Drawing.Point(733, 348);
             this.eraseButton.Name = "eraseButton";
-            this.eraseButton.Size = new System.Drawing.Size(191, 47);
+            this.eraseButton.Size = new System.Drawing.Size(210, 71);
             this.eraseButton.TabIndex = 6;
-            this.eraseButton.Text = "Sterge";
             this.eraseButton.UseVisualStyleBackColor = false;
             this.eraseButton.Click += new System.EventHandler(this.eraseButton_Click);
             // 
             // dataGridView
             // 
             this.dataGridView.AutoGenerateColumns = false;
-            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dataGridView.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.subjectDataGridViewTextBoxColumn,
             this.idDataGridViewTextBoxColumn});
             this.dataGridView.DataSource = this.materialsBindingSource;
-            this.dataGridView.Location = new System.Drawing.Point(692, 88);
+            this.dataGridView.Location = new System.Drawing.Point(712, 63);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(242, 245);
+            this.dataGridView.Size = new System.Drawing.Size(242, 263);
             this.dataGridView.TabIndex = 35;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // subjectDataGridViewTextBoxColumn
+            // 
+            this.subjectDataGridViewTextBoxColumn.DataPropertyName = "Subject";
+            this.subjectDataGridViewTextBoxColumn.HeaderText = "Subject";
+            this.subjectDataGridViewTextBoxColumn.Name = "subjectDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // materialsBindingSource
             // 
@@ -201,11 +222,11 @@ namespace SpaceGame
             this.addLabel.BackColor = System.Drawing.Color.Transparent;
             this.addLabel.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.addLabel.ForeColor = System.Drawing.Color.White;
-            this.addLabel.Location = new System.Drawing.Point(150, 23);
+            this.addLabel.Location = new System.Drawing.Point(174, 9);
             this.addLabel.Name = "addLabel";
             this.addLabel.Size = new System.Drawing.Size(305, 37);
             this.addLabel.TabIndex = 36;
-            this.addLabel.Text = "Adauga materiale";
+            this.addLabel.Text = "Adaugă materiale";
             this.addLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // deleteLabel
@@ -214,38 +235,19 @@ namespace SpaceGame
             this.deleteLabel.BackColor = System.Drawing.Color.Transparent;
             this.deleteLabel.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.deleteLabel.ForeColor = System.Drawing.Color.White;
-            this.deleteLabel.Location = new System.Drawing.Point(649, 23);
+            this.deleteLabel.Location = new System.Drawing.Point(686, 9);
             this.deleteLabel.Name = "deleteLabel";
             this.deleteLabel.Size = new System.Drawing.Size(305, 37);
             this.deleteLabel.TabIndex = 37;
-            this.deleteLabel.Text = "Sterge materiale";
+            this.deleteLabel.Text = "Șterge materiale";
             this.deleteLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // subjectDataGridViewTextBoxColumn
-            // 
-            this.subjectDataGridViewTextBoxColumn.DataPropertyName = "Subject";
-            this.subjectDataGridViewTextBoxColumn.HeaderText = "Subject";
-            this.subjectDataGridViewTextBoxColumn.Name = "subjectDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // AdminMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photo_1539721972319_f0e80a00d424;
-            this.ClientSize = new System.Drawing.Size(1026, 434);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Sterge;
+            this.ClientSize = new System.Drawing.Size(1077, 475);
             this.Controls.Add(this.deleteLabel);
             this.Controls.Add(this.addLabel);
             this.Controls.Add(this.dataGridView);

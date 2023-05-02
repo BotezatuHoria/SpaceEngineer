@@ -19,7 +19,7 @@ namespace SpaceGame
             InitializeComponent();
             string user = File.ReadAllText("user.txt");
             string file = user.Replace("\n", "").Replace("\r", "")  + ".txt";
-            highScoreLabel.Text = "Highscore-ul tau este: " + File.ReadAllText(file);
+            highScoreLabel.Text = "Highscore-ul tău este: " + File.ReadAllText(file);
         }
     }
 }

@@ -80,8 +80,8 @@ namespace SpaceGame
         private void DispalyChart()
         {
             chart.Series["s1"].IsValueShownAsLabel = true;
-            chart.Series["s1"].Points.AddXY("Matematica", maths.ToString());
-            chart.Series["s1"].Points.AddXY("Fizica", physics.ToString());
+            chart.Series["s1"].Points.AddXY("Matematică", maths.ToString());
+            chart.Series["s1"].Points.AddXY("Fizică", physics.ToString());
             chart.Series["s1"].Points.AddXY("Chimie", chemestry.ToString());
             chart.Series["s1"].Points.AddXY("Programare", programming.ToString());
         }

@@ -60,7 +60,7 @@ namespace SpaceGame
             this.upLabel.Name = "upLabel";
             this.upLabel.Size = new System.Drawing.Size(239, 32);
             this.upLabel.TabIndex = 0;
-            this.upLabel.Text = "Miscarea in sus";
+            this.upLabel.Text = "Mișcarea în sus";
             // 
             // downLabel
             // 
@@ -72,7 +72,7 @@ namespace SpaceGame
             this.downLabel.Name = "downLabel";
             this.downLabel.Size = new System.Drawing.Size(239, 32);
             this.downLabel.TabIndex = 1;
-            this.downLabel.Text = "Miscarea in jos";
+            this.downLabel.Text = "Mișcarea în jos";
             // 
             // leftLabel
             // 
@@ -84,7 +84,7 @@ namespace SpaceGame
             this.leftLabel.Name = "leftLabel";
             this.leftLabel.Size = new System.Drawing.Size(284, 32);
             this.leftLabel.TabIndex = 2;
-            this.leftLabel.Text = "Miscarea in stanga";
+            this.leftLabel.Text = "Mișcarea în stânga";
             // 
             // rightLabel
             // 
@@ -96,7 +96,7 @@ namespace SpaceGame
             this.rightLabel.Name = "rightLabel";
             this.rightLabel.Size = new System.Drawing.Size(299, 32);
             this.rightLabel.TabIndex = 3;
-            this.rightLabel.Text = "Miscarea in dreapta";
+            this.rightLabel.Text = "Mișcarea în dreapta";
             // 
             // interactLabel
             // 
@@ -108,7 +108,7 @@ namespace SpaceGame
             this.interactLabel.Name = "interactLabel";
             this.interactLabel.Size = new System.Drawing.Size(404, 32);
             this.interactLabel.TabIndex = 4;
-            this.interactLabel.Text = "Interactiunea cu obiectele";
+            this.interactLabel.Text = "Interacțiunea cu obiectele";
             // 
             // closeLabel
             // 
@@ -120,7 +120,7 @@ namespace SpaceGame
             this.closeLabel.Name = "closeLabel";
             this.closeLabel.Size = new System.Drawing.Size(284, 32);
             this.closeLabel.TabIndex = 5;
-            this.closeLabel.Text = "Inchiderea jocului";
+            this.closeLabel.Text = "Închiderea jocului";
             // 
             // upPic
             // 

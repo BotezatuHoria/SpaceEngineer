@@ -161,7 +161,7 @@ namespace SpaceGame
             this.controlButton.Name = "controlButton";
             this.controlButton.Size = new System.Drawing.Size(268, 98);
             this.controlButton.TabIndex = 5;
-            this.controlButton.Text = "Interactioneaza";
+            this.controlButton.Text = "Interacționează";
             this.controlButton.UseVisualStyleBackColor = false;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
             // 

@@ -39,7 +39,7 @@ namespace SpaceGame
             this.flowLayoutPanel.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel.Location = new System.Drawing.Point(12, 12);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(939, 622);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(854, 622);
             this.flowLayoutPanel.TabIndex = 0;
             // 
             // Lessons
@@ -48,8 +48,9 @@ namespace SpaceGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SpaceGame.Properties.Resources.Black_Sky_Galaxy_Stars_Desktop_Wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(963, 641);
+            this.ClientSize = new System.Drawing.Size(878, 641);
             this.Controls.Add(this.flowLayoutPanel);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -93,7 +93,7 @@ namespace SpaceGame
             }
             if (e.KeyCode == Keys.Escape)
             {
-                DialogResult dialogResult = MessageBox.Show("Esti sigur ca vrei sa inchizi jocul?", "Confirmare", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogResult = MessageBox.Show("Esti sigur că vrei să închizi jocul?", "Confirmare", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
                     this.Close();
@@ -470,21 +470,21 @@ namespace SpaceGame
             chatLabel.BringToFront();
             chatLabel.Visible = true;
 
-            chatLabel.Text = "Buna! Eu sunt Edison si sunt aici ca sa te ajut! Alege una dintre camere pentru a putea incepe lucrul la racheta.";
+            chatLabel.Text = "Buna! Eu sunt Edison și sunt aici ca să te ajut! Alege una dintre camere pentru a putea începe lucrul la rachetă.";
             if (roomMath == true)
-                chatLabel.Text = "Aici este laboratorul de matematica. \nPentru a invata lucruri noi una dintre bibilioteci te va ajuta, iar pentru a-ti testa cunostintele poti folosi tabla.";
+                chatLabel.Text = "Aici este laboratorul de matematiă. \nPentru a învăța lucruri noi una dintre bibilioteci te va ajuta, iar pentru a-ți testa cunoștințele poți folosi tabla.";
             if (roomChem == true)
-                chatLabel.Text = "Aceasta este laboratorul de chimie. \nPentru a invata lucruri noi verifica tabla, iar pentru a-ti vedea calitatile de om de stiinta incearca trusa de chimie.";
+                chatLabel.Text = "Aceasta este laboratorul de chimie. \nPentru a învăța lucruri noi verifică tabla, iar pentru a-ți vedea calitățile de om de știință încearcă trusa de chimie.";
             if (roomPhy == true)
-                chatLabel.Text = "Bine ai venit in laboratorul de fizica. \nPentru a invata lucruri noi verifica tabla, iar pentru a vedea ce fizician bun esti incearca unul dintre reactoare.";
+                chatLabel.Text = "Bine ai venit în laboratorul de fizică. \nPentru a învăța lucruri noi verifică tabla, iar pentru a vedea ce fizician bun ești încearcă unul dintre reactoare.";
             if (roomProg == true)
-                chatLabel.Text = "Acesta este laboratorul de informatica. \nPentru a invata lucruri noi verifica tabla, iar pentri a-ti testa cunostintele de informatician poti folosi calculatorul.";
+                chatLabel.Text = "Acesta este laboratorul de informatică. \nPentru a învăța lucruri noi verifică tabla, iar pentru a-ți testa cunostințele de informatician poți folosi calculatorul.";
             if (roomRocket == true)
-                chatLabel.Text = "Acesta este ateleriul rachetei. \nPe masura ce avansezi aceasta va fi construita.";
+                chatLabel.Text = "Acesta este ateleriul rachetei. \nPe măsură ce avansezi aceasta va fi construită.";
             if (finale == true)
             {
                 dog.Image = SpaceGame.Properties.Resources.dog1;
-                chatLabel.Text = "Bravooo ai terminat racheta!!! Hai sa mergem sa gasim leacul!";
+                chatLabel.Text = "Bravooo ai terminat racheta!!! Hai sa mergem să gasim leacul!";
             }
         }
 
@@ -604,26 +604,26 @@ namespace SpaceGame
             if (scr >= 0 && scr <= 10)
             {
                 this.BackgroundImage = SpaceGame.Properties.Resources.rocket5;
-                rocketLabel.Text = "Inca nu ai construit nimic la racheta.";
+                rocketLabel.Text = "Incă nu ai construit nimic la rachetă.";
             }
             if (scr > 10 && scr <= 20)
             {
-                rocketLabel.Text = "Ai reusit sa construiesti primul nivel al rachetei.";
+                rocketLabel.Text = "Ai reușit să construiești primul nivel al rachetei.";
                 this.BackgroundImage = SpaceGame.Properties.Resources.rocket1004_;
             }
             if (scr > 20 && scr <= 30)
             {
-                rocketLabel.Text = "Ai reusit sa construiesti al doilea nivel al rachetei.";
+                rocketLabel.Text = "Ai reușit să construiești al doilea nivel al rachetei.";
                 this.BackgroundImage = SpaceGame.Properties.Resources.rocket3;
             }
             if (scr > 30 && scr <= 40)
             {
-                rocketLabel.Text = "Ai reusit sa construiesti al treilea nivel al rachetei.";
+                rocketLabel.Text = "Ai reușit să construiești al treilea nivel al rachetei.";
                 this.BackgroundImage = SpaceGame.Properties.Resources.rocket2;
             }
             if (scr > 40)
             {
-                rocketLabel.Text = "Ai reusit sa construiesti racheta!";
+                rocketLabel.Text = "Ai reuțit să construiești racheta!";
                 this.BackgroundImage = SpaceGame.Properties.Resources.rocket11;
                 rocket.Enabled = true;
             }

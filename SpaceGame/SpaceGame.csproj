@@ -265,6 +265,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Sterge.png" />
+    <None Include="Resources\Adauga.png" />
     <None Include="Resources\StartAdmin.png" />
     <None Include="Resources\Start.png" />
     <None Include="Resources\Intrebari.png" />

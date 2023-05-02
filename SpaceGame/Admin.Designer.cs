@@ -66,25 +66,25 @@ namespace SpaceGame
             // 
             // question
             // 
-            this.question.BackColor = System.Drawing.Color.PeachPuff;
+            this.question.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.question.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.question.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.question.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.question.ForeColor = System.Drawing.Color.Black;
-            this.question.Location = new System.Drawing.Point(142, 82);
+            this.question.Location = new System.Drawing.Point(150, 139);
             this.question.Multiline = true;
             this.question.Name = "question";
-            this.question.Size = new System.Drawing.Size(625, 65);
+            this.question.Size = new System.Drawing.Size(726, 67);
             this.question.TabIndex = 0;
             // 
             // chemRadButton
             // 
             this.chemRadButton.AutoSize = true;
             this.chemRadButton.BackColor = System.Drawing.Color.Transparent;
-            this.chemRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chemRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.chemRadButton.ForeColor = System.Drawing.Color.White;
-            this.chemRadButton.Location = new System.Drawing.Point(487, 552);
+            this.chemRadButton.Location = new System.Drawing.Point(495, 619);
             this.chemRadButton.Name = "chemRadButton";
-            this.chemRadButton.Size = new System.Drawing.Size(75, 24);
+            this.chemRadButton.Size = new System.Drawing.Size(87, 28);
             this.chemRadButton.TabIndex = 6;
             this.chemRadButton.TabStop = true;
             this.chemRadButton.Text = "Chimie";
@@ -94,39 +94,39 @@ namespace SpaceGame
             // 
             this.mathsRadButton.AutoSize = true;
             this.mathsRadButton.BackColor = System.Drawing.Color.Transparent;
-            this.mathsRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mathsRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.mathsRadButton.ForeColor = System.Drawing.Color.White;
-            this.mathsRadButton.Location = new System.Drawing.Point(142, 552);
+            this.mathsRadButton.Location = new System.Drawing.Point(150, 619);
             this.mathsRadButton.Name = "mathsRadButton";
-            this.mathsRadButton.Size = new System.Drawing.Size(110, 24);
+            this.mathsRadButton.Size = new System.Drawing.Size(123, 28);
             this.mathsRadButton.TabIndex = 3;
             this.mathsRadButton.TabStop = true;
-            this.mathsRadButton.Text = "Matematica";
+            this.mathsRadButton.Text = "Matematică";
             this.mathsRadButton.UseVisualStyleBackColor = false;
             // 
             // phyRadButton
             // 
             this.phyRadButton.AutoSize = true;
             this.phyRadButton.BackColor = System.Drawing.Color.Transparent;
-            this.phyRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.phyRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.phyRadButton.ForeColor = System.Drawing.Color.White;
-            this.phyRadButton.Location = new System.Drawing.Point(271, 552);
+            this.phyRadButton.Location = new System.Drawing.Point(279, 619);
             this.phyRadButton.Name = "phyRadButton";
-            this.phyRadButton.Size = new System.Drawing.Size(68, 24);
+            this.phyRadButton.Size = new System.Drawing.Size(77, 28);
             this.phyRadButton.TabIndex = 4;
             this.phyRadButton.TabStop = true;
-            this.phyRadButton.Text = "Fizica";
+            this.phyRadButton.Text = "Fizică";
             this.phyRadButton.UseVisualStyleBackColor = false;
             // 
             // progRadButton
             // 
             this.progRadButton.AutoSize = true;
             this.progRadButton.BackColor = System.Drawing.Color.Transparent;
-            this.progRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.progRadButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.progRadButton.ForeColor = System.Drawing.Color.White;
-            this.progRadButton.Location = new System.Drawing.Point(367, 552);
+            this.progRadButton.Location = new System.Drawing.Point(362, 619);
             this.progRadButton.Name = "progRadButton";
-            this.progRadButton.Size = new System.Drawing.Size(110, 24);
+            this.progRadButton.Size = new System.Drawing.Size(127, 28);
             this.progRadButton.TabIndex = 5;
             this.progRadButton.TabStop = true;
             this.progRadButton.Text = "Programare";
@@ -135,54 +135,56 @@ namespace SpaceGame
             // answersPanel
             // 
             this.answersPanel.BackColor = System.Drawing.Color.Transparent;
-            this.answersPanel.Location = new System.Drawing.Point(142, 170);
+            this.answersPanel.Location = new System.Drawing.Point(150, 227);
             this.answersPanel.Name = "answersPanel";
-            this.answersPanel.Size = new System.Drawing.Size(625, 232);
+            this.answersPanel.Size = new System.Drawing.Size(726, 234);
             this.answersPanel.TabIndex = 1;
             // 
             // sendButton
             // 
-            this.sendButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.sendButton.BackColor = System.Drawing.Color.Transparent;
+            this.sendButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.sendButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.sendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sendButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sendButton.Location = new System.Drawing.Point(354, 618);
+            this.sendButton.Location = new System.Drawing.Point(273, 696);
             this.sendButton.Name = "sendButton";
-            this.sendButton.Size = new System.Drawing.Size(191, 46);
+            this.sendButton.Size = new System.Drawing.Size(271, 86);
             this.sendButton.TabIndex = 8;
-            this.sendButton.Text = "Adauga";
             this.sendButton.UseVisualStyleBackColor = false;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // answerButton
             // 
-            this.answerButton.BackColor = System.Drawing.Color.Coral;
+            this.answerButton.BackColor = System.Drawing.Color.Transparent;
+            this.answerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.answerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.answerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.answerButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.answerButton.Location = new System.Drawing.Point(578, 542);
+            this.answerButton.Location = new System.Drawing.Point(606, 591);
             this.answerButton.Name = "answerButton";
-            this.answerButton.Size = new System.Drawing.Size(191, 46);
+            this.answerButton.Size = new System.Drawing.Size(270, 87);
             this.answerButton.TabIndex = 7;
-            this.answerButton.Text = "Adauga raspuns";
             this.answerButton.UseVisualStyleBackColor = false;
             this.answerButton.Click += new System.EventHandler(this.answerButton_Click);
             // 
             // explanationTextBox
             // 
-            this.explanationTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.explanationTextBox.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.explanationTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.explanationTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.explanationTextBox.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.explanationTextBox.ForeColor = System.Drawing.Color.Black;
-            this.explanationTextBox.Location = new System.Drawing.Point(144, 432);
+            this.explanationTextBox.Location = new System.Drawing.Point(152, 489);
             this.explanationTextBox.Multiline = true;
             this.explanationTextBox.Name = "explanationTextBox";
-            this.explanationTextBox.Size = new System.Drawing.Size(625, 65);
+            this.explanationTextBox.Size = new System.Drawing.Size(724, 65);
             this.explanationTextBox.TabIndex = 2;
             // 
             // dataGridView
             // 
             this.dataGridView.AllowUserToOrderColumns = true;
             this.dataGridView.AutoGenerateColumns = false;
-            this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.dataGridView.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.questionDataGridViewTextBoxColumn,
@@ -192,9 +194,9 @@ namespace SpaceGame
             this.isValidDataGridViewCheckBoxColumn,
             this.IdQuestion});
             this.dataGridView.DataSource = this.qandABindingSource;
-            this.dataGridView.Location = new System.Drawing.Point(834, 82);
+            this.dataGridView.Location = new System.Drawing.Point(934, 126);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(542, 418);
+            this.dataGridView.Size = new System.Drawing.Size(542, 517);
             this.dataGridView.TabIndex = 9;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
@@ -252,14 +254,15 @@ namespace SpaceGame
             // 
             // refreshButton
             // 
-            this.refreshButton.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.refreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.refreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.refreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.refreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshButton.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.refreshButton.Location = new System.Drawing.Point(1010, 542);
+            this.refreshButton.Location = new System.Drawing.Point(1063, 696);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(191, 46);
+            this.refreshButton.Size = new System.Drawing.Size(271, 86);
             this.refreshButton.TabIndex = 9;
-            this.refreshButton.Text = "Sterge";
             this.refreshButton.UseVisualStyleBackColor = false;
             this.refreshButton.Click += new System.EventHandler(this.eraseButton_Click);
             // 
@@ -267,47 +270,47 @@ namespace SpaceGame
             // 
             this.questionLabel.AutoSize = true;
             this.questionLabel.BackColor = System.Drawing.Color.Transparent;
-            this.questionLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.questionLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.questionLabel.ForeColor = System.Drawing.Color.White;
-            this.questionLabel.Location = new System.Drawing.Point(12, 82);
+            this.questionLabel.Location = new System.Drawing.Point(26, 139);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(99, 19);
+            this.questionLabel.Size = new System.Drawing.Size(110, 22);
             this.questionLabel.TabIndex = 13;
-            this.questionLabel.Text = "Intrebare:";
+            this.questionLabel.Text = "Întrebare:";
             // 
             // answersLabel
             // 
             this.answersLabel.AutoSize = true;
             this.answersLabel.BackColor = System.Drawing.Color.Transparent;
-            this.answersLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.answersLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.answersLabel.ForeColor = System.Drawing.Color.White;
-            this.answersLabel.Location = new System.Drawing.Point(12, 170);
+            this.answersLabel.Location = new System.Drawing.Point(24, 227);
             this.answersLabel.Name = "answersLabel";
-            this.answersLabel.Size = new System.Drawing.Size(108, 19);
+            this.answersLabel.Size = new System.Drawing.Size(120, 22);
             this.answersLabel.TabIndex = 14;
-            this.answersLabel.Text = "Raspunsuri:";
+            this.answersLabel.Text = "Răspunsuri:";
             // 
             // explLabel
             // 
             this.explLabel.AutoSize = true;
             this.explLabel.BackColor = System.Drawing.Color.Transparent;
-            this.explLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.explLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.explLabel.ForeColor = System.Drawing.Color.White;
-            this.explLabel.Location = new System.Drawing.Point(12, 432);
+            this.explLabel.Location = new System.Drawing.Point(26, 489);
             this.explLabel.Name = "explLabel";
-            this.explLabel.Size = new System.Drawing.Size(108, 19);
+            this.explLabel.Size = new System.Drawing.Size(120, 22);
             this.explLabel.TabIndex = 15;
-            this.explLabel.Text = "Explicatie:";
+            this.explLabel.Text = "Explicație:";
             // 
             // subjectLabel
             // 
             this.subjectLabel.AutoSize = true;
             this.subjectLabel.BackColor = System.Drawing.Color.Transparent;
-            this.subjectLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.subjectLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.subjectLabel.ForeColor = System.Drawing.Color.White;
-            this.subjectLabel.Location = new System.Drawing.Point(12, 552);
+            this.subjectLabel.Location = new System.Drawing.Point(24, 621);
             this.subjectLabel.Name = "subjectLabel";
-            this.subjectLabel.Size = new System.Drawing.Size(81, 19);
+            this.subjectLabel.Size = new System.Drawing.Size(90, 22);
             this.subjectLabel.TabIndex = 16;
             this.subjectLabel.Text = "Materie:";
             // 
@@ -319,33 +322,34 @@ namespace SpaceGame
             // 
             this.addLabel.AutoSize = true;
             this.addLabel.BackColor = System.Drawing.Color.Transparent;
-            this.addLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addLabel.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.addLabel.ForeColor = System.Drawing.Color.White;
-            this.addLabel.Location = new System.Drawing.Point(298, 21);
+            this.addLabel.Location = new System.Drawing.Point(298, 35);
             this.addLabel.Name = "addLabel";
-            this.addLabel.Size = new System.Drawing.Size(285, 32);
+            this.addLabel.Size = new System.Drawing.Size(341, 37);
             this.addLabel.TabIndex = 17;
-            this.addLabel.Text = "Adauga o intrebare";
+            this.addLabel.Text = "Adaugă o întrebare";
             // 
             // deleteLabel
             // 
             this.deleteLabel.AutoSize = true;
             this.deleteLabel.BackColor = System.Drawing.Color.Transparent;
-            this.deleteLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.deleteLabel.Font = new System.Drawing.Font("Consolas", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.deleteLabel.ForeColor = System.Drawing.Color.White;
-            this.deleteLabel.Location = new System.Drawing.Point(960, 21);
+            this.deleteLabel.Location = new System.Drawing.Point(1031, 35);
             this.deleteLabel.Name = "deleteLabel";
-            this.deleteLabel.Size = new System.Drawing.Size(285, 32);
+            this.deleteLabel.Size = new System.Drawing.Size(341, 37);
             this.deleteLabel.TabIndex = 18;
-            this.deleteLabel.Text = "Sterge o intrebare";
+            this.deleteLabel.Text = "Șterge o întrebare";
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.BackgroundImage = global::SpaceGame.Properties.Resources.photo_1539721972319_f0e80a00d424;
-            this.ClientSize = new System.Drawing.Size(1443, 676);
+            this.BackgroundImage = global::SpaceGame.Properties.Resources.Adauga;
+            this.ClientSize = new System.Drawing.Size(1507, 811);
             this.Controls.Add(this.deleteLabel);
             this.Controls.Add(this.addLabel);
             this.Controls.Add(this.subjectLabel);
@@ -367,6 +371,7 @@ namespace SpaceGame
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Admin";
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 30, 30);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrare intrebari";
             this.Load += new System.EventHandler(this.Admin_Load);

@@ -50,9 +50,9 @@ namespace SpaceGame
         {
             var answer = new TextBox();
             var answerButton = new RadioButton();
-            answer.Font = new Font("Consolas", 10);
+            answer.Font = new Font("Consolas", 12);
             answer.ForeColor = Color.Black;
-            answer.BackColor = Color.PeachPuff;
+            answer.BackColor = Color.DarkOrange;
             answer.BorderStyle = BorderStyle.FixedSingle;
             answerButton.Location = new Point(answerButtonPosX, answerButtonPosY + 2 * pace);
             answerButtonPosY += 2 * pace;
@@ -178,9 +178,9 @@ namespace SpaceGame
         {
             var answer = new TextBox();
             var answerButton = new RadioButton();
-            answer.Font = new Font("Consolas", 10);
-            answer.ForeColor = Color.White;
-            answer.BackColor = Color.PeachPuff;
+            answer.Font = new Font("Consolas", 12);
+            answer.ForeColor = Color.Black;
+            answer.BackColor = Color.DarkOrange;
             answer.BorderStyle = BorderStyle.FixedSingle;
             answerButtonPosX = answerButton.Location.X;
             answerButtonPosY = answerButton.Location.Y;
