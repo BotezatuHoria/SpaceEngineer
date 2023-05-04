@@ -51,7 +51,7 @@ namespace SpaceGame
             this.shutDownLabel.BackColor = System.Drawing.Color.Transparent;
             this.shutDownLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.shutDownLabel.ForeColor = System.Drawing.Color.White;
-            this.shutDownLabel.Location = new System.Drawing.Point(12, 352);
+            this.shutDownLabel.Location = new System.Drawing.Point(27, 361);
             this.shutDownLabel.Name = "shutDownLabel";
             this.shutDownLabel.Size = new System.Drawing.Size(674, 99);
             this.shutDownLabel.TabIndex = 1;
