@@ -241,10 +241,5 @@ namespace SpaceGame
                 writetext.WriteLine(finScore);
             }
         }
-
-        private void ansPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

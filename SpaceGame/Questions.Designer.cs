@@ -47,7 +47,6 @@ namespace SpaceGame
             this.ansPanel.Name = "ansPanel";
             this.ansPanel.Size = new System.Drawing.Size(776, 390);
             this.ansPanel.TabIndex = 1;
-            this.ansPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ansPanel_Paint);
             // 
             // nextButton
             // 
