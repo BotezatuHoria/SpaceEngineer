@@ -990,16 +990,6 @@ namespace SpaceGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] Prop__Chimice__Materie__Corp__Substanță__Material {
-            get {
-                object obj = ResourceManager.GetObject("Prop__Chimice__Materie__Corp__Substanță__Material", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
         internal static byte[] Proprietati_Fizice_ale_Corpurilor {
             get {
                 object obj = ResourceManager.GetObject("Proprietati_Fizice_ale_Corpurilor", resourceCulture);

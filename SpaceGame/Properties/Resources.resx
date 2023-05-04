@@ -154,9 +154,6 @@
   <data name="rocket1004 " type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rocket1004 .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Prop__Chimice__Materie__Corp__Substanță__Material" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Prop. Chimice. Materie. Corp. Substanță. Material.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="math_desk_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\math_desk_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
